@@ -1,0 +1,2 @@
+# globaltrading
+Global trading simulator
