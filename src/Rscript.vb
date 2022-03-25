@@ -1,3 +1,4 @@
+Imports System.Runtime.CompilerServices
 Imports Microsoft.VisualBasic.CommandLine.Reflection
 Imports Microsoft.VisualBasic.Scripting.MetaData
 Imports SMRUCC.Rsharp.Runtime
@@ -19,23 +20,26 @@ Public Module Rscript
                 .ToArray
         }
 
-        table.columns("name") = study.Select(Function(d) d.name).ToArray
-        table.columns("keywords") = study.Select(Function(d) d.keywords.JoinBy("; ")).ToArray
-        table.columns("study") = study.Select(Function(d) d.study_design.JoinBy("; ")).ToArray
-        table.columns("publication") = study.Select(Function(d) d.publication).ToArray
-        table.columns("organism") = study.Select(Function(d) d.Organism.JoinBy("; ")).ToArray
-        table.columns("tissue") = study.Select(Function(d) d.OrganismPart.JoinBy("; ")).ToArray
+        table.columns("name") = study.Select(Function(d) trimString(d.name)).ToArray
+        table.columns("keywords") = study.Select(Function(d) trimString(d.keywords.JoinBy("; "))).ToArray
+        table.columns("study") = study.Select(Function(d) trimString(d.study_design.JoinBy("; "))).ToArray
+        table.columns("publication") = study.Select(Function(d) trimString(d.publication)).ToArray
+        table.columns("organism") = study.Select(Function(d) trimString(d.Organism.JoinBy("; "))).ToArray
+        table.columns("tissue") = study.Select(Function(d) trimString(d.OrganismPart.JoinBy("; "))).ToArray
         table.columns("metabolites") = study _
             .Select(Function(d)
                         Return d.cross_references _
-                            .Select(Function(i)
-                                        Return $"{i.Key}: {i.Value.JoinBy(", ")}"
-                                    End Function) _
+                            .TryGetValue("MetaboLights", [default]:={}) _
                             .JoinBy("; ")
                     End Function) _
             .ToArray
 
         Return table
+    End Function
+
+    <MethodImpl(MethodImplOptions.AggressiveInlining)>
+    Private Function trimString(str As String) As String
+        Return str.LineTokens.Select(Function(s) s.StringReplace("\s{2,}", " ")).JoinBy(" ")
     End Function
 
     <ExportAPI("loadMetaEntries")>
