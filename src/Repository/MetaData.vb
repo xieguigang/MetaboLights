@@ -18,7 +18,7 @@
 
         If publication Is Nothing AndAlso study_design.Length = 0 Then
             ' is metabolites
-            Return New Metabolites With {
+            Return New Metabolite With {
                 .entry_id = entry.id,
                 .name = entry.name,
                 .description = entry.description,
@@ -73,7 +73,7 @@ Public Class ResearchStudy : Inherits MetaData
 
 End Class
 
-Public Class Metabolites : Inherits MetaData
+Public Class Metabolite : Inherits MetaData
 
     Public Property formula As String
     Public Property inchi As String
