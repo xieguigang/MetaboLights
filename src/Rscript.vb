@@ -14,11 +14,13 @@ Public Module Rscript
 
     <ExportAPI("as.metaSet")>
     Public Function createMetaSet(repo As entry()) As MetaData()
-        Return repo.AsParallel.Select(Function(i) New MetaData(i)).ToArray
+        Return (From i As entry
+                In repo.AsParallel
+                Select MetaData.CreateMeta(i)).ToArray
     End Function
 
     <ExportAPI("metabolites")>
-    <RApiReturn(GetType(MetaData))>
+    <RApiReturn(GetType(Metabolites))>
     Public Function metabolites(<RRawVectorArgument> database As Object, Optional env As Environment = Nothing) As Object
         Dim repo As pipeline = pipeline.TryCreatePipeline(Of MetaData)(database, env)
 
@@ -26,16 +28,24 @@ Public Module Rscript
             Return repo.getError
         End If
 
-
+        Return repo _
+            .populates(Of MetaData)(env) _
+            .Where(Function(m) TypeOf m Is Metabolites) _
+            .ToArray
     End Function
 
     <ExportAPI("experiments")>
-    <RApiReturn(GetType(MetaData))>
+    <RApiReturn(GetType(ResearchStudy))>
     Public Function experiments(<RRawVectorArgument> database As Object, Optional env As Environment = Nothing) As Object
         Dim repo As pipeline = pipeline.TryCreatePipeline(Of MetaData)(database, env)
 
         If repo.isError Then
             Return repo.getError
         End If
+
+        Return repo _
+            .populates(Of MetaData)(env) _
+            .Where(Function(m) TypeOf m Is ResearchStudy) _
+            .ToArray
     End Function
 End Module
