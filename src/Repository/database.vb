@@ -29,6 +29,10 @@ Public Class entry
     Public Property dates As [date]()
     Public Property additional_fields As field()
 
+    Public Overrides Function ToString() As String
+        Return $"[{id}] {name}"
+    End Function
+
 End Class
 
 Public Class ref
@@ -36,12 +40,20 @@ Public Class ref
     <XmlAttribute> Public Property dbkey As String
     <XmlAttribute> Public Property dbname As String
 
+    Public Overrides Function ToString() As String
+        Return $"{dbname}: {dbkey}"
+    End Function
+
 End Class
 
 Public Class [date]
 
     <XmlAttribute> Public Property type As String
     <XmlAttribute> Public Property value As String
+
+    Public Overrides Function ToString() As String
+        Return $"{type}: {value}"
+    End Function
 
 End Class
 
@@ -51,6 +63,10 @@ Public Class field
     Public Property name As String
 
     <XmlText> Public Property value As String
+
+    Public Overrides Function ToString() As String
+        Return $"{name}: {value}"
+    End Function
 
 End Class
 
