@@ -62,21 +62,4 @@
     End Function
 End Class
 
-Public Class ResearchStudy : Inherits MetaData
 
-    Public Property authors As String()
-    Public Property publication As String
-    Public Property study_design As String()
-    Public Property keywords As String()
-    Public Property Organism As String()
-    Public Property OrganismPart As String()
-
-End Class
-
-Public Class Metabolite : Inherits MetaData
-
-    Public Property formula As String
-    Public Property inchi As String
-    Public Property iupac As String
-
-End Class
