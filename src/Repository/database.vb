@@ -10,6 +10,10 @@ Public Class database
     Public Property entry_count As Integer
     Public Property entries As entry()
 
+    Public Overrides Function ToString() As String
+        Return description
+    End Function
+
     Public Shared Function LoadReferenceEntries(file As String) As IEnumerable(Of entry)
         Return file.LoadUltraLargeXMLDataSet(Of entry)()
     End Function
