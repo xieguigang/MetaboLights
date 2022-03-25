@@ -28,8 +28,8 @@ Public Module Rscript
         table.columns("keywords") = study.Select(Function(d) trimString(d.keywords.JoinBy("; "))).ToArray
         table.columns("study") = study.Select(Function(d) trimString(d.study_design.JoinBy("; "))).ToArray
         table.columns("publication") = study.Select(Function(d) trimString(d.publication)).ToArray
-        table.columns("organism") = study.Select(Function(d) trimString(d.Organism.Where(Function(r) Not Strings.LCase(r) Like organismIgnores).JoinBy("; "))).ToArray
-        table.columns("tissue") = study.Select(Function(d) trimString(d.OrganismPart.Where(Function(r) Not Strings.LCase(r) Like tissueIgnores).JoinBy("; "))).ToArray
+        table.columns("organism") = study.Select(Function(d) trimString(d.Organism.Where(Function(r) Not Strings.LCase(r) Like organismIgnores).Select(AddressOf Strings.LCase).Distinct.JoinBy("; "))).ToArray
+        table.columns("tissue") = study.Select(Function(d) trimString(d.OrganismPart.Where(Function(r) Not Strings.LCase(r) Like tissueIgnores).Select(AddressOf Strings.LCase).Distinct.JoinBy("; "))).ToArray
         table.columns("metabolites") = study _
             .Select(Function(d)
                         Return d.cross_references _
