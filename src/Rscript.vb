@@ -1,6 +1,7 @@
 Imports System.Runtime.CompilerServices
 Imports Microsoft.VisualBasic.CommandLine.Reflection
 Imports Microsoft.VisualBasic.ComponentModel.Collection
+Imports Microsoft.VisualBasic.Linq
 Imports Microsoft.VisualBasic.Scripting.MetaData
 Imports SMRUCC.Rsharp.Runtime
 Imports SMRUCC.Rsharp.Runtime.Internal.Object
@@ -24,12 +25,37 @@ Public Module Rscript
         Static organismIgnores As Index(Of String) = {"blank", "experimental blank", "reference compound", "culture media"}
         Static tissueIgnores As Index(Of String) = {"dmem (medium)", "solvent", "mixture", "blank", "pure substance", "commercial glucose"}
 
+        Dim organismTags As String() = study _
+            .Select(Function(d)
+                        Return d.Organism _
+                            .Select(Function(s) s.StringSplit("[\\/]")) _
+                            .IteratesALL _
+                            .Where(Function(r) Not Strings.LCase(r) Like organismIgnores) _
+                            .Select(AddressOf Strings.LCase) _
+                            .Distinct _
+                            .JoinBy("; ") _
+                            .trimString
+                    End Function) _
+            .ToArray
+        Dim tissueTags As String() = study _
+            .Select(Function(d)
+                        Return d.OrganismPart _
+                            .Where(Function(r)
+                                       Return Not Strings.LCase(r) Like tissueIgnores
+                                   End Function) _
+                            .Select(AddressOf Strings.LCase) _
+                            .Distinct _
+                            .JoinBy("; ") _
+                            .trimString
+                    End Function) _
+            .ToArray
+
         table.columns("name") = study.Select(Function(d) trimString(d.name)).ToArray
         table.columns("keywords") = study.Select(Function(d) trimString(d.keywords.JoinBy("; "))).ToArray
         table.columns("study") = study.Select(Function(d) trimString(d.study_design.JoinBy("; "))).ToArray
         table.columns("publication") = study.Select(Function(d) trimString(d.publication)).ToArray
-        table.columns("organism") = study.Select(Function(d) trimString(d.Organism.Where(Function(r) Not Strings.LCase(r) Like organismIgnores).Select(AddressOf Strings.LCase).Distinct.JoinBy("; "))).ToArray
-        table.columns("tissue") = study.Select(Function(d) trimString(d.OrganismPart.Where(Function(r) Not Strings.LCase(r) Like tissueIgnores).Select(AddressOf Strings.LCase).Distinct.JoinBy("; "))).ToArray
+        table.columns("organism") = organismTags
+        table.columns("tissue") = tissueTags
         table.columns("metabolites") = study _
             .Select(Function(d)
                         Return d.cross_references _
@@ -42,6 +68,7 @@ Public Module Rscript
     End Function
 
     <MethodImpl(MethodImplOptions.AggressiveInlining)>
+    <Extension>
     Private Function trimString(str As String) As String
         Return str.LineTokens.Select(Function(s) s.StringReplace("\s{2,}", " ")).JoinBy(" ")
     End Function
