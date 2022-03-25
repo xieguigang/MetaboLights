@@ -72,7 +72,14 @@ Public Module Rscript
     <Extension>
     Private Function trimString(str As String) As String
         Dim raw = str.LineTokens.Select(Function(s) s.StringReplace("\s{2,}", " ")).ToArray
-        Dim asc = raw.Select(Function(s) s.Where(Function(c) ASCII.IsAsciiChar(c)).JoinBy("")).ToArray
+        Dim asc = raw _
+            .Select(Function(s)
+                        Return GreekAlphabets _
+                            .StripGreek(s) _
+                            .Where(Function(c) ASCII.IsAsciiChar(c)) _
+                            .JoinBy("")
+                    End Function) _
+            .ToArray
 
         Return asc.JoinBy("; ")
     End Function
