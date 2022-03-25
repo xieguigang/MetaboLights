@@ -3,6 +3,7 @@ Imports Microsoft.VisualBasic.CommandLine.Reflection
 Imports Microsoft.VisualBasic.ComponentModel.Collection
 Imports Microsoft.VisualBasic.Linq
 Imports Microsoft.VisualBasic.Scripting.MetaData
+Imports Microsoft.VisualBasic.Text
 Imports SMRUCC.Rsharp.Runtime
 Imports SMRUCC.Rsharp.Runtime.Internal.Object
 Imports SMRUCC.Rsharp.Runtime.Interop
@@ -70,7 +71,10 @@ Public Module Rscript
     <MethodImpl(MethodImplOptions.AggressiveInlining)>
     <Extension>
     Private Function trimString(str As String) As String
-        Return str.LineTokens.Select(Function(s) s.StringReplace("\s{2,}", " ")).JoinBy(" ")
+        Dim raw = str.LineTokens.Select(Function(s) s.StringReplace("\s{2,}", " ")).ToArray
+        Dim asc = raw.Select(Function(s) s.Where(Function(c) ASCII.IsAsciiChar(c)).JoinBy("")).ToArray
+
+        Return asc.JoinBy("; ")
     End Function
 
     <ExportAPI("loadMetaEntries")>
