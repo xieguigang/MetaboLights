@@ -1,5 +1,6 @@
 Imports System.Runtime.CompilerServices
 Imports Microsoft.VisualBasic.CommandLine.Reflection
+Imports Microsoft.VisualBasic.ComponentModel.Collection
 Imports Microsoft.VisualBasic.Scripting.MetaData
 Imports SMRUCC.Rsharp.Runtime
 Imports SMRUCC.Rsharp.Runtime.Internal.Object
@@ -20,12 +21,15 @@ Public Module Rscript
                 .ToArray
         }
 
+        Static organismIgnores As Index(Of String) = {"blank", "experimental blank", "reference compound", "culture media"}
+        Static tissueIgnores As Index(Of String) = {"dmem (medium)", "solvent", "mixture", "blank", "pure substance", "commercial glucose"}
+
         table.columns("name") = study.Select(Function(d) trimString(d.name)).ToArray
         table.columns("keywords") = study.Select(Function(d) trimString(d.keywords.JoinBy("; "))).ToArray
         table.columns("study") = study.Select(Function(d) trimString(d.study_design.JoinBy("; "))).ToArray
         table.columns("publication") = study.Select(Function(d) trimString(d.publication)).ToArray
-        table.columns("organism") = study.Select(Function(d) trimString(d.Organism.JoinBy("; "))).ToArray
-        table.columns("tissue") = study.Select(Function(d) trimString(d.OrganismPart.JoinBy("; "))).ToArray
+        table.columns("organism") = study.Select(Function(d) trimString(d.Organism.Where(Function(r) Not Strings.LCase(r) Like organismIgnores).JoinBy("; "))).ToArray
+        table.columns("tissue") = study.Select(Function(d) trimString(d.OrganismPart.Where(Function(r) Not Strings.LCase(r) Like tissueIgnores).JoinBy("; "))).ToArray
         table.columns("metabolites") = study _
             .Select(Function(d)
                         Return d.cross_references _
