@@ -7,6 +7,37 @@ Imports SMRUCC.Rsharp.Runtime.Interop
 <Package("repository")>
 Public Module Rscript
 
+    Sub New()
+        Call Internal.Object.Converts.makeDataframe.addHandler(GetType(ResearchStudy()), AddressOf CreateStudyTable)
+    End Sub
+
+    Public Function CreateStudyTable(study As ResearchStudy(), args As list, env As Environment) As dataframe
+        Dim table As New dataframe With {
+            .columns = New Dictionary(Of String, Array),
+            .rownames = study _
+                .Select(Function(d) d.entry_id) _
+                .ToArray
+        }
+
+        table.columns("name") = study.Select(Function(d) d.name).ToArray
+        table.columns("keywords") = study.Select(Function(d) d.keywords.JoinBy("; ")).ToArray
+        table.columns("study") = study.Select(Function(d) d.study_design.JoinBy("; ")).ToArray
+        table.columns("publication") = study.Select(Function(d) d.publication).ToArray
+        table.columns("organism") = study.Select(Function(d) d.Organism.JoinBy("; ")).ToArray
+        table.columns("tissue") = study.Select(Function(d) d.OrganismPart.JoinBy("; ")).ToArray
+        table.columns("metabolites") = study _
+            .Select(Function(d)
+                        Return d.cross_references _
+                            .Select(Function(i)
+                                        Return $"{i.Key}: {i.Value.JoinBy(", ")}"
+                                    End Function) _
+                            .JoinBy("; ")
+                    End Function) _
+            .ToArray
+
+        Return table
+    End Function
+
     <ExportAPI("loadMetaEntries")>
     Public Function loadMetaEntries(file As String) As pipeline
         Return pipeline.CreateFromPopulator(database.LoadReferenceEntries(file))
@@ -55,6 +86,43 @@ Public Module Rscript
         Return repo _
             .populates(Of MetaData)(env) _
             .Where(Function(m) TypeOf m Is ResearchStudy) _
+            .Select(Function(d) DirectCast(d, ResearchStudy)) _
+            .ToArray
+    End Function
+
+    <ExportAPI("keywordFilters")>
+    Public Function keywordFilters(<RRawVectorArgument>
+                                   studies As Object,
+                                   keywords As String(),
+                                   Optional ignoreCase As Boolean = True,
+                                   Optional env As Environment = Nothing) As Object
+
+        Dim repo As pipeline = pipeline.TryCreatePipeline(Of ResearchStudy)(studies, env)
+        Dim test As Func(Of String(), Boolean)
+
+        If repo.isError Then
+            Return repo.getError
+        ElseIf ignoreCase Then
+            test = Function(factors)
+                       Return factors.Any(Function(wd) wd.InStrAny(keywords) > 0)
+                   End Function
+        Else
+            test = Function(factors)
+                       Return factors _
+                           .Any(Function(wd)
+                                    Return keywords _
+                                        .Any(Function(str)
+                                                 Return wd.IndexOf(str) > -1
+                                             End Function)
+                                End Function)
+                   End Function
+        End If
+
+        Return repo.populates(Of ResearchStudy)(env) _
+            .AsParallel _
+            .Where(Function(study)
+                       Return test(study.keywords) OrElse test(study.study_design)
+                   End Function) _
             .ToArray
     End Function
 End Module
