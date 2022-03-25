@@ -1,3 +1,3 @@
-const .onLoad as function() {
+const .onLoad = function() {
 	
 }
