@@ -8,4 +8,7 @@ raw = "F:/eb-eye_metabolights_complete.xml"
 experiments = raw |> experiments();
 metabolites = raw |> metabolites();
 
+print(length(experiments));
+print(length(metabolites));
+
 pause();

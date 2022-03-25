@@ -22,7 +22,9 @@ Public Module Rscript
         End If
 
         Return (From i As entry
-                In repo.populates(Of entry)(env)'.AsParallel
+                In repo _
+                    .populates(Of entry)(env) _
+                    .AsParallel
                 Select MetaData.CreateMeta(i)).ToArray
     End Function
 
