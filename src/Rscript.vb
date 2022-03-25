@@ -23,8 +23,8 @@ Public Module Rscript
                 .ToArray
         }
 
-        Static organismIgnores As Index(Of String) = {"blank", "experimental blank", "reference compound", "culture media"}
-        Static tissueIgnores As Index(Of String) = {"dmem (medium)", "solvent", "mixture", "blank", "pure substance", "commercial glucose"}
+        Static organismIgnores As Index(Of String) = {"blank", "experimental blank", "reference compound", "culture media", "sample preparation blank", "reference compound mix", "solvent blank"}
+        Static tissueIgnores As Index(Of String) = {"dmem (medium)", "solvent", "mixture", "blank", "pure substance", "commercial glucose", "standard", "matrix", "no injection"}
 
         Dim organismTags As String() = study _
             .Select(Function(d)
