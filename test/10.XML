@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8'?><S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/"><S:Body><getCompleteEntityResponse xmlns="https://www.ebi.ac.uk/webservices/chebi"><return><chebiId>CHEBI:10</chebiId><chebiAsciiName>(+)-Atherospermoline</chebiAsciiName><definition></definition><status>OK - Preliminary</status><smiles>COc1cc2CCN(C)[C@H]3Cc4ccc(Oc5cc(C[C@@H]6N(C)CCc7cc(OC)c(O)c(Oc1cc23)c67)ccc5O)cc4</smiles><inchi>InChI=1S/C36H38N2O6/c1-37-13-11-23-18-31(41-3)32-20-26(23)27(37)15-21-5-8-25(9-6-21)43-30-17-22(7-10-29(30)39)16-28-34-24(12-14-38(28)2)19-33(42-4)35(40)36(34)44-32/h5-10,17-20,27-28,39-40H,11-16H2,1-4H3/t27-,28-/m0/s1</inchi><inchiKey>XGEAUXVPBXUBKN-NSOVKSMOSA-N</inchiKey><charge>0</charge><mass>594.698</mass><monoisotopicMass>594.27299</monoisotopicMass><entityStar>2</entityStar><Synonyms><data>(+)-Atherospermoline</data><type>SYNONYM</type><source>KEGG COMPOUND</source></Synonyms><Formulae><data>C36H38N2O6</data><source>KEGG COMPOUND</source></Formulae><RegistryNumbers><data>21008-67-3</data><type>CAS Registry Number</type><source>KEGG COMPOUND</source></RegistryNumbers><ChemicalStructures><structure>
+  ISISHOST03240423272D 1   1.00000     0.00000 10651
+
+ 44 50  0     1  0            999 V2000
+   16.0237  -11.9005    0.0000 C   0  0  0  0  0  0           0  0  0
+   16.7159  -12.3053    0.0000 C   0  0  0  0  0  0           0  0  0
+   15.3315  -12.3018    0.0000 C   0  0  1  0  0  0           0  0  0
+   16.0272  -11.1021    0.0000 C   0  0  0  0  0  0           0  0  0
+   15.9107  -14.2447    0.0000 O   0  0  0  0  0  0           0  0  0
+   17.4158  -11.9005    0.0000 C   0  0  0  0  0  0           0  0  0
+   14.6392  -11.8936    0.0000 N   0  0  3  0  0  0           0  0  0
+   16.7159  -10.6973    0.0000 C   0  0  0  0  0  0           0  0  0
+   15.3384  -10.6981    0.0000 C   0  0  0  0  0  0           0  0  0
+   16.6236  -14.6081    0.0000 C   0  0  0  0  0  0           0  0  0
+   17.4158  -11.1021    0.0000 C   0  0  0  0  0  0           0  0  0
+   18.1081  -12.3053    0.0000 O   0  0  0  0  0  0           0  0  0
+   14.6358  -13.4981    0.0000 C   0  0  0  0  0  0           0  0  0
+   14.6565  -11.1021    0.0000 C   0  0  0  0  0  0           0  0  0
+   13.9470  -12.2846    0.0000 C   0  0  0  0  0  0           0  0  0
+   16.6650  -15.4100    0.0000 C   0  0  0  0  0  0           0  0  0
+   17.2993  -14.1731    0.0000 C   0  0  0  0  0  0           0  0  0
+   18.1081  -10.6973    0.0000 O   0  0  0  0  0  0           0  0  0
+   14.6358  -14.2965    0.0000 C   0  0  0  0  0  0           0  0  0
+   13.9470  -13.0899    0.0000 C   0  0  0  0  0  0           0  0  0
+   17.3814  -15.7699    0.0000 C   0  0  0  0  0  0           0  0  0
+   18.0115  -14.5399    0.0000 C   0  0  0  0  0  0           0  0  0
+   17.2580  -13.3712    0.0000 O   0  0  0  0  0  0           0  0  0
+   18.7969  -11.0952    0.0000 C   0  0  0  0  0  0           0  0  0
+   13.9401  -14.6977    0.0000 C   0  0  0  0  0  0           0  0  0
+   13.2513  -13.4912    0.0000 C   0  0  0  0  0  0           0  0  0
+   17.4227  -16.5725    0.0000 C   0  0  1  0  0  0           0  0  0
+   18.0495  -15.3348    0.0000 C   0  0  0  0  0  0           0  0  0
+   17.9295  -12.9389    0.0000 C   0  0  0  0  0  0           0  0  0
+   13.9366  -15.4962    0.0000 O   0  0  0  0  0  0           0  0  0
+   13.2478  -14.2930    0.0000 C   0  0  0  0  0  0           0  0  0
+   18.1349  -16.9324    0.0000 N   0  0  3  0  0  0           0  0  0
+   18.7624  -15.6913    0.0000 C   0  0  0  0  0  0           0  0  0
+   14.6358  -15.8803    0.0000 C   0  0  0  0  0  0           0  0  0
+   12.5591  -14.6874    0.0000 O   0  0  0  0  0  0           0  0  0
+   16.0375  -16.6476    0.0000 C   0  0  0  0  0  0           0  0  0
+   18.7969  -16.4863    0.0000 C   0  0  0  0  0  0           0  0  0
+   18.1866  -17.7274    0.0000 C   0  0  0  0  0  0           0  0  0
+   15.3211  -15.4618    0.0000 C   0  0  0  0  0  0           0  0  0
+   14.6530  -16.6821    0.0000 C   0  0  0  0  0  0           0  0  0
+   16.0237  -15.8458    0.0000 C   0  0  0  0  0  0           0  0  0
+   15.3556  -17.0620    0.0000 C   0  0  0  0  0  0           0  0  0
+   16.7313  -17.0227    0.0000 C   0  0  0  0  0  0           0  0  0
+   15.3284  -13.1268    0.0000 C   0  0  0  0  0  0           0  0  0
+  2  5  1  0     0  0
+  2  6  1  0     0  0
+  3  7  1  0     0  0
+  4  8  2  0     0  0
+  4  9  1  0     0  0
+  5 10  1  0     0  0
+  6 11  2  0     0  0
+  6 12  1  0     0  0
+ 44 13  1  0     0  0
+  7 14  1  0     0  0
+  7 15  1  0     0  0
+ 10 16  1  0     0  0
+ 10 17  2  0     0  0
+ 11 18  1  0     0  0
+ 13 19  1  0     0  0
+ 13 20  2  0     0  0
+ 16 21  2  0     0  0
+ 17 22  1  0     0  0
+ 17 23  1  0     0  0
+ 18 24  1  0     0  0
+ 19 25  2  0     0  0
+ 20 26  1  0     0  0
+ 21 27  1  0     0  0
+ 21 28  1  0     0  0
+ 23 29  1  0     0  0
+ 25 30  1  0     0  0
+ 25 31  1  0     0  0
+ 27 32  1  0     0  0
+ 28 33  1  0     0  0
+ 30 34  1  0     0  0
+ 31 35  1  0     0  0
+ 43 36  1  0     0  0
+ 32 37  1  0     0  0
+ 32 38  1  0     0  0
+ 34 39  2  0     0  0
+ 34 40  1  0     0  0
+ 36 41  2  0     0  0
+ 36 42  1  0     0  0
+  8 11  1  0     0  0
+  9 14  1  0     0  0
+ 22 28  2  0     0  0
+ 26 31  2  0     0  0
+ 33 37  1  0     0  0
+ 39 41  1  0     0  0
+ 40 42  2  0     0  0
+ 27 43  1  1     0  0
+  1  2  2  0     0  0
+  1  3  1  0     0  0
+  3 44  1  6     0  0
+  1  4  1  0     0  0
+M  END
+</structure><type>mol</type><dimension>2D</dimension><defaultStructure>true</defaultStructure></ChemicalStructures><DatabaseLinks><data>C00001814</data><type>KNApSAcK accession</type></DatabaseLinks><DatabaseLinks><data>C11141</data><type>KEGG COMPOUND accession</type></DatabaseLinks><OntologyParents><chebiName>bisbenzylisoquinoline alkaloid</chebiName><chebiId>CHEBI:133004</chebiId><type>is a</type><status>CHECKED</status><cyclicRelationship>false</cyclicRelationship></OntologyParents></return></getCompleteEntityResponse></S:Body></S:Envelope>
