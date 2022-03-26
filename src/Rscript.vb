@@ -4,6 +4,8 @@ Imports Microsoft.VisualBasic.ComponentModel.Collection
 Imports Microsoft.VisualBasic.Linq
 Imports Microsoft.VisualBasic.Scripting.MetaData
 Imports Microsoft.VisualBasic.Text
+Imports SMRUCC.genomics.Assembly.ELIXIR.EBI.ChEBI.WebServices
+Imports SMRUCC.genomics.Assembly.ELIXIR.EBI.ChEBI.XML
 Imports SMRUCC.Rsharp.Runtime
 Imports SMRUCC.Rsharp.Runtime.Internal.Object
 Imports SMRUCC.Rsharp.Runtime.Interop
@@ -170,5 +172,17 @@ Public Module Rscript
                        Return test(study.keywords) OrElse test(study.study_design)
                    End Function) _
             .ToArray
+    End Function
+
+    <ExportAPI("parseChEBIEntity")>
+    <RApiReturn(GetType(ChEBIEntity))>
+    Public Function ParseChebiEntity(xml As String) As Object
+        Dim data = REST.ParsingRESTData(xml)
+
+        If data.Length = 1 Then
+            Return data(Scan0)
+        Else
+            Return data
+        End If
     End Function
 End Module
