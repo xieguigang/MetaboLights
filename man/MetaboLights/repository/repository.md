@@ -1,6 +1,6 @@
 # repository
 
-
+the metabolights data repository
 
 + [loadMetaEntries](repository/loadMetaEntries.1) load the complete metabolights database
 + [as.metaSet](repository/as.metaSet.1) Convert as dataset collection

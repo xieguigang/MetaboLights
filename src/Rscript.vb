@@ -157,12 +157,13 @@ Public Module Rscript
         Dim metabos = repo _
             .populates(Of MetaData)(env) _
             .Where(Function(m) TypeOf m Is Metabolite) _
+            .Select(Function(m) DirectCast(m, Metabolite)) _
             .ToArray
 
         If mzkit Then
             Return metabos _
                 .Select(Function(m)
-                            Return DirectCast(m, Metabolite).CreateMetabolite
+                            Return m.CreateMetabolite
                         End Function) _
                 .ToArray
         Else

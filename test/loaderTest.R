@@ -6,11 +6,13 @@ raw = "E:/eb-eye_metabolights_complete.xml"
 ;
 
 let exprs = raw |> experiments();
-let metabos = raw |> metabolites(mzkit = TRUE);
+let metabos = raw |> metabolites();
 
 print("get analysis experiments:");
 print(length(exprs));
 print("total metabolites:");
 print(length(metabos));
 
-pause();
+setwd(@dir);
+
+write.csv(metabos, file = "./MetaboLights.csv");

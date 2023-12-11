@@ -162,7 +162,8 @@
         <h3>Usage</h3>
 
         <div style="width: 100%; padding-left: 3%; color: black;">
-            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>metabolites</strong>(<i>database</i>);</code></pre>
+            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>metabolites</strong>(<i>database</i>,
+    <i>mzkit</i> = <span style='color: blue !important;'>FALSE</span>);</code></pre>
         </div>
 
         <h3>Arguments</h3>
@@ -186,11 +187,17 @@
 
         <h3>Value</h3>
 
-        this function returns data object of type <a href="/clr/MetaboLights/Metabolite.html">Metabolite</a>.
+        this function returns data object in these one of the listed data types: <a href="/clr/MetaboLights/Metabolite.html">Metabolite</a>, <a href="/clr/BioNovoGene/BioDeep/Chemistry/MetaLib/Models/MetaLib.html">MetaLib</a>.
 
-        <h3 style="display: none;">Examples</h3>
+        <h3 style="display: block;">Examples</h3>
 
-        
+        <pre><code>require(MetaboLights);
+ 
+ const source_repo = "/path/to/eb-eye_metabolights_complete.xml";
+ const data_repo = loadMetaEntries(source_repo) |> as.metaSet();
+ const metabos_data = data_repo |> metabolites();
+ 
+ write.csv(metabos_data, file = "/path/to/metabolites.csv");</code></pre>
 
         <hr />
         <div style="text-align: center;">[Package <em>repository</em> version 1.0.0.0 <a

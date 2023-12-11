@@ -5,6 +5,7 @@
 // ref=MetaboLights.Rscript@MetaboLights, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 
 /**
+ * the metabolights data repository
  * 
 */
 declare namespace repository {
@@ -59,11 +60,13 @@ declare namespace repository {
     * 
     * 
      * @param database -
+     * @param mzkit 
+     * + default value Is ``false``.
      * @param env -
      * 
      * + default value Is ``null``.
    */
-   function metabolites(database: any, env?: object): object;
+   function metabolites(database: any, mzkit?: boolean, env?: object): object|object;
    /**
    */
    function parseChEBIEntity(xml: string): object;
