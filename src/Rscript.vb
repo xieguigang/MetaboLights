@@ -17,9 +17,28 @@ Imports SMRUCC.Rsharp.Runtime.Interop
 <Package("repository")>
 Public Module Rscript
 
-    Sub New()
+    Friend Sub Main()
         Call Internal.Object.Converts.makeDataframe.addHandler(GetType(ResearchStudy()), AddressOf CreateStudyTable)
+        Call Internal.Object.Converts.makeDataframe.addHandler(GetType(Metabolite()), AddressOf CreateMetaboliteTable)
     End Sub
+
+    Public Function CreateMetaboliteTable(metabos As Metabolite(), args As list, env As Environment) As dataframe
+        Dim entry_id As String() = metabos.Select(Function(m) m.entry_id).ToArray
+        Dim df As New dataframe With {
+            .columns = New Dictionary(Of String, Array),
+            .rownames = entry_id
+        }
+
+        Call df.add("name", From m In metabos Select m.name)
+        Call df.add("iupac", From m In metabos Select m.iupac)
+        Call df.add("formula", From m In metabos Select m.formula)
+        Call df.add("description", From m In metabos Select m.description)
+        Call df.add("chebi", From m In metabos Select m("ChEBI").JoinBy("; "))
+        Call df.add("inchi", From m In metabos Select m.inchi)
+        Call df.add("organism", From m In metabos Select m.organism.JoinBy("; "))
+
+        Return df
+    End Function
 
     Public Function CreateStudyTable(study As ResearchStudy(), args As list, env As Environment) As dataframe
         Dim table As New dataframe With {

@@ -8,6 +8,12 @@ Public Class MetaData
     Public Property description As String
     Public Property cross_references As Dictionary(Of String, String())
 
+    Default Public ReadOnly Property xrefs(src As String) As String()
+        Get
+            Return cross_references.TryGetValue(src)
+        End Get
+    End Property
+
     Public Overrides Function ToString() As String
         Return $"{entry_id}: {name}"
     End Function
