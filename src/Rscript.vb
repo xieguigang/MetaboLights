@@ -86,11 +86,27 @@ Public Module Rscript
         Return asc.JoinBy("; ")
     End Function
 
+    ''' <summary>
+    ''' load the complete metabolights database
+    ''' </summary>
+    ''' <param name="file">should be a file path to the complete metabolights 
+    ''' database file: ``eb-eye_metabolights_complete.xml``</param>
+    ''' <returns></returns>
+    ''' <remarks>
+    ''' the database file could be download from the url link: 
+    ''' http://ftp.ebi.ac.uk/pub/databases/metabolights/eb-eye/eb-eye_metabolights_complete.xml
+    ''' </remarks>
     <ExportAPI("loadMetaEntries")>
     Public Function loadMetaEntries(file As String) As pipeline
         Return pipeline.CreateFromPopulator(database.LoadReferenceEntries(file))
     End Function
 
+    ''' <summary>
+    ''' Convert as dataset collection
+    ''' </summary>
+    ''' <param name="database"></param>
+    ''' <param name="env"></param>
+    ''' <returns></returns>
     <ExportAPI("as.metaSet")>
     <RApiReturn(GetType(MetaData))>
     Public Function createMetaSet(<RRawVectorArgument> database As Object, Optional env As Environment = Nothing) As Object
@@ -107,6 +123,12 @@ Public Module Rscript
                 Select MetaData.CreateMeta(i)).ToArray
     End Function
 
+    ''' <summary>
+    ''' get metabolites data from the database repository
+    ''' </summary>
+    ''' <param name="database"></param>
+    ''' <param name="env"></param>
+    ''' <returns></returns>
     <ExportAPI("metabolites")>
     <RApiReturn(GetType(Metabolite))>
     Public Function metabolites(<RRawVectorArgument> database As Object, Optional env As Environment = Nothing) As Object
@@ -122,6 +144,12 @@ Public Module Rscript
             .ToArray
     End Function
 
+    ''' <summary>
+    ''' get research study data from the database repository
+    ''' </summary>
+    ''' <param name="database"></param>
+    ''' <param name="env"></param>
+    ''' <returns></returns>
     <ExportAPI("experiments")>
     <RApiReturn(GetType(ResearchStudy))>
     Public Function experiments(<RRawVectorArgument> database As Object, Optional env As Environment = Nothing) As Object
@@ -138,6 +166,14 @@ Public Module Rscript
             .ToArray
     End Function
 
+    ''' <summary>
+    ''' filter the studies collection with a given set of the keywords
+    ''' </summary>
+    ''' <param name="studies"></param>
+    ''' <param name="keywords"></param>
+    ''' <param name="ignoreCase"></param>
+    ''' <param name="env"></param>
+    ''' <returns></returns>
     <ExportAPI("keywordFilters")>
     Public Function keywordFilters(<RRawVectorArgument>
                                    studies As Object,
