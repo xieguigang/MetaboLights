@@ -15,4 +15,4 @@ print(length(metabos));
 
 setwd(@dir);
 
-write.csv(metabos, file = "./MetaboLights.csv");
+write.csv(as.data.frame(metabos), file = "./MetaboLights.csv", row.names = TRUE);
