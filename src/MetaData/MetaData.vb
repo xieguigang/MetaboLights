@@ -1,9 +1,16 @@
-﻿Public Class MetaData
+﻿''' <summary>
+''' the base object type of the metabolights metadata
+''' </summary>
+Public Class MetaData
 
     Public Property entry_id As String
     Public Property name As String
     Public Property description As String
     Public Property cross_references As Dictionary(Of String, String())
+
+    Public Overrides Function ToString() As String
+        Return $"{entry_id}: {name}"
+    End Function
 
     Public Shared Function CreateMeta(entry As entry) As MetaData
         Dim metadata = loadMetaSet(entry)

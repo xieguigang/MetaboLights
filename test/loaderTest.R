@@ -1,16 +1,16 @@
 require(MetaboLights);
 
-raw = "F:/eb-eye_metabolights_complete.xml"
+raw = "E:/eb-eye_metabolights_complete.xml"
 |> loadMetaEntries()
 |> as.metaSet()
 ;
 
-experiments = raw |> experiments();
-metabolites = raw |> metabolites();
+let exprs = raw |> experiments();
+let metabos = raw |> metabolites();
 
 print("get analysis experiments:");
-print(length(experiments));
+print(length(exprs));
 print("total metabolites:");
-print(length(metabolites));
+print(length(metabos));
 
 pause();
