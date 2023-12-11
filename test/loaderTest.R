@@ -6,7 +6,7 @@ raw = "E:/eb-eye_metabolights_complete.xml"
 ;
 
 let exprs = raw |> experiments();
-let metabos = raw |> metabolites();
+let metabos = raw |> metabolites(mzkit = TRUE);
 
 print("get analysis experiments:");
 print(length(exprs));

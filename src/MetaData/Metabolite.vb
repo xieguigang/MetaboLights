@@ -19,6 +19,8 @@ Public Class Metabolite : Inherits MetaData
     ''' 
     <MethodImpl(MethodImplOptions.AggressiveInlining)>
     Public Function CreateMetabolite() As MetaLib
+        Dim links = cross_references
+
         Return New MetaLib With {
             .description = description,
             .formula = formula,
