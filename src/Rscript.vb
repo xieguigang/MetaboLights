@@ -1,4 +1,5 @@
 Imports System.Runtime.CompilerServices
+Imports BioNovoGene.BioDeep.Chemistry.MetaLib.Models
 Imports Microsoft.VisualBasic.CommandLine.Reflection
 Imports Microsoft.VisualBasic.ComponentModel.Collection
 Imports Microsoft.VisualBasic.Linq
@@ -10,6 +11,9 @@ Imports SMRUCC.Rsharp.Runtime
 Imports SMRUCC.Rsharp.Runtime.Internal.Object
 Imports SMRUCC.Rsharp.Runtime.Interop
 
+''' <summary>
+''' the metabolights data repository 
+''' </summary>
 <Package("repository")>
 Public Module Rscript
 
@@ -130,18 +134,31 @@ Public Module Rscript
     ''' <param name="env"></param>
     ''' <returns></returns>
     <ExportAPI("metabolites")>
-    <RApiReturn(GetType(Metabolite))>
-    Public Function metabolites(<RRawVectorArgument> database As Object, Optional env As Environment = Nothing) As Object
+    <RApiReturn(GetType(Metabolite), GetType(MetaLib))>
+    Public Function metabolites(<RRawVectorArgument> database As Object,
+                                Optional mzkit As Boolean = False,
+                                Optional env As Environment = Nothing) As Object
+
         Dim repo As pipeline = pipeline.TryCreatePipeline(Of MetaData)(database, env)
 
         If repo.isError Then
             Return repo.getError
         End If
 
-        Return repo _
+        Dim metabos = repo _
             .populates(Of MetaData)(env) _
             .Where(Function(m) TypeOf m Is Metabolite) _
             .ToArray
+
+        If mzkit Then
+            Return metabos _
+                .Select(Function(m)
+                            Return DirectCast(m, Metabolite).CreateMetabolite
+                        End Function) _
+                .ToArray
+        Else
+            Return metabos
+        End If
     End Function
 
     ''' <summary>
