@@ -11,6 +11,7 @@ Public Class Metabolite : Inherits MetaData
     Public Property formula As String
     Public Property inchi As String
     Public Property iupac As String
+    Public Property organism As String()
 
     ''' <summary>
     ''' create the metabolite annotation data model of the mzkit package
@@ -20,6 +21,7 @@ Public Class Metabolite : Inherits MetaData
     <MethodImpl(MethodImplOptions.AggressiveInlining)>
     Public Function CreateMetabolite() As MetaLib
         Dim links = cross_references
+        Dim chebi As String() = links.TryGetValue("ChEBI")
 
         Return New MetaLib With {
             .description = description,
@@ -27,7 +29,10 @@ Public Class Metabolite : Inherits MetaData
             .IUPACName = iupac,
             .ID = entry_id,
             .name = name,
-            .xref = New xref
+            .xref = New xref With {
+                .chebi = chebi.JoinBy("; "),
+                .InChI = inchi
+            }
         }
     End Function
 

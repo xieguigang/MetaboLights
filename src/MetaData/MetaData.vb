@@ -32,7 +32,8 @@ Public Class MetaData
                 .cross_references = cross_references,
                 .formula = getValues(metadata, "formula").FirstOrDefault,
                 .inchi = getValues(metadata, "inchi").FirstOrDefault,
-                .iupac = getValues(metadata, "iupac").FirstOrDefault
+                .iupac = getValues(metadata, "iupac").FirstOrDefault,
+                .organism = getValues(metadata, "organism")
             }
         Else
             ' is study
