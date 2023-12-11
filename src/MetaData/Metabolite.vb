@@ -6,6 +6,9 @@ Imports BioNovoGene.BioDeep.Chemistry.MetaLib.Models
 ''' <summary>
 ''' the data model of the metabolights database
 ''' </summary>
+''' <remarks>
+''' data model for save and export csv file
+''' </remarks>
 Public Class Metabolite : Inherits MetaData
 
     Public Property formula As String
