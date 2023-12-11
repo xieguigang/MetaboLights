@@ -5,28 +5,63 @@
 // ref=MetaboLights.Rscript@MetaboLights, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 
 /**
+ * 
 */
 declare namespace repository {
    module as {
       /**
-        * @param env default value Is ``null``.
+       * Convert as dataset collection
+       * 
+       * 
+        * @param database -
+        * @param env -
+        * 
+        * + default value Is ``null``.
       */
       function metaSet(database: any, env?: object): object;
    }
    /**
-     * @param env default value Is ``null``.
+    * get research study data from the database repository
+    * 
+    * 
+     * @param database -
+     * @param env -
+     * 
+     * + default value Is ``null``.
    */
    function experiments(database: any, env?: object): object;
    /**
-     * @param ignoreCase default value Is ``true``.
-     * @param env default value Is ``null``.
+    * filter the studies collection with a given set of the keywords
+    * 
+    * 
+     * @param studies -
+     * @param keywords -
+     * @param ignoreCase -
+     * 
+     * + default value Is ``true``.
+     * @param env -
+     * 
+     * + default value Is ``null``.
    */
    function keywordFilters(studies: any, keywords: string, ignoreCase?: boolean, env?: object): any;
    /**
+    * load the complete metabolights database
+    * 
+    * > the database file could be download from the url link: 
+    * >  http://ftp.ebi.ac.uk/pub/databases/metabolights/eb-eye/eb-eye_metabolights_complete.xml
+    * 
+     * @param file should be a file path to the complete metabolights 
+     *  database file: ``eb-eye_metabolights_complete.xml``
    */
    function loadMetaEntries(file: string): object;
    /**
-     * @param env default value Is ``null``.
+    * get metabolites data from the database repository
+    * 
+    * 
+     * @param database -
+     * @param env -
+     * 
+     * + default value Is ``null``.
    */
    function metabolites(database: any, env?: object): object;
    /**
