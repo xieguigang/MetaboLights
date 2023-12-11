@@ -133,6 +133,15 @@ Public Module Rscript
     ''' <param name="database"></param>
     ''' <param name="env"></param>
     ''' <returns></returns>
+    ''' <example>
+    ''' require(MetaboLights);
+    ''' 
+    ''' const source_repo = "/path/to/eb-eye_metabolights_complete.xml";
+    ''' const data_repo = loadMetaEntries(source_repo) |> as.metaSet();
+    ''' const metabos_data = data_repo |> metabolites();
+    ''' 
+    ''' write.csv(metabos_data, file = "/path/to/metabolites.csv");
+    ''' </example>
     <ExportAPI("metabolites")>
     <RApiReturn(GetType(Metabolite), GetType(MetaLib))>
     Public Function metabolites(<RRawVectorArgument> database As Object,
