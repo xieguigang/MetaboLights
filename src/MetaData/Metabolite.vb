@@ -32,7 +32,8 @@ Public Class Metabolite : Inherits MetaData
             .xref = New xref With {
                 .chebi = chebi.JoinBy("; "),
                 .InChI = inchi
-            }
+            },
+            .organism = organism
         }
     End Function
 
