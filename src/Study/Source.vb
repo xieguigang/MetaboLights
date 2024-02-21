@@ -1,7 +1,6 @@
 ﻿Imports System.IO
 Imports Microsoft.VisualBasic.ComponentModel.DataSourceModel
 Imports Microsoft.VisualBasic.Data.csv.IO
-Imports Microsoft.VisualBasic.Data.csv.StorageProvider.Reflection
 Imports Microsoft.VisualBasic.Language
 Imports Microsoft.VisualBasic.Text
 Imports Microsoft.VisualBasic.Text.Xml.Models
@@ -33,11 +32,11 @@ Public Class Source
     '<Column("Term Source REF")>
     '<Column("Term Accession Number")>
 
-    <Column("Source Name")> Public Property SourceName As String
-    <Column("Protocol REF")> Public Property ProtocolREF As String
-    <Column("Sample Name")> Public Property SampleName As String
-    <Column("Characteristics")> Public Property Characteristics As Dictionary(Of String, [Property])
-    <Column("Factor Value")> Public Property FactorValue As Dictionary(Of String, [Property])
+    Public Property SourceName As String
+    Public Property ProtocolREF As String
+    Public Property SampleName As String
+    Public Property Characteristics As Dictionary(Of String, [Property])
+    Public Property FactorValue As Dictionary(Of String, [Property])
 
     Public Overrides Function ToString() As String
         Return SampleName
