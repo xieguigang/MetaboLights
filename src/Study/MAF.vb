@@ -29,4 +29,8 @@ Public Class MAF : Inherits DynamicPropertyBase(Of Double)
     <Column("smallmolecule_abundance_stdev_sub")> Public Property smallmolecule_abundance_stdev_sub As String
     <Column("smallmolecule_abundance_std_error_sub")> Public Property smallmolecule_abundance_std_error_sub As String
 
+    Public Overrides Function ToString() As String
+        Return metabolite_identification
+    End Function
+
 End Class
