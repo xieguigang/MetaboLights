@@ -11,3 +11,8 @@ metadata
 |> JSON::json_encode()
 |> writeLines(con = file.path(@dir, "s_mtbls330.json"))
 ;
+
+metadata 
+|> sampleinfo("Characteristics", "Organism")
+|> write.csv(file = file.path(@dir, "sampleinfo-organism.csv"))
+;
