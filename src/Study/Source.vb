@@ -1,10 +1,14 @@
 ﻿Imports System.IO
+Imports Microsoft.VisualBasic.ComponentModel.DataSourceModel
 Imports Microsoft.VisualBasic.Data.csv.IO
 Imports Microsoft.VisualBasic.Data.csv.StorageProvider.Reflection
 Imports Microsoft.VisualBasic.Language
 Imports Microsoft.VisualBasic.Text
 Imports Microsoft.VisualBasic.Text.Xml.Models
 
+''' <summary>
+''' the metadata for generates sampleinfo
+''' </summary>
 Public Class Source
 
     '<Column("Source Name")>
@@ -30,10 +34,14 @@ Public Class Source
     '<Column("Term Accession Number")>
 
     <Column("Source Name")> Public Property SourceName As String
-    <Column("Characteristics")> Public Property Characteristics As Characteristics
     <Column("Protocol REF")> Public Property ProtocolREF As String
     <Column("Sample Name")> Public Property SampleName As String
-    <Column("Factor Value")> Public Property FactorValue As FactorValue
+    <Column("Characteristics")> Public Property Characteristics As Dictionary(Of String, [Property])
+    <Column("Factor Value")> Public Property FactorValue As Dictionary(Of String, [Property])
+
+    Public Overrides Function ToString() As String
+        Return SampleName
+    End Function
 
     Public Shared Iterator Function LoadTsv(file As Stream) As IEnumerable(Of Source)
         Dim s As New StreamReader(file)
@@ -43,32 +51,50 @@ Public Class Source
         Dim sourceName As Integer = headers.IndexOf("Source Name")
         Dim protocolREF As Integer = headers.IndexOf("Protocol REF")
         Dim sampleName As Integer = headers.IndexOf("Sample Name")
+        Dim characteristics = GetIndex(headers, "Characteristics").ToArray
+        Dim factorValue = GetIndex(headers, "Factor Value").ToArray
+        Dim i As Integer
 
         Do While (line = s.ReadLine) IsNot Nothing
-            row = Tokenizer.CharsParser(line, delimiter:=ASCII.TAB).ToArray
+            Dim chrs As New Dictionary(Of String, [Property])
+            Dim factors As New Dictionary(Of String, [Property])
+
+            row = Tokenizer _
+                .CharsParser(line, delimiter:=ASCII.TAB) _
+                .ToArray
+
+            For Each offset As NamedValue(Of Integer) In characteristics
+                i = offset
+                chrs(offset.Name) = New [Property](row(i), row(i + 1), row(i + 2))
+            Next
+            For Each offset As NamedValue(Of Integer) In factorValue
+                i = offset
+                factors(offset.Name) = New [Property](row(i), row(i + 1), row(i + 2))
+            Next
 
             Yield New Source With {
                 .ProtocolREF = row(protocolREF),
                 .SampleName = row(sampleName),
-                .SourceName = row(sourceName)
+                .SourceName = row(sourceName),
+                .Characteristics = chrs,
+                .FactorValue = factors
             }
         Loop
     End Function
 
-End Class
+    Private Shared Iterator Function GetIndex(headers As String(), prefix As String) As IEnumerable(Of NamedValue(Of Integer))
+        Dim key_size As Integer = prefix.Length
+        Dim key As String
 
-Public Class FactorValue
+        For i As Integer = 0 To headers.Length - 1
+            If headers(i).StartsWith(prefix) Then
+                key = headers(i) _
+                    .Substring(key_size) _
+                    .Trim("["c, "]"c)
 
-    <Column("Tissue")> Public Property Tissue As [Property]
-    <Column("Life cycle stage")> Public Property Life_cycle_stage As [Property]
-    <Column("Genotype")> Public Property Genotype As [Property]
-
-End Class
-
-Public Class Characteristics
-
-    <Column("Organism")> Public Property Organism As [Property]
-    <Column("Variant")> Public Property [Variant] As [Property]
-    <Column("Organism part")> Public Property Organism_part As [Property]
+                Yield New NamedValue(Of Integer)(key, i)
+            End If
+        Next
+    End Function
 
 End Class
