@@ -38,6 +38,22 @@ Public Class Source
     Public Property Characteristics As Dictionary(Of String, [Property])
     Public Property FactorValue As Dictionary(Of String, [Property])
 
+    Public Function GetGroupInformation(group As String, [property] As String) As String
+        Dim ls As Dictionary(Of String, [Property])
+
+        If group.ToLower = "characteristics" Then
+            ls = Characteristics
+        Else
+            ls = FactorValue
+        End If
+
+        If ls.ContainsKey([property]) AndAlso Not ls([property]) Is Nothing Then
+            Return ls([property]).name
+        Else
+            Return "-"
+        End If
+    End Function
+
     Public Overrides Function ToString() As String
         Return SampleName
     End Function

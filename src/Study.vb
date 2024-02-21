@@ -1,6 +1,9 @@
 ﻿Imports System.IO
 Imports Microsoft.VisualBasic.CommandLine.Reflection
+Imports Microsoft.VisualBasic.Language
+Imports Microsoft.VisualBasic.Linq
 Imports Microsoft.VisualBasic.Scripting.MetaData
+Imports SMRUCC.genomics.GCModeller.Workbench.ExperimentDesigner
 Imports SMRUCC.Rsharp.Runtime
 Imports SMRUCC.Rsharp.Runtime.Components
 Imports SMRUCC.Rsharp.Runtime.Interop
@@ -28,6 +31,27 @@ Module MTBLSStudy
         End If
 
         Return metadata
+    End Function
+
+    <ExportAPI("sampleinfo")>
+    <RApiReturn(GetType(SampleInfo))>
+    Public Function convertSampleinfo(metadata As Source(), group As String, [property] As String) As Object
+        Dim samples As New List(Of SampleInfo)
+        Dim offset As i32 = 1
+
+        For Each i As Source In metadata.SafeQuery
+            Call samples.Add(New SampleInfo With {
+                .batch = 1,
+                .color = "black",
+                .ID = i.SampleName,
+                .injectionOrder = ++offset,
+                .sample_info = i.GetGroupInformation(group, [property]),
+                .sample_name = i.SampleName,
+                .shape = "+"
+            })
+        Next
+
+        Return samples.ToArray
     End Function
 
 End Module
