@@ -12,7 +12,12 @@ Imports SMRUCC.Rsharp.Runtime.Interop
 ''' MTBLS study project data reader
 ''' </summary>
 <Package("MTBLSStudy")>
+<RTypeExport("MTBLS_maf", GetType(MAF))>
 Module MTBLSStudy
+
+    Sub Main()
+
+    End Sub
 
     <ExportAPI("read.study_source")>
     <RApiReturn(GetType(Source))>
