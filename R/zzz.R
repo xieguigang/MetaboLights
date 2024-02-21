@@ -1,4 +1,5 @@
 imports "repository" from "MetaboLights";
+imports "MTBLSStudy" from "MetaboLights";
 
 #' package startup
 #' 

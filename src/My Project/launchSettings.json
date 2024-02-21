@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "MetaboLights": {
+      "commandName": "Project"
+    },
+    "run_dll": {
+      "commandName": "Executable",
+      "executablePath": "E:\\GCModeller\\src\\R-sharp\\App\\net6.0\\R#.exe",
+      "commandLineArgs": "E:\\MetaboLights\\test\\study_test\\read_metadata.R --attach E:\\MetaboLights"
+    }
+  }
+}
