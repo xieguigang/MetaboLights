@@ -47,7 +47,11 @@ Public Class Source
         Do While (line = s.ReadLine) IsNot Nothing
             row = Tokenizer.CharsParser(line, delimiter:=ASCII.TAB).ToArray
 
-            Yield New Source
+            Yield New Source With {
+                .ProtocolREF = row(protocolREF),
+                .SampleName = row(sampleName),
+                .SourceName = row(sourceName)
+            }
         Loop
     End Function
 
@@ -55,16 +59,16 @@ End Class
 
 Public Class FactorValue
 
-    Public Property Tissue As [Property]
-    Public Property Life_cycle_stage As [Property]
-    Public Property Genotype As [Property]
+    <Column("Tissue")> Public Property Tissue As [Property]
+    <Column("Life cycle stage")> Public Property Life_cycle_stage As [Property]
+    <Column("Genotype")> Public Property Genotype As [Property]
 
 End Class
 
 Public Class Characteristics
 
-    Public Property Organism As [Property]
-    Public Property [Variant] As [Property]
-    Public Property Organism_part As [Property]
+    <Column("Organism")> Public Property Organism As [Property]
+    <Column("Variant")> Public Property [Variant] As [Property]
+    <Column("Organism part")> Public Property Organism_part As [Property]
 
 End Class
