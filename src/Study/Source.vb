@@ -66,10 +66,18 @@ Public Class Source
             For Each offset As NamedValue(Of Integer) In characteristics
                 i = offset
                 chrs(offset.Name) = New [Property](row(i), row(i + 1), row(i + 2))
+
+                If empty(chrs(offset.Name)) Then
+                    chrs(offset.Name) = Nothing
+                End If
             Next
             For Each offset As NamedValue(Of Integer) In factorValue
                 i = offset
                 factors(offset.Name) = New [Property](row(i), row(i + 1), row(i + 2))
+
+                If empty(factors(offset.Name)) Then
+                    factors(offset.Name) = Nothing
+                End If
             Next
 
             Yield New Source With {
@@ -80,6 +88,12 @@ Public Class Source
                 .FactorValue = factors
             }
         Loop
+    End Function
+
+    Private Shared Function empty(p As [Property]) As Boolean
+        Return p.name.Trim(" "c, """"c).StringEmpty AndAlso
+            p.value.Trim(" "c, """"c).StringEmpty AndAlso
+            p.comment.Trim(" "c, """"c).StringEmpty
     End Function
 
     Private Shared Iterator Function GetIndex(headers As String(), prefix As String) As IEnumerable(Of NamedValue(Of Integer))
