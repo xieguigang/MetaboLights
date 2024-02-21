@@ -15,4 +15,7 @@ declare namespace MTBLSStudy {
       */
       function study_source(file: any, env?: object): object;
    }
+   /**
+   */
+   function sampleinfo(metadata: object, group: string, property: string): object;
 }
