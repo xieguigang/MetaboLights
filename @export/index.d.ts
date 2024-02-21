@@ -9,6 +9,10 @@ declare namespace MetaboLights {
       function onLoad(): object;
    }
    /**
+     * @param outputdir default value Is ``./``.
+   */
+   function extract_spectra(maf: any, rawfiles: any, outputdir?: any): object;
+   /**
    */
    function requestRepository(): object;
 }
