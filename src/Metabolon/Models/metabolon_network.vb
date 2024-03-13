@@ -1,5 +1,12 @@
 ﻿Imports MetaboLights.Metabolon.Models.Network
 Imports Microsoft.VisualBasic.Data.visualize.Network
+Imports V = Microsoft.VisualBasic.Data.visualize.Network.Graph.Node
+Imports E = Microsoft.VisualBasic.Data.visualize.Network.Graph.Edge
+Imports node_data = Microsoft.VisualBasic.Data.visualize.Network.Graph.NodeData
+Imports Microsoft.VisualBasic.Imaging
+Imports Microsoft.VisualBasic.Data.visualize.Network.Layouts
+Imports edge_data = Microsoft.VisualBasic.Data.visualize.Network.Graph.EdgeData
+Imports System.Drawing
 
 Namespace Metabolon.Models
 
@@ -14,7 +21,28 @@ Namespace Metabolon.Models
         Public Function CreateGraph() As Graph.NetworkGraph
             Dim g As New Graph.NetworkGraph
 
+            For Each node As node In nodes
+                Dim meta As New node_data() With {
+                    .color = node.color.GetBrush,
+                    .initialPostion = New FDGVector2(node.x, node.y),
+                    .label = node.label,
+                    .mass = 1,
+                    .origID = node.id
+                }
 
+                Call g.CreateNode(node.id, meta)
+            Next
+
+            For Each edge As edge In edges
+                Dim u As V = g.GetElementByID(edge.from)
+                Dim v As V = g.GetElementByID(edge.to)
+                Dim meta As New edge_data With {
+                    .label = edge.title,
+                    .style = New Pen(edge.color.GetBrush, 1.0)
+                }
+
+                Call g.CreateEdge(u, v, 1, meta)
+            Next
 
             Return g
         End Function
