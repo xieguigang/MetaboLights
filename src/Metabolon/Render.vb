@@ -1,5 +1,6 @@
 ﻿Imports System.Drawing
 Imports MetaboLights.Metabolon.Models
+Imports MetaboLights.Metabolon.Models.AssociationMatrix
 Imports Microsoft.VisualBasic.Data.ChartPlots.Graphic.Legend
 Imports Microsoft.VisualBasic.Data.visualize.Network
 Imports Microsoft.VisualBasic.Data.visualize.Network.Graph
@@ -13,6 +14,7 @@ Namespace Metabolon
 
         ReadOnly network As metabolon_network
         ReadOnly mapper As Mapper
+        ReadOnly metadata As Dictionary(Of String, response)
 
         Public Property defaultFill As String = NameOf(Color.LightGray)
 
@@ -22,7 +24,7 @@ Namespace Metabolon
         End Sub
 
         Public Function RenderGraph(highlights As Dictionary(Of String, String)) As NetworkGraph
-            Dim graph As NetworkGraph = network.CreateGraph
+            Dim graph As NetworkGraph = network.CreateGraph(metadata)
             Dim gray As Brush = defaultFill.GetBrush
 
             ' reset colors

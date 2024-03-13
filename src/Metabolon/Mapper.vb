@@ -9,7 +9,6 @@ Namespace Metabolon
     Public Class Mapper
 
         ReadOnly association As association_matrix_v6
-        ReadOnly network As metabolon_network
         ''' <summary>
         ''' mapping from xref to <see cref="response.compid"/>
         ''' </summary>
@@ -20,7 +19,6 @@ Namespace Metabolon
         ReadOnly nodeId As Dictionary(Of String, String())
 
         Sub New(association As association_matrix_v6, network As metabolon_network)
-            Me.network = network
             Me.association = association
             Me.nodeId = network.nodes _
                 .Where(Function(vi) Not vi.met_compid.StringEmpty) _

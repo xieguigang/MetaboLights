@@ -1,4 +1,5 @@
 ﻿Imports System.Drawing
+Imports MetaboLights.Metabolon.Models.AssociationMatrix
 Imports MetaboLights.Metabolon.Models.Network
 Imports Microsoft.VisualBasic.Data.ChartPlots.Graphic.Legend
 Imports Microsoft.VisualBasic.Data.visualize.Network
@@ -19,7 +20,7 @@ Namespace Metabolon.Models
         Public Property width As Integer
         Public Property height As Integer
 
-        Public Function CreateGraph() As Graph.NetworkGraph
+        Public Function CreateGraph(metadata As Dictionary(Of String, response)) As Graph.NetworkGraph
             Dim g As New Graph.NetworkGraph
 
             For Each node As node In nodes
@@ -35,6 +36,20 @@ Namespace Metabolon.Models
                         {"shape", shape_data(node.shape)}
                     }
                 }
+                Dim cid As String = $"M{node.met_compid}"
+
+                If metadata.ContainsKey(cid) Then
+                    Dim response As response = metadata(cid)
+
+                    meta.Add(NameOf(response.subpathway), response.subpathway)
+                    meta.Add(NameOf(response.superpathway), response.superpathway)
+                    meta.Add(NameOf(response.name), response.name)
+                    meta.Add(NameOf(response.cas), response.cas)
+                    meta.Add(NameOf(response.pubchem), response.pubchem)
+                    meta.Add(NameOf(response.chemspider), response.chemspider)
+                    meta.Add(NameOf(response.kegg), response.kegg)
+                    meta.Add(NameOf(response.hmdb), response.hmdb)
+                End If
 
                 Call g.CreateNode(node.id, meta)
             Next
