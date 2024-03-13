@@ -37,13 +37,13 @@ Namespace Metabolon
 
         Private Sub SetResponseIndex()
             For Each item As response In association.responses
-                responseIndex(item.kegg) = item.compid
-                responseIndex(item.hmdb) = item.compid
-                responseIndex(item.hmdb_ef) = item.compid
-                responseIndex(item.cas) = item.compid
-                responseIndex(item.chemspider) = item.compid
-                responseIndex(item.pubchem) = item.compid
-                responseIndex(item.name.ToLower) = item.compid
+                If item.kegg IsNot Nothing Then responseIndex(item.kegg) = item.compid
+                If item.hmdb IsNot Nothing Then responseIndex(item.hmdb) = item.compid
+                If item.hmdb_ef IsNot Nothing Then responseIndex(item.hmdb_ef) = item.compid
+                If item.cas IsNot Nothing Then responseIndex(item.cas) = item.compid
+                If item.chemspider IsNot Nothing Then responseIndex(item.chemspider) = item.compid
+                If item.pubchem IsNot Nothing Then responseIndex(item.pubchem) = item.compid
+                If item.name IsNot Nothing Then responseIndex(item.name.ToLower) = item.compid
             Next
         End Sub
 
