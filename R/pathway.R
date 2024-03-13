@@ -31,7 +31,7 @@ const pathmaps = function(outputdir = "./", highlights = NULL) {
             description = "",
             creators = [],
             create_time = toString(now()),
-            links = [],
+            links = ["https://omicscience.org/", "https://mzkit.org/", "https://gcmodeller.org/", "https://rsharp.net/"],
             keywords = names(highlights)
         ));
 }
