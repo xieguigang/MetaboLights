@@ -8,4 +8,4 @@ MetaboLights::pathmaps(outputdir = @dir, highlights = list(
     "535-83-1" = "blue",
     "24003-67-6" = "blue",
     "1005-24-9" = "blue"
-));
+), default.fill_color = "lightgray");

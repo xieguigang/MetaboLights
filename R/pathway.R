@@ -4,7 +4,7 @@ require(igraph);
 
 #' rendering the pathway map
 #' 
-const pathmaps = function(outputdir = "./", highlights = NULL) {
+const pathmaps = function(outputdir = "./", highlights = NULL, default.fill_color = "lightgray") {
     let readJSON = function(name, what) {
         `data/Metabolon/${name}` 
         |> system.file(package = "MetaboLights")
@@ -21,7 +21,8 @@ const pathmaps = function(outputdir = "./", highlights = NULL) {
     let graph = Metabolon::highlights(graph_render, highlight = highlights);
 
     svg(file = file.path(outputdir, "render.svg")) {
-        plot(graph_render, highlight = highlights);
+        plot(graph_render, highlight = highlights, 
+            default.fill = default.fill_color);
     }
 
     igraph::save.network(graph, file = outputdir, 
