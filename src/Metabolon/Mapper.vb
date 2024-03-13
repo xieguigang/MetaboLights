@@ -2,6 +2,7 @@
 Imports MetaboLights.Metabolon.Models
 Imports MetaboLights.Metabolon.Models.AssociationMatrix
 Imports MetaboLights.Metabolon.Models.Network
+Imports Microsoft.VisualBasic.Linq
 
 Namespace Metabolon
 
@@ -16,16 +17,19 @@ Namespace Metabolon
         ''' <summary>
         ''' mapping from <see cref="node.met_compid"/> to <see cref="node.id"/>
         ''' </summary>
-        ReadOnly nodeId As Dictionary(Of String, String)
+        ReadOnly nodeId As Dictionary(Of String, String())
 
         Sub New(association As association_matrix_v6, network As metabolon_network)
             Me.network = network
             Me.association = association
             Me.nodeId = network.nodes _
                 .Where(Function(vi) Not vi.met_compid.StringEmpty) _
-                .ToDictionary(Function(v) $"M{v.met_compid}",
+                .GroupBy(Function(v) $"M{v.met_compid}") _
+                .ToDictionary(Function(v) v.Key,
                               Function(v)
-                                  Return v.id
+                                  Return v.Select(Function(vi) vi.id) _
+                                      .Distinct _
+                                      .ToArray
                               End Function)
 
             Call SetResponseIndex()
@@ -44,10 +48,21 @@ Namespace Metabolon
         ''' 
         <MethodImpl(MethodImplOptions.AggressiveInlining)>
         Public Function GetMapping(highlights As Dictionary(Of String, String)) As Dictionary(Of String, String)
-            Return highlights.ToDictionary(Function(i) MapNode(i.Key), Function(color) color.Value)
+            Return highlights.SafeQuery _
+                .Select(Iterator Function(map) As IEnumerable(Of (key As String, color As String))
+                            For Each v_id As String In MapNode(map.Key).SafeQuery
+                                Yield (v_id, map.Value)
+                            Next
+                        End Function) _
+                .IteratesALL _
+                .GroupBy(Function(v) v.key) _
+                .ToDictionary(Function(i) i.Key,
+                              Function(v)
+                                  Return v.First.color
+                              End Function)
         End Function
 
-        Public Function MapNode(q As String) As String
+        Public Function MapNode(q As String) As String()
 
         End Function
 
