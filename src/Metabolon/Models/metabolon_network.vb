@@ -1,12 +1,11 @@
-﻿Imports MetaboLights.Metabolon.Models.Network
+﻿Imports System.Drawing
+Imports MetaboLights.Metabolon.Models.Network
 Imports Microsoft.VisualBasic.Data.visualize.Network
-Imports V = Microsoft.VisualBasic.Data.visualize.Network.Graph.Node
-Imports E = Microsoft.VisualBasic.Data.visualize.Network.Graph.Edge
-Imports node_data = Microsoft.VisualBasic.Data.visualize.Network.Graph.NodeData
-Imports Microsoft.VisualBasic.Imaging
 Imports Microsoft.VisualBasic.Data.visualize.Network.Layouts
+Imports Microsoft.VisualBasic.Imaging
 Imports edge_data = Microsoft.VisualBasic.Data.visualize.Network.Graph.EdgeData
-Imports System.Drawing
+Imports node_data = Microsoft.VisualBasic.Data.visualize.Network.Graph.NodeData
+Imports V = Microsoft.VisualBasic.Data.visualize.Network.Graph.Node
 
 Namespace Metabolon.Models
 
