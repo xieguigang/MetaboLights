@@ -43,7 +43,7 @@ Namespace Metabolon
                 responseIndex(item.cas) = item.compid
                 responseIndex(item.chemspider) = item.compid
                 responseIndex(item.pubchem) = item.compid
-                responseIndex(item.name) = item.compid
+                responseIndex(item.name.ToLower) = item.compid
             Next
         End Sub
 
@@ -71,7 +71,13 @@ Namespace Metabolon
         End Function
 
         Public Function MapNode(q As String) As String()
-
+            If responseIndex.ContainsKey(q) Then
+                Return nodeId(responseIndex(q))
+            ElseIf responseIndex.ContainsKey(q.ToLower) Then
+                Return nodeId(responseIndex(q.ToLower))
+            Else
+                Return {}
+            End If
         End Function
 
     End Class
