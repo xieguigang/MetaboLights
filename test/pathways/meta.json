@@ -1,0 +1,11 @@
+﻿{
+  "additionals": {
+    
+  },
+  "create_time": "3\/13\/2024 02:11:16 PM",
+  "creators": ["Maria Ulmer","Johannes Raffler","xie.guigang@gcmodeller.org"],
+  "description": "metabolic pathways highlights",
+  "keywords": null,
+  "links": ["https:\/\/omicscience.org\/","https:\/\/mzkit.org\/","https:\/\/gcmodeller.org\/","https:\/\/rsharp.net\/"],
+  "title": "Map of metabolic pathways with associated metabolites and genes"
+}

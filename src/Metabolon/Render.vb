@@ -1,4 +1,5 @@
 ﻿Imports MetaboLights.Metabolon.Models
+Imports Microsoft.VisualBasic.Data.visualize.Network
 Imports Microsoft.VisualBasic.Data.visualize.Network.Graph
 Imports Microsoft.VisualBasic.Imaging.Driver
 
@@ -32,7 +33,12 @@ Namespace Metabolon
         Public Function RenderSvg(highlights As Dictionary(Of String, String)) As SVGData
             Dim graph As NetworkGraph = RenderGraph(highlights)
             ' rendering the network graph as svg
+            Dim img = NetworkVisualizer.DrawImage(graph,
+                  canvasSize:=$"{network.width + 200},{network.height + 200}",
+                  labelerIterations:=0,
+                  driver:=Drivers.SVG)
 
+            Return img
         End Function
 
     End Class
