@@ -21,6 +21,7 @@ Namespace Metabolon
         Sub New(association As association_matrix_v6, network As metabolon_network)
             Me.network = network
             Me.mapper = New Mapper(association, network)
+            Me.metadata = association.responses.ToDictionary(Function(a) a.compid)
         End Sub
 
         Public Function RenderGraph(highlights As Dictionary(Of String, String)) As NetworkGraph
