@@ -36,7 +36,15 @@ Namespace Metabolon
         End Sub
 
         Private Sub SetResponseIndex()
-
+            For Each item As response In association.responses
+                responseIndex(item.kegg) = item.compid
+                responseIndex(item.hmdb) = item.compid
+                responseIndex(item.hmdb_ef) = item.compid
+                responseIndex(item.cas) = item.compid
+                responseIndex(item.chemspider) = item.compid
+                responseIndex(item.pubchem) = item.compid
+                responseIndex(item.name) = item.compid
+            Next
         End Sub
 
         ''' <summary>
