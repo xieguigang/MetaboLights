@@ -15,8 +15,9 @@ declare namespace MetaboLights {
    /**
      * @param outputdir default value Is ``./``.
      * @param highlights default value Is ``null``.
+     * @param default.fill_color default value Is ``lightgray``.
    */
-   function pathmaps(outputdir?: any, highlights?: any): object;
+   function pathmaps(outputdir?: any, highlights?: any, default.fill_color?: any): object;
    /**
    */
    function requestRepository(): object;
