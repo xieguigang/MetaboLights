@@ -29,7 +29,7 @@ Namespace Metabolon.Models
                     .label = If(node.label.StringEmpty, node.title, node.label),
                     .mass = 1,
                     .origID = node.id,
-                    .size = {node.size},
+                    .size = {node.size * 2},
                     .Properties = New Dictionary(Of String, String) From {
                         {NamesOf.REFLECTION_ID_MAPPING_NODETYPE, node.compoundType},
                         {"shape", shape_data(node.shape)}

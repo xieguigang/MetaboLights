@@ -3,18 +3,20 @@ Imports MetaboLights.Metabolon.Models
 Imports Microsoft.VisualBasic.Data.ChartPlots.Graphic.Legend
 Imports Microsoft.VisualBasic.Data.visualize.Network
 Imports Microsoft.VisualBasic.Data.visualize.Network.Graph
+Imports Microsoft.VisualBasic.Imaging
 Imports Microsoft.VisualBasic.Imaging.Driver
 
 Namespace Metabolon
 
     Public Class Render
 
-        ReadOnly association As association_matrix_v6
         ReadOnly network As metabolon_network
+        ReadOnly mapper As Mapper
 
         Sub New(association As association_matrix_v6, network As metabolon_network)
             Me.network = network
             Me.association = association
+            Me.mapper = New Mapper(association, network)
         End Sub
 
         Public Function RenderGraph(highlights As Dictionary(Of String, String)) As NetworkGraph
@@ -35,14 +37,19 @@ Namespace Metabolon
         End Function
 
         Private Sub RenderGraph(ByRef graph As NetworkGraph, hightlights As Dictionary(Of String, String))
+            For Each target In hightlights
+                Dim v_id As String = mapper.MapNode(target.Key)
+                Dim v As Node = graph.GetElementByID(v_id)
 
+                v.data.color = target.Value.GetBrush
+            Next
         End Sub
 
         Public Function RenderSvg(highlights As Dictionary(Of String, String)) As SVGData
             Dim graph As NetworkGraph = RenderGraph(highlights)
             ' rendering the network graph as svg
             Dim img = NetworkVisualizer.DrawImage(graph,
-                  canvasSize:=$"{network.width * 5},{network.height * 5}",
+                  canvasSize:=$"{network.width * 6.5},{network.height * 6.5}",
                   labelerIterations:=0,
                   fillConvexHullPolygon:=False,
                   labelTextStroke:=Nothing,
