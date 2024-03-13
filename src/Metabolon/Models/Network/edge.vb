@@ -12,5 +12,9 @@
         Public Property smooth As  Boolean
         Public Property color As String
 
+        Public Overrides Function ToString() As String
+            Return $"{from} -> {[to]}"
+        End Function
+
     End Class
 End Namespace

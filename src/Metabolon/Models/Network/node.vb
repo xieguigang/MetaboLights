@@ -15,7 +15,11 @@
         Public Property size As Double
         Public Property fixed As  Boolean
         Public Property shape As String
-        Public Property chosen as  boolean 
+        Public Property chosen as  Boolean
+
+        Public Overrides Function ToString() As String
+            Return $"[{x},{y}] {id}: {label}"
+        End Function
 
     End Class
 End Namespace
