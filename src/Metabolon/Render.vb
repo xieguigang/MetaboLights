@@ -5,6 +5,7 @@ Imports Microsoft.VisualBasic.Data.visualize.Network
 Imports Microsoft.VisualBasic.Data.visualize.Network.Graph
 Imports Microsoft.VisualBasic.Imaging
 Imports Microsoft.VisualBasic.Imaging.Driver
+Imports Microsoft.VisualBasic.Linq
 
 Namespace Metabolon
 
@@ -37,10 +38,12 @@ Namespace Metabolon
 
         Private Sub RenderGraph(ByRef graph As NetworkGraph, hightlights As Dictionary(Of String, String))
             For Each target In hightlights
-                Dim v_id As String = mapper.MapNode(target.Key)
-                Dim v As Node = graph.GetElementByID(v_id)
+                Dim vs As String() = mapper.MapNode(target.Key)
+                Dim color As Brush = target.Value.GetBrush
 
-                v.data.color = target.Value.GetBrush
+                For Each v_id As String In vs.SafeQuery
+                    graph.GetElementByID(v_id).data.color = color
+                Next
             Next
         End Sub
 
