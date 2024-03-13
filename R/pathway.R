@@ -27,9 +27,9 @@ const pathmaps = function(outputdir = "./", highlights = NULL) {
     igraph::save.network(graph, file = outputdir, 
         properties = "*", 
         meta = igraph::metadata(
-            title = "",
-            description = "",
-            creators = [],
+            title = "Map of metabolic pathways with associated metabolites and genes",
+            description = "metabolic pathways highlights",
+            creators = ["Maria Ulmer", "Johannes Raffler", "xie.guigang@gcmodeller.org"],
             create_time = toString(now()),
             links = ["https://omicscience.org/", "https://mzkit.org/", "https://gcmodeller.org/", "https://rsharp.net/"],
             keywords = names(highlights)
