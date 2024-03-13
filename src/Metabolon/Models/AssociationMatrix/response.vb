@@ -14,7 +14,8 @@
         Public Property cas As String
         Public Property pubchem As  String
         Public Property chemspider As String
-        Public Property hmdb As  String
+        Public Property hmdb As String
+        Public Property kegg As String
         Public Property key As String
 
     End Class
