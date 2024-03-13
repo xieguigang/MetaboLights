@@ -72,9 +72,9 @@ Namespace Metabolon
 
         Public Function MapNode(q As String) As String()
             If responseIndex.ContainsKey(q) Then
-                Return nodeId(responseIndex(q))
+                Return nodeId.TryGetValue(responseIndex(q))
             ElseIf responseIndex.ContainsKey(q.ToLower) Then
-                Return nodeId(responseIndex(q.ToLower))
+                Return nodeId.TryGetValue(responseIndex(q.ToLower))
             Else
                 Return {}
             End If

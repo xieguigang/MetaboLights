@@ -41,6 +41,12 @@ Namespace Metabolon
                 Dim vs As String() = mapper.MapNode(target.Key)
                 Dim color As Brush = target.Value.GetBrush
 
+                If vs.IsNullOrEmpty Then
+                    Call VBDebugger.EchoLine($"'{target.Key}' has no id mapping!")
+                Else
+                    Call VBDebugger.EchoLine($"get {vs.Length} vertex id mapping for target '{target.Key}'.")
+                End If
+
                 For Each v_id As String In vs.SafeQuery
                     graph.GetElementByID(v_id).data.color = color
                 Next
