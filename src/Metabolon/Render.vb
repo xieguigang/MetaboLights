@@ -1,5 +1,6 @@
 ﻿Imports System.Drawing
 Imports MetaboLights.Metabolon.Models
+Imports Microsoft.VisualBasic.Data.ChartPlots.Graphic.Legend
 Imports Microsoft.VisualBasic.Data.visualize.Network
 Imports Microsoft.VisualBasic.Data.visualize.Network.Graph
 Imports Microsoft.VisualBasic.Imaging.Driver
@@ -43,6 +44,7 @@ Namespace Metabolon
                   labelerIterations:=0,
                   fillConvexHullPolygon:=False,
                   labelTextStroke:=Nothing,
+                  shapeRender:=AddressOf LegendPlotExtensions.DrawShape,
                   driver:=Drivers.SVG)
 
             Return img
