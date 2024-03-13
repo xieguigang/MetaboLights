@@ -15,7 +15,6 @@ Namespace Metabolon
 
         Sub New(association As association_matrix_v6, network As metabolon_network)
             Me.network = network
-            Me.association = association
             Me.mapper = New Mapper(association, network)
         End Sub
 
