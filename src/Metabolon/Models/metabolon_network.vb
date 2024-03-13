@@ -1,5 +1,6 @@
 ﻿Imports System.Drawing
 Imports MetaboLights.Metabolon.Models.Network
+Imports Microsoft.VisualBasic.Data.ChartPlots.Graphic.Legend
 Imports Microsoft.VisualBasic.Data.visualize.Network
 Imports Microsoft.VisualBasic.Data.visualize.Network.FileStream.Generic
 Imports Microsoft.VisualBasic.Data.visualize.Network.Layouts
@@ -30,7 +31,8 @@ Namespace Metabolon.Models
                     .origID = node.id,
                     .size = {node.size},
                     .Properties = New Dictionary(Of String, String) From {
-                        {NamesOf.REFLECTION_ID_MAPPING_NODETYPE, node.compoundType}
+                        {NamesOf.REFLECTION_ID_MAPPING_NODETYPE, node.compoundType},
+                        {"shape", shape_data(node.shape)}
                     }
                 }
 
@@ -49,6 +51,22 @@ Namespace Metabolon.Models
             Next
 
             Return g
+        End Function
+
+        Private Shared Function shape_data(shape As String) As String
+            Select Case Strings.LCase(shape)
+                Case "square" : Return LegendStyles.Square.Description
+                Case "dot", "diamond" : Return LegendStyles.Diamond.Description
+                Case "triangle", "triangledown" : Return LegendStyles.Triangle.Description
+                Case "star" : Return LegendStyles.Pentacle.Description
+                Case "box" : Return LegendStyles.Rectangle.Description
+
+                    ' default is circle for render a node
+                Case "" : Return LegendStyles.Circle.Description
+
+                Case Else
+                    Throw New NotImplementedException(shape)
+            End Select
         End Function
 
     End Class
