@@ -19,6 +19,12 @@ Namespace Metabolon
 
         Public Function RenderGraph(highlights As Dictionary(Of String, String)) As NetworkGraph
             Dim graph As NetworkGraph = network.CreateGraph
+            Dim gray As Brush = Brushes.Gray
+
+            ' reset colors
+            For Each v As Node In graph.vertex
+                v.data.color = gray
+            Next
 
             ' rendering the hightlights data
             If Not highlights.IsNullOrEmpty Then
@@ -29,11 +35,7 @@ Namespace Metabolon
         End Function
 
         Private Sub RenderGraph(ByRef graph As NetworkGraph, hightlights As Dictionary(Of String, String))
-            Dim gray As Brush = Brushes.Gray
 
-            For Each v As Node In graph.vertex
-                v.data.color = gray
-            Next
         End Sub
 
         Public Function RenderSvg(highlights As Dictionary(Of String, String)) As SVGData
@@ -45,6 +47,8 @@ Namespace Metabolon
                   fillConvexHullPolygon:=False,
                   labelTextStroke:=Nothing,
                   shapeRender:=AddressOf LegendPlotExtensions.DrawShape,
+                  labelWordWrapWidth:=24,
+                  fontSize:=16,
                   driver:=Drivers.SVG)
 
             Return img

@@ -26,7 +26,7 @@ Namespace Metabolon.Models
                 Dim meta As New node_data() With {
                     .color = node.color.GetBrush,
                     .initialPostion = New FDGVector2(node.x, node.y),
-                    .label = node.label,
+                    .label = If(node.label.StringEmpty, node.title, node.label),
                     .mass = 1,
                     .origID = node.id,
                     .size = {node.size},
