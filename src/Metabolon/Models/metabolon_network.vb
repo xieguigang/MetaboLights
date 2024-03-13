@@ -1,6 +1,7 @@
 ﻿Imports System.Drawing
 Imports MetaboLights.Metabolon.Models.Network
 Imports Microsoft.VisualBasic.Data.visualize.Network
+Imports Microsoft.VisualBasic.Data.visualize.Network.FileStream.Generic
 Imports Microsoft.VisualBasic.Data.visualize.Network.Layouts
 Imports Microsoft.VisualBasic.Imaging
 Imports edge_data = Microsoft.VisualBasic.Data.visualize.Network.Graph.EdgeData
@@ -26,7 +27,11 @@ Namespace Metabolon.Models
                     .initialPostion = New FDGVector2(node.x, node.y),
                     .label = node.label,
                     .mass = 1,
-                    .origID = node.id
+                    .origID = node.id,
+                    .size = {node.size},
+                    .Properties = New Dictionary(Of String, String) From {
+                        {NamesOf.REFLECTION_ID_MAPPING_NODETYPE, node.compoundType}
+                    }
                 }
 
                 Call g.CreateNode(node.id, meta)

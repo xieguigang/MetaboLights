@@ -37,6 +37,17 @@ Module MetabolonPathmap
     <ExportAPI("highlights")>
     <RApiReturn(GetType(NetworkGraph))>
     Public Function highlight_graph(render As Render, <RListObjectArgument> highlight As list, Optional env As Environment = Nothing) As Object
+        If highlight Is Nothing Then
+            highlight = list.empty
+        End If
+        If highlight.hasName(NameOf(highlight)) Then
+            highlight = highlight(NameOf(highlight))
+
+            If highlight Is Nothing Then
+                highlight = list.empty
+            End If
+        End If
+
         Dim colors As Dictionary(Of String, String) = highlight.AsGeneric(env, [default]:="#FFFFFF")
         Dim graph As NetworkGraph = render.RenderGraph(colors)
 
