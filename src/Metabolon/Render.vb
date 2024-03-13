@@ -34,8 +34,9 @@ Namespace Metabolon
             Dim graph As NetworkGraph = RenderGraph(highlights)
             ' rendering the network graph as svg
             Dim img = NetworkVisualizer.DrawImage(graph,
-                  canvasSize:=$"{network.width + 200},{network.height + 200}",
+                  canvasSize:=$"{network.width * 10},{network.height * 10}",
                   labelerIterations:=0,
+                  fillConvexHullPolygon:=False,
                   driver:=Drivers.SVG)
 
             Return img
