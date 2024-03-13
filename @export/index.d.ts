@@ -13,9 +13,10 @@ declare namespace MetaboLights {
    */
    function extract_spectra(maf: any, rawfiles: any, outputdir?: any): object;
    /**
-     * @param idset default value Is ``null``.
+     * @param outputdir default value Is ``./``.
+     * @param highlights default value Is ``null``.
    */
-   function pathmaps(idset?: any): object;
+   function pathmaps(outputdir?: any, highlights?: any): object;
    /**
    */
    function requestRepository(): object;
