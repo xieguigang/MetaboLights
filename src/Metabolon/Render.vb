@@ -14,6 +14,8 @@ Namespace Metabolon
         ReadOnly network As metabolon_network
         ReadOnly mapper As Mapper
 
+        Public Property defaultFill As String = NameOf(Color.LightGray)
+
         Sub New(association As association_matrix_v6, network As metabolon_network)
             Me.network = network
             Me.mapper = New Mapper(association, network)
@@ -21,7 +23,7 @@ Namespace Metabolon
 
         Public Function RenderGraph(highlights As Dictionary(Of String, String)) As NetworkGraph
             Dim graph As NetworkGraph = network.CreateGraph
-            Dim gray As Brush = Brushes.Gray
+            Dim gray As Brush = defaultFill.GetBrush
 
             ' reset colors
             For Each v As Node In graph.vertex

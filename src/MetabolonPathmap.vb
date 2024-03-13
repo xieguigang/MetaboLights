@@ -21,10 +21,13 @@ Module MetabolonPathmap
     <RGenericOverloads("plot")>
     Public Function plotPathmap(render As Render, args As list, env As Environment) As Object
         Dim highlights As list = args.getValue(Of list)({"highlight", "highlights"}, env, [default]:=Nothing)
+        Dim defaultColor As String = args.getValue({"default.fill"}, env, [default]:="lightgray")
         Dim colors As Dictionary(Of String, String) = If(
             highlights Is Nothing,
             Nothing,
-            highlights.AsGeneric(env, [default]:="#FFFFFF"))
+            highlights.AsGeneric(env, [default]:="#000000"))
+
+        render.defaultFill = defaultColor
 
         Return render.RenderSvg(highlights:=colors)
     End Function

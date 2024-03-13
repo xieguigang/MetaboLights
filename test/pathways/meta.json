@@ -2,10 +2,10 @@
   "additionals": {
     
   },
-  "create_time": "3\/13\/2024 03:41:11 PM",
+  "create_time": "3\/13\/2024 03:47:17 PM",
   "creators": ["Maria Ulmer","Johannes Raffler","xie.guigang@gcmodeller.org"],
   "description": "metabolic pathways highlights",
-  "keywords": ["HMDB0002820","6505-45-9"],
+  "keywords": ["HMDB0002820","6505-45-9","HMDB0094656","HMDB0000056","535-83-1","24003-67-6","1005-24-9"],
   "links": ["https:\/\/omicscience.org\/","https:\/\/mzkit.org\/","https:\/\/gcmodeller.org\/","https:\/\/rsharp.net\/"],
   "title": "Map of metabolic pathways with associated metabolites and genes"
 }
