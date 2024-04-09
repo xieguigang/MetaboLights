@@ -2,15 +2,16 @@ imports "Metabolon" from "MetaboLights";
 
 require(igraph);
 
+let readJSON = function(name, what) {
+    `data/Metabolon/${name}` 
+    |> system.file(package = "MetaboLights")
+    |> loadJSON(what)
+    ;
+}
+
 #' rendering the pathway map
 #' 
 const pathmaps = function(outputdir = "./", highlights = NULL, default.fill_color = "lightgray") {
-    let readJSON = function(name, what) {
-        `data/Metabolon/${name}` 
-        |> system.file(package = "MetaboLights")
-        |> loadJSON(what)
-        ;
-    }
     let associations = readJSON("association_matrix.v6.json", 
         what = "association_matrix.v6");
     let graph_path = readJSON("metabolon-network.json", 
@@ -35,4 +36,11 @@ const pathmaps = function(outputdir = "./", highlights = NULL, default.fill_colo
             links = ["https://omicscience.org/", "https://mzkit.org/", "https://gcmodeller.org/", "https://rsharp.net/"],
             keywords = names(highlights)
         ));
+}
+
+const pathway_metabolites = function() {
+    let associations = readJSON("association_matrix.v6.json", 
+        what = "association_matrix.v6");
+
+    print(associations);
 }

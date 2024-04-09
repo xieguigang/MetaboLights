@@ -1,8 +1,10 @@
 ﻿
 Imports MetaboLights.Metabolon
 Imports MetaboLights.Metabolon.Models
+Imports MetaboLights.Metabolon.Models.AssociationMatrix
 Imports Microsoft.VisualBasic.CommandLine.Reflection
 Imports Microsoft.VisualBasic.Data.visualize.Network.Graph
+Imports Microsoft.VisualBasic.Linq
 Imports Microsoft.VisualBasic.Scripting.MetaData
 Imports SMRUCC.Rsharp.Runtime
 Imports SMRUCC.Rsharp.Runtime.Internal
@@ -55,6 +57,35 @@ Module MetabolonPathmap
         Dim graph As NetworkGraph = render.RenderGraph(colors)
 
         Return graph
+    End Function
+
+    <ExportAPI("matches_cas")>
+    Public Function matches(<RRawVectorArgument> cas As String(), association As association_matrix_v6) As Object
+        If cas.IsNullOrEmpty Then
+            Return Nothing
+        End If
+
+        Dim metabolites_cas = association _
+            .GetAllMetabolites _
+            .Select(Iterator Function(r) As IEnumerable(Of (cas_id As String, meta As response))
+                        For Each id As String In r.cas.StringSplit("[,;]+")
+                            Yield (id, r)
+                        Next
+                    End Function) _
+            .IteratesALL _
+            .GroupBy(Function(r) r.cas_id) _
+            .ToDictionary(Function(a) a.Key,
+                          Function(a)
+                              Return a.ToArray
+                          End Function)
+
+        Dim result As response() = New response(cas.Length - 1) {}
+
+        For i As Integer = 0 To result.Length - 1
+            result(i) = metabolites_cas.TryGetValue(cas(i), [default]:={}).FirstOrDefault.meta
+        Next
+
+        Return result
     End Function
 
 End Module
