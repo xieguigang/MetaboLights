@@ -20,7 +20,7 @@ declare namespace MetaboLights {
    function pathmaps(outputdir?: any, highlights?: any, default.fill_color?: any): object;
    /**
    */
-   function pathway_metabolites(): object;
+   function pathway_metabolites(cas_id: any): object;
    /**
    */
    function readJSON(name: any, what: any): object;

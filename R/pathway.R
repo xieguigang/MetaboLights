@@ -38,9 +38,21 @@ const pathmaps = function(outputdir = "./", highlights = NULL, default.fill_colo
         ));
 }
 
-const pathway_metabolites = function() {
+const pathway_metabolites = function(cas_id) {
     let associations = readJSON("association_matrix.v6.json", 
         what = "association_matrix.v6");
+    let matches = matches_cas(cas_id, associations);
 
-    print(associations);
+    data.frame(
+        cas_id = cas_id,
+        name = [matches]::name,
+        superpathway = [matches]::superpathway,
+        subpathway = [matches]::subpathway,
+        mass      = [matches]::mass,
+        ri       = [matches]::ri,
+        pubchem  = [matches]::pubchem,
+        chemspider  = [matches]::chemspider,
+        hmdb  = [matches]::hmdb,
+        kegg  = [matches]::kegg  
+    );
 }
