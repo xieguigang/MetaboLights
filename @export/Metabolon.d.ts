@@ -16,4 +16,7 @@ declare namespace Metabolon {
      * @param env default value Is ``null``.
    */
    function highlights(render: object, highlight: object, env?: object): object;
+   /**
+   */
+   function matches_cas(cas: string, association: object): any;
 }
