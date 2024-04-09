@@ -60,6 +60,7 @@ Module MetabolonPathmap
     End Function
 
     <ExportAPI("matches_cas")>
+    <RApiReturn(GetType(response))>
     Public Function matches(<RRawVectorArgument> cas As String(), association As association_matrix_v6) As Object
         If cas.IsNullOrEmpty Then
             Return Nothing

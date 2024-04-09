@@ -18,5 +18,5 @@ declare namespace Metabolon {
    function highlights(render: object, highlight: object, env?: object): object;
    /**
    */
-   function matches_cas(cas: string, association: object): any;
+   function matches_cas(cas: string, association: object): object;
 }
