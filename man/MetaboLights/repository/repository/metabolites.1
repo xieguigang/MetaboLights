@@ -17,6 +17,16 @@ get metabolites data from the database repository
 .PP
 \fBenv\fB \fR\- -. 
 .PP
+.SH EXAMPLES
+.PP
+require(MetaboLights);
+ 
+ const source_repo = "/path/to/eb-eye_metabolights_complete.xml";
+ const data_repo = loadMetaEntries(source_repo) |> as.metaSet();
+ const metabos_data = data_repo |> metabolites();
+ 
+ write.csv(metabos_data, file = "/path/to/metabolites.csv");
+.PP
 .SH SEE ALSO
 repository
 .SH FILES
