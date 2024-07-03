@@ -38,6 +38,24 @@ Module MTBLSStudy
         Return metadata
     End Function
 
+    ''' <summary>
+    ''' 
+    ''' </summary>
+    ''' <param name="metadata"></param>
+    ''' <param name="group">
+    ''' the group source, value could be characteristics or factor
+    ''' </param>
+    ''' <param name="property">
+    ''' the group property data, value maybe various based on the study details
+    ''' </param>
+    ''' <returns></returns>
+    ''' <remarks>
+    ''' the sample group information is generates via the combination of 
+    ''' <paramref name="group"/> and <paramref name="property"/> data, 
+    ''' example as, there is data field named ``Factor Value[Cohort]`` in maf 
+    ''' table file, then the group parameter value should be ``factor`` and 
+    ''' the property parameter value should be ``Cohort``.
+    ''' </remarks>
     <ExportAPI("sampleinfo")>
     <RApiReturn(GetType(SampleInfo))>
     Public Function convertSampleinfo(metadata As Source(), group As String, [property] As String) As Object
