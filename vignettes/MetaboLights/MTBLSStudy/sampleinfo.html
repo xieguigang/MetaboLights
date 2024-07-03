@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>sampleinfo</title>
+    <title></title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
     <link rel="stylesheet" type="text/css" href="../../_assets/page.css">
@@ -18,11 +18,11 @@
             </tr>
         </table>
 
-        <h2>sampleinfo</h2>
+        <h2></h2>
 
         <h3>Description</h3>
 
-        sampleinfo
+        
 
         <h3>Usage</h3>
 
@@ -34,12 +34,27 @@
 
         <table>
             
+<dt>metadata</dt>
+<dd><p>[as <a href="/vignettes/clr/MetaboLights/Source.html">Source</a>]</p></dd>
+
+
+<dt>group</dt>
+<dd><p>the group source, value could be characteristics or factor. [as string]</p></dd>
+
+
+<dt>property</dt>
+<dd><p>the group property data, value maybe various based on the study details. [as string]</p></dd>
+
         </table>
 
 
-        <h3 style="display: none;">Details</h3>
+        <h3 style="display: block;">Details</h3>
 
-        
+        <p>the sample group information is generates via the combination of 
+ <strong>`group`<em></em> and <em></em>`property`</strong> data, 
+ example as, there is data field named <code>Factor Value[Cohort]</code> in maf 
+ table file, then the group parameter value should be <code>factor</code> and 
+ the property parameter value should be <code>Cohort</code>.</p>
 
         <h3 style="display: block">Authors</h3>
 

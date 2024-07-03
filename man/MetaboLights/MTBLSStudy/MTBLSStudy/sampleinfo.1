@@ -6,6 +6,28 @@ sampleinfo \-
 \fIsampleinfo(\fBmetadata\fR as <generic> Source[], 
 \fBgroup\fR as string, 
 \fBproperty\fR as string);\fR
+.SH OPTIONS
+.PP
+\fBmetadata\fB \fR\- -. 
+.PP
+.PP
+\fBgroup\fB \fR\- 
+ the group source, value could be characteristics or factor
+. 
+.PP
+.PP
+\fBproperty\fB \fR\- 
+ the group property data, value maybe various based on the study details
+. 
+.PP
+.SH DETAILS
+.PP
+the sample group information is generates via the combination of 
+ **`group`** and **`property`** data, 
+ example as, there is data field named \fBFactor Value[Cohort]\fR in maf 
+ table file, then the group parameter value should be \fBfactor\fR and 
+ the property parameter value should be \fBCohort\fR.
+.PP
 .SH SEE ALSO
 MTBLSStudy
 .SH FILES
