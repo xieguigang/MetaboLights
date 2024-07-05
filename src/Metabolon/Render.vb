@@ -67,6 +67,7 @@ Namespace Metabolon
                   fillConvexHullPolygon:=False,
                   labelTextStroke:=Nothing,
                   shapeRender:=AddressOf LegendPlotExtensions.DrawShape,
+                  drawEdgeDirection:=True,
                   labelWordWrapWidth:=24,
                   fontSize:=16,
                   driver:=Drivers.SVG)
