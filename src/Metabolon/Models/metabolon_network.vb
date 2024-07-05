@@ -1,6 +1,7 @@
 ﻿Imports System.Drawing
 Imports MetaboLights.Metabolon.Models.AssociationMatrix
 Imports MetaboLights.Metabolon.Models.Network
+Imports Microsoft.VisualBasic.ComponentModel.Ranges.Model
 Imports Microsoft.VisualBasic.Data.ChartPlots.Graphic.Legend
 Imports Microsoft.VisualBasic.Data.visualize.Network
 Imports Microsoft.VisualBasic.Data.visualize.Network.FileStream.Generic
@@ -12,6 +13,9 @@ Imports V = Microsoft.VisualBasic.Data.visualize.Network.Graph.Node
 
 Namespace Metabolon.Models
 
+    ''' <summary>
+    ''' the network model for pathway map
+    ''' </summary>
     Public Class metabolon_network
 
         Public Property nodes As node()
@@ -20,13 +24,19 @@ Namespace Metabolon.Models
         Public Property width As Integer
         Public Property height As Integer
 
-        Public Function CreateGraph(metadata As Dictionary(Of String, response)) As Graph.NetworkGraph
+        Public Function CreateGraph(metadata As Dictionary(Of String, response), scale As SizeF, lineWidth As Single) As Graph.NetworkGraph
             Dim g As New Graph.NetworkGraph
+            Dim width As Integer = Me.width * scale.Width
+            Dim height As Integer = Me.height * scale.Height
+            Dim raw_w As New DoubleRange(0, Me.width)
+            Dim raw_h As New DoubleRange(0, Me.height)
+            Dim scale_x As New DoubleRange(0, width)
+            Dim scale_y As New DoubleRange(0, height)
 
             For Each node As node In nodes
                 Dim meta As New node_data() With {
                     .color = node.color.GetBrush,
-                    .initialPostion = New FDGVector2(node.x, node.y),
+                    .initialPostion = New FDGVector2(raw_w.ScaleMapping(node.x, scale_x), raw_h.ScaleMapping(node.y, scale_y)),
                     .label = If(node.label.StringEmpty, node.title, node.label),
                     .mass = 1,
                     .origID = node.id,
@@ -59,7 +69,7 @@ Namespace Metabolon.Models
                 Dim v As V = g.GetElementByID(edge.to)
                 Dim meta As New edge_data With {
                     .label = edge.title,
-                    .style = New Pen(edge.color.GetBrush, 1.0)
+                    .style = New Pen(edge.color.GetBrush, lineWidth)
                 }
 
                 Call g.CreateEdge(u, v, 1, meta)

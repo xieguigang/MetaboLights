@@ -17,6 +17,12 @@ Namespace Metabolon
         ReadOnly metadata As Dictionary(Of String, response)
 
         Public Property defaultFill As String = NameOf(Color.LightGray)
+        Public Property scale As New SizeF(6.5, 9)
+        ''' <summary>
+        ''' the line width of the edge
+        ''' </summary>
+        ''' <returns></returns>
+        Public Property lineWidth As Single = 2
 
         Sub New(association As association_matrix_v6, network As metabolon_network)
             Me.network = network
@@ -25,7 +31,7 @@ Namespace Metabolon
         End Sub
 
         Public Function RenderGraph(highlights As Dictionary(Of String, String)) As NetworkGraph
-            Dim graph As NetworkGraph = network.CreateGraph(metadata)
+            Dim graph As NetworkGraph = network.CreateGraph(metadata, scale, lineWidth)
             Dim gray As Brush = defaultFill.GetBrush
 
             ' reset colors
@@ -62,7 +68,7 @@ Namespace Metabolon
             Dim graph As NetworkGraph = RenderGraph(highlights)
             ' rendering the network graph as svg
             Dim img = NetworkVisualizer.DrawImage(graph,
-                  canvasSize:=$"{network.width * 6.5},{network.height * 6.5}",
+                  canvasSize:=$"{network.width * scale.Width},{network.height * scale.Height}",
                   labelerIterations:=0,
                   fillConvexHullPolygon:=False,
                   labelTextStroke:=Nothing,
