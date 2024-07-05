@@ -17,12 +17,13 @@ Namespace Metabolon
         ReadOnly metadata As Dictionary(Of String, response)
 
         Public Property defaultFill As String = NameOf(Color.LightGray)
-        Public Property scale As New SizeF(6.5, 9)
+        Public Property scale As New SizeF(6.5, 10)
         ''' <summary>
         ''' the line width of the edge
         ''' </summary>
         ''' <returns></returns>
-        Public Property lineWidth As Single = 2
+        Public Property lineWidth As Single = 4
+        Public Property fontSize As Single = 24
 
         Sub New(association As association_matrix_v6, network As metabolon_network)
             Me.network = network
@@ -75,7 +76,7 @@ Namespace Metabolon
                   shapeRender:=AddressOf LegendPlotExtensions.DrawShape,
                   drawEdgeDirection:=True,
                   labelWordWrapWidth:=24,
-                  fontSize:=16,
+                  fontSize:=fontSize,
                   driver:=Drivers.SVG)
 
             Return img
