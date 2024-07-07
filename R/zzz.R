@@ -1,6 +1,8 @@
 imports "repository" from "MetaboLights";
 imports "MTBLSStudy" from "MetaboLights";
 
+require(REnv);
+
 #' package startup
 #' 
 const .onLoad = function() {
