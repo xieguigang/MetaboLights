@@ -16,7 +16,7 @@ plsda = function(x) {
 
     # 进行PLS-DA分析
     # 首先，我们需要将数据转换为ropls所需的格式
-    data_pls <- opls(data = data, class = data_class, predI = 3)
+    data_pls <- opls(data, y = data_class, predI = 3)
 
     # 提取PLS-DA得分
     plsda_scores <- as.data.frame(data_pls@scores$X)
