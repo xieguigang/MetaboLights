@@ -1,4 +1,5 @@
 require(mzkit);
+require(MetaboLights);
 
 [@info "the file path to the rawdata matrix file, should be a csv excel table file 
         in format of features in rows and sample in columns."]
@@ -19,3 +20,14 @@ let sampleinfo = ?"--sampleinfo" || stop("the sampleinfo metadata must be provid
 
 [@info "a directory path for export the analysis result."]
 let workdir = ?"--export_dir" || file.path(dirname(raw_data), "LCMS_analysis");
+
+# rawdata pre-processing
+# impute and normalization
+
+
+# combine data with sample metadata
+raw_data 
+|> combine_sampleinfo(sampleinfo)
+|> write.csv(x, file.path(workdir, "data.csv"), 
+    row.names = TRUE);
+
