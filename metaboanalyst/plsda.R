@@ -19,7 +19,12 @@ plsda = function(x) {
     data_pls <- opls(data, y = data_class, predI = 3)
 
     # 提取PLS-DA得分
-    plsda_scores <- as.data.frame(data_pls@scores$X)
+    plsda_scores <- as.data.frame(data_pls@scoreMN);
+    plsda_scores <- data.frame(
+        Score1 = plsda_scores$p1,
+        Score2 = plsda_scores$p2,
+        Score3 = plsda_scores$p3
+    );
 
     # 将PLS-DA得分和物种信息合并为一个数据框
     plsda_data <- data.frame(class = data_class, plsda_scores)
