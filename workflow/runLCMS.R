@@ -23,7 +23,13 @@ let workdir = ?"--export_dir" || file.path(dirname(raw_data), "LCMS_analysis");
 
 # rawdata pre-processing
 # impute and normalization
-
+sampleinfo <- read.csv(sampleinfo, row.names = NULL, check.names = FALSE);
+# binary/csv/txt
+raw_data  <- read.xcms_peaks(raw_data, tsv = file.ext(raw_data) != "csv");
+raw_data  <- mzkit::preprocessing_expression(raw_data, 
+    sampleinfo = sampleinfo, 
+    factor = 1e8, missing = 0.3
+);
 
 # combine data with sample metadata
 raw_data 
