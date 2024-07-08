@@ -20,6 +20,7 @@ ttest = function(x) {
 
 ttest_group = function(x, a, b) {
     workdir = paste(c(a,b), collapse = " vs ");
+    dir.create(workdir);
 
     i = a == x$class;
     j = b == x$class;
@@ -38,13 +39,13 @@ ttest_group = function(x, a, b) {
     sd_a = apply(i,1, sd);
     sd_b = apply(j,1,sd);
     foldchange = mean_a / mean_b;
-    t = sapply(1:nrow(i), function(offset) {
+    t = lapply(1:nrow(i), function(offset) {
         v1 = unlist(i[offset,,drop = TRUE]);
         v2 = unlist(j[offset,, drop = TRUE]);
         t.test(v1,v2, alternative = "two.sided" );
     });
-    pvalue = sapply(t, function(x) x@p.value);
-    t = sapply(t, function(x) x@statistic);
+    pvalue = sapply(t, function(x) x$p.value);
+    t = sapply(t, function(x) x$statistic);
     t = data.frame(
         mean_a, mean_b, sd_a, sd_b,foldchange, log(foldchange,base =2),t,pvalue, 
         row.names = rownames(i)
