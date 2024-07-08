@@ -3,6 +3,7 @@ oplsda = function(x) {
     class = unique(x$class);
     sample_class = x$class;
 
+    # opls-da only works for two group
     for(class_name in class) {
         v <- as.character(sample_class);
         v[v != class_name] = "Other";

@@ -6,6 +6,9 @@ plsda = function(x, oplsda = FALSE) {
     # 假设你已经有了一个名为data的数据框，其中包含了你的代谢组学数据
     # data <- read.csv("path_to_your_data.csv", row.names = 1)
 
+    dir.create("plsda");
+    setwd("plsda");
+
     # 由于iris数据集是连续的，我们需要将其转换为分类变量
     data = as.data.frame(x);
     data_class <- as.factor(data$class)
@@ -16,7 +19,7 @@ plsda = function(x, oplsda = FALSE) {
     data[, "class"] = NULL;
 
     # 进行PLS-DA分析
-    svg(filename = "ropls.svg");
+    svg(filename = ifelse(oplsda, "ropls.svg", "plsda.svg"));
 
     if (oplsda) {
         data_pls <- opls(data, y = data_class, predI = 3, orthoI = NA)
@@ -45,7 +48,9 @@ plsda = function(x, oplsda = FALSE) {
     }
 
     # 将PLS-DA得分和物种信息合并为一个数据框
-    plsda_data <- data.frame(class = data_class, plsda_scores)
+    plsda_data <- cbind(class = data_class, plsda_scores);
+
+    write.csv(plsda_data, file = "plsda.csv", row.names = TRUE);
 
     svg(filename = "plsda.svg");
 
@@ -59,4 +64,6 @@ plsda = function(x, oplsda = FALSE) {
         theme(legend.position = "bottom")  # 将图例放在底部
 
     dev.off();
+
+    setwd("..");
 }

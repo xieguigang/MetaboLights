@@ -31,9 +31,22 @@ raw_data  <- mzkit::preprocessing_expression(raw_data,
     factor = 1e8, missing = 0.3
 );
 
+let processed_raw = file.path(workdir, "data.csv");
+let run = function() {
+    let x = read.csv(processed_raw, row.names = 1, check.names = FALSE);
+
+    setwd(workdir);
+
+    pca(x);
+    plsda(x);
+    oplsda(x);     
+}
+
 # combine data with sample metadata
 raw_data 
 |> combine_sampleinfo(sampleinfo)
-|> write.csv(x, file.path(workdir, "data.csv"), 
+|> write.csv(x, file = processed_raw, 
     row.names = TRUE);
+
+
 
