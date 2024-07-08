@@ -58,5 +58,22 @@ ttest_group = function(x, a, b) {
 
     write.csv(t, file = file.path(workdir, "ttest.csv"), row.names = TRUE);
 
-    
+    svg(filename = file.path(workdir, "volcano.svg"));
+    volcano(t); 
+    dev.off();
+}
+
+volcano = function(t, log_cutoff = 2, pval_cutoff = 0.05) {
+    t[, "log10"] = -log10(t$p.value);
+    t[, "sig"] =  ifelse(t$log2FC > log_cutoff & t$p.value < pval_cutoff, "Upregulated",
+                           ifelse(t$log2FC < -log_cutoff & t$p.value < pval_cutoff, "Downregulated", "Not Significant"));
+
+    ggplot(t, aes(x=log2FC, y=log10, color=sig)) +
+        geom_point() +
+        theme_minimal() +
+        scale_color_manual(values=c("blue", "red", "grey"), labels=c("Upregulated", "Downregulated", "Not Significant")) +
+        geom_vline(xintercept=c(-log_cutoff, log_cutoff), linetype="dashed") +
+        geom_hline(yintercept=-log10(pval_cutoff), linetype="dashed") +
+        labs(x="log2 Fold Change", y="-log10(p value)", color="Significance") +
+        theme(legend.position="right")
 }
