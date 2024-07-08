@@ -65,8 +65,8 @@ ttest_group = function(x, a, b) {
 
 volcano = function(t, log_cutoff = 2, pval_cutoff = 0.05) {
     t[, "log10"] = -log10(t$p.value);
-    t[, "sig"] =  ifelse(t$log2FC > log_cutoff & t$p.value < pval_cutoff, "Upregulated",
-                           ifelse(t$log2FC < -log_cutoff & t$p.value < pval_cutoff, "Downregulated", "Not Significant"));
+    t[, "sig"] = ifelse(t$log2FC > log_cutoff & t$p.value < pval_cutoff, "Upregulated",
+                ifelse(t$log2FC < -log_cutoff & t$p.value < pval_cutoff, "Downregulated", "Not Significant"));
 
     ggplot(t, aes(x=log2FC, y=log10, color=sig)) +
         geom_point() +
