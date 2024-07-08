@@ -39,7 +39,9 @@ let run = function() {
 
     pca(x);
     plsda(x);
-    oplsda(x);     
+    oplsda(x); 
+    anova(x);
+    ttest(x);     
 }
 let deps = system.file("metaboanalyst/readme.txt", package = "MetaboLights") 
 |> dirname() 
