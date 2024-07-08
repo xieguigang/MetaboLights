@@ -41,6 +41,11 @@ let run = function() {
     plsda(x);
     oplsda(x);     
 }
+let deps = system.file("metaboanalyst/readme.txt", package = "MetaboLights") 
+|> dirname() 
+|> list.files(pattern = "*.R", 
+    recursive = TRUE)
+;
 
 # combine data with sample metadata
 raw_data 
@@ -48,5 +53,6 @@ raw_data
 |> write.csv(x, file = processed_raw, 
     row.names = TRUE);
 
-
+REnv::rlang_interop(run, source = deps, 
+    debug = TRUE);
 
