@@ -353,3 +353,4 @@ MigrationBackup/
 .Rproj.user
 .pkg/MetaboLights.zip
 test/workflow_test/.RData
+.RData
