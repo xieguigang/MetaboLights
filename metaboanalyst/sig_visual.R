@@ -1,3 +1,5 @@
-const sig_visual = function(x) {
-    
+#' bar/box/violin/heatmap plot of the different expression value
+#' 
+sig_visual = function(x) {
+
 }
