@@ -40,7 +40,7 @@ let run = function() {
     pca(x);
     plsda(x);
     oplsda(x); 
-    anova(x);
+    anova_analysis(x);
     ttest(x);     
 }
 let deps = system.file("metaboanalyst/readme.txt", package = "MetaboLights") 

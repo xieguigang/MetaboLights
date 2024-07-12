@@ -1,4 +1,4 @@
-anova = function(x) {
+anova_analysis = function(x) {
     class = x$class;
 
     x[, "class"] = NULL;
