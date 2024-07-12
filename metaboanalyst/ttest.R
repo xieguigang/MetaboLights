@@ -18,7 +18,7 @@ ttest = function(x) {
     }
 }
 
-ttest_group = function(x, a, b) {
+ttest_group = function(x, a, b, log_cutoff = 2, pval_cutoff = 0.05) {
     workdir = paste(c(a,b), collapse = " vs ");
     dir.create(workdir);
 
@@ -57,6 +57,10 @@ ttest_group = function(x, a, b) {
         "foldchange", "log2FC","t","p.value"
     );
 
+    t[, "log10"] = -log10(t$p.value);
+    t[, "sig"] = ifelse(t$log2FC > log_cutoff & t$p.value < pval_cutoff, "Upregulated",
+                ifelse(t$log2FC < -log_cutoff & t$p.value < pval_cutoff, "Downregulated", "Not Significant"));
+
     write.csv(t, file = file.path(workdir, "ttest.csv"), row.names = TRUE);
 
     svg(filename = file.path(workdir, "volcano.svg"));
@@ -64,11 +68,7 @@ ttest_group = function(x, a, b) {
     dev.off();
 }
 
-volcano = function(t, log_cutoff = 2, pval_cutoff = 0.05) {
-    t[, "log10"] = -log10(t$p.value);
-    t[, "sig"] = ifelse(t$log2FC > log_cutoff & t$p.value < pval_cutoff, "Upregulated",
-                ifelse(t$log2FC < -log_cutoff & t$p.value < pval_cutoff, "Downregulated", "Not Significant"));
-
+volcano = function(t, log_cutoff = 2, pval_cutoff = 0.05) {   
     ggplot(t, aes(x=log2FC, y=log10, color=sig)) +
         geom_point() +
         theme_minimal() +
