@@ -1,11 +1,14 @@
 Package: MetaboLights
 Type: Package
-Title: What the Package Does (Title Case)
+Title: MetaboLights data repository
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Author: xieguigang
+Maintainer: xieguigang <gg.xie@bionovogene.com>
+Description: MetaboLights is a database for Metabolomics experiments and derived information. 
+   The database is cross-species, cross-technique and covers metabolite structures and their 
+   reference spectra as well as their biological roles, locations and concentrations, and 
+   experimental data from metabolic experiments. MetaboLights is the recommended Metabolomics 
+   repository for a number of leading journals.
+License: MIT
 Encoding: UTF-8
 LazyData: true
