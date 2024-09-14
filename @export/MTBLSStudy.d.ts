@@ -11,7 +11,13 @@
 declare namespace MTBLSStudy {
    module read {
       /**
-        * @param env default value Is ``null``.
+       * read the metabolights study file
+       * 
+       * 
+        * @param file a file path to the metabolights study maf tsv table file.
+        * @param env -
+        * 
+        * + default value Is ``null``.
       */
       function study_source(file: any, env?: object): object;
    }

@@ -53,8 +53,11 @@ declare namespace repository {
     * 
      * @param file should be a file path to the complete metabolights 
      *  database file: ``eb-eye_metabolights_complete.xml``
+     * @param tqdm apply of the tqdm progress bar wrapper?
+     * 
+     * + default value Is ``true``.
    */
-   function loadMetaEntries(file: string): object;
+   function loadMetaEntries(file: string, tqdm?: boolean): object;
    /**
     * get metabolites data from the database repository
     * 

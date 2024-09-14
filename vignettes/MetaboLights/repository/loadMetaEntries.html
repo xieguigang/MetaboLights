@@ -27,7 +27,8 @@
         <h3>Usage</h3>
 
         <div style="width: 100%; padding-left: 3%; color: black;">
-            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>loadMetaEntries</strong>(<i>file</i>);</code></pre>
+            <pre><code class='language-R' style="color: black; font-weight:normal;"><strong>loadMetaEntries</strong>(<i>file</i>,
+    <i>tqdm</i> = <span style='color: blue !important;'>TRUE</span>);</code></pre>
         </div>
 
         <h3>Arguments</h3>
@@ -37,6 +38,10 @@
 <dt>file</dt>
 <dd><p>should be a file path to the complete metabolights 
  database file: <code>eb-eye_metabolights_complete.xml</code>. [as string]</p></dd>
+
+
+<dt>tqdm</dt>
+<dd><p>apply of the tqdm progress bar wrapper?. [as boolean]</p></dd>
 
         </table>
 

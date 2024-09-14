@@ -3,7 +3,8 @@
 .SH NAME
 loadMetaEntries \- load the complete metabolights database
 .SH SYNOPSIS
-\fIloadMetaEntries(\fBfile\fR as string);\fR
+\fIloadMetaEntries(\fBfile\fR as string, 
+\fBtqdm\fR as boolean = TRUE);\fR
 .SH DESCRIPTION
 .PP
 load the complete metabolights database
@@ -12,6 +13,11 @@ load the complete metabolights database
 .PP
 \fBfile\fB \fR\- should be a file path to the complete metabolights 
  database file: \fBeb-eye_metabolights_complete.xml\fR. 
+.PP
+.PP
+\fBtqdm\fB \fR\- 
+ apply of the tqdm progress bar wrapper?
+. 
 .PP
 .SH DETAILS
 .PP
