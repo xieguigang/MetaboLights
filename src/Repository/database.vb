@@ -16,8 +16,8 @@ Public Class database
     End Function
 
     <MethodImpl(MethodImplOptions.AggressiveInlining)>
-    Public Shared Function LoadReferenceEntries(file As String) As IEnumerable(Of entry)
-        Return file.LoadUltraLargeXMLDataSet(Of entry)()
+    Public Shared Function LoadReferenceEntries(file As String, Optional tqdm As Boolean = True) As IEnumerable(Of entry)
+        Return file.LoadUltraLargeXMLDataSet(Of entry)(tqdm:=tqdm)
     End Function
 
 End Class

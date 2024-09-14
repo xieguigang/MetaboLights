@@ -114,14 +114,17 @@ Public Module Rscript
     ''' </summary>
     ''' <param name="file">should be a file path to the complete metabolights 
     ''' database file: ``eb-eye_metabolights_complete.xml``</param>
+    ''' <param name="tqdm">
+    ''' apply of the tqdm progress bar wrapper?
+    ''' </param>
     ''' <returns></returns>
     ''' <remarks>
     ''' the database file could be download from the url link: 
     ''' http://ftp.ebi.ac.uk/pub/databases/metabolights/eb-eye/eb-eye_metabolights_complete.xml
     ''' </remarks>
     <ExportAPI("loadMetaEntries")>
-    Public Function loadMetaEntries(file As String) As pipeline
-        Return pipeline.CreateFromPopulator(database.LoadReferenceEntries(file))
+    Public Function loadMetaEntries(file As String, Optional tqdm As Boolean = True) As pipeline
+        Return pipeline.CreateFromPopulator(database.LoadReferenceEntries(file, tqdm:=tqdm))
     End Function
 
     ''' <summary>
