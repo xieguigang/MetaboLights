@@ -19,7 +19,7 @@ Public Class MetaData
     End Function
 
     Public Shared Function CreateMeta(entry As entry) As MetaData
-        Dim metadata = loadMetaSet(entry)
+        Dim metadata As Dictionary(Of String, field()) = loadMetaSet(entry)
         Dim publication = getValues(metadata, "publication").FirstOrDefault
         Dim study_design = getValues(metadata, "study_design")
         Dim cross_references = entry.cross_references _
@@ -53,7 +53,12 @@ Public Class MetaData
                 .Organism = getValues(metadata, "Organism"),
                 .OrganismPart = getValues(metadata, "Organism Part"),
                 .publication = publication,
-                .study_design = study_design
+                .study_design = study_design,
+                .study_factor = getValues(metadata, "study_factor"),
+                .instrument_platform = getValues(metadata, "instrument_platform"),
+                .technology_type = getValues(metadata, "technology_type").FirstOrDefault,
+                .omics_type = getValues(metadata, "omics_type").FirstOrDefault,
+                .protocols = New Protocols(metadata)
             }
         End If
     End Function
@@ -67,7 +72,7 @@ Public Class MetaData
                           End Function)
     End Function
 
-    Protected Shared Function getValues(metadata As Dictionary(Of String, field()), ref As String) As String()
+    Protected Friend Shared Function getValues(metadata As Dictionary(Of String, field()), ref As String) As String()
         If metadata.ContainsKey(ref) Then
             Return metadata(ref).Select(Function(a) a.value).ToArray
         Else
