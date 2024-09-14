@@ -34,12 +34,17 @@ export class ResearchStudy extends <a href="/vignettes/clr/MetaboLights/MetaData
    cross_references: list;
    description: string;
    entry_id: string;
+   instrument_platform: string;
    keywords: string;
    name: string;
+   omics_type: string;
    Organism: string;
    OrganismPart: string;
+   protocols: <a href="/vignettes/clr/MetaboLights/Protocols.html">Protocols</a>;
    publication: string;
    study_design: string;
+   study_factor: string;
+   technology_type: string;
 }
 </code>
         </pre>
@@ -49,6 +54,7 @@ export class ResearchStudy extends <a href="/vignettes/clr/MetaboLights/MetaData
         <ol>
 <li>this class extends from <a href="/vignettes/clr/MetaboLights/MetaData.html">MetaData</a> class: <a href="/vignettes/clr/MetaboLights/MetaData.html">MetaData</a></li>
 <li>use by <i>property</i> member <code>cross_references</code>: list</li>
+<li>use by <i>property</i> member <code>protocols</code>: <a href="/vignettes/clr/MetaboLights/Protocols.html">Protocols</a></li>
 </ol>
 
 
