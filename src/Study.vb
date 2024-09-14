@@ -19,6 +19,12 @@ Module MTBLSStudy
 
     End Sub
 
+    ''' <summary>
+    ''' read the metabolights study file
+    ''' </summary>
+    ''' <param name="file">a file path to the metabolights study maf tsv table file.</param>
+    ''' <param name="env"></param>
+    ''' <returns></returns>
     <ExportAPI("read.study_source")>
     <RApiReturn(GetType(Source))>
     Public Function readSourceInformation(<RRawVectorArgument> file As Object, Optional env As Environment = Nothing) As Object

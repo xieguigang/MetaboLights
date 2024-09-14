@@ -1,4 +1,8 @@
-﻿Public Class ResearchStudy : Inherits MetaData
+﻿
+''' <summary>
+''' metadata of the metabolights research study
+''' </summary>
+Public Class ResearchStudy : Inherits MetaData
 
     Public Property authors As String()
     Public Property publication As String
