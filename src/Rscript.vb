@@ -83,6 +83,14 @@ Public Module Rscript
         table.columns("publication") = study.Select(Function(d) trimString(d.publication)).ToArray
         table.columns("organism") = organismTags
         table.columns("tissue") = tissueTags
+
+        Call table.add("sample_collection", study.Select(Function(a) a.protocols.sample_collection))
+        Call table.add("extraction", study.Select(Function(a) a.protocols.extraction))
+        Call table.add("chromatography", study.Select(Function(a) a.protocols.chromatography))
+        Call table.add("mass_spectrometry", study.Select(Function(a) a.protocols.mass_spectrometry))
+        Call table.add("data_transformation", study.Select(Function(a) a.protocols.data_transformation))
+        Call table.add("metabolite_identification", study.Select(Function(a) a.protocols.metabolite_identification))
+
         table.columns("metabolites") = study _
             .Select(Function(d)
                         Return d.cross_references _
