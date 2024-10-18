@@ -13,6 +13,11 @@ pool = pool |> memory_query::fulltext("protocols.mass_spectrometry")
             |> memory_query::fulltext("description")
             ;
 
-let experiments = pool |> select(match_against("protocols.mass_spectrometry", "fisher"));
+let serum = pool |> select(match_against("protocols.mass_spectrometry", "thermo fisher"), match_against("description", "Serum"));
+let plasma = pool |> select(match_against("protocols.mass_spectrometry", "thermo fisher"), match_against("description", "plasma"));
+let blood = pool |> select(match_against("protocols.mass_spectrometry", "thermo fisher"), match_against("description", "blood"));
+let experiments = as.data.frame([...serum, ...plasma, ...blood]);
 
-print(as.data.frame(experiments));
+print(experiments);
+
+write.csv(experiments, file = "./experiments_filter.csv");

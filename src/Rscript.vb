@@ -78,18 +78,19 @@ Public Module Rscript
             .ToArray
 
         table.columns("name") = study.Select(Function(d) trimString(d.name)).ToArray
+        table.columns("description") = study.Select(Function(d) trimString(d.description)).ToArray
         table.columns("keywords") = study.Select(Function(d) trimString(d.keywords.JoinBy("; "))).ToArray
         table.columns("study") = study.Select(Function(d) trimString(d.study_design.JoinBy("; "))).ToArray
         table.columns("publication") = study.Select(Function(d) trimString(d.publication)).ToArray
         table.columns("organism") = organismTags
         table.columns("tissue") = tissueTags
 
-        Call table.add("sample_collection", study.Select(Function(a) a.protocols.sample_collection))
-        Call table.add("extraction", study.Select(Function(a) a.protocols.extraction))
-        Call table.add("chromatography", study.Select(Function(a) a.protocols.chromatography))
-        Call table.add("mass_spectrometry", study.Select(Function(a) a.protocols.mass_spectrometry))
-        Call table.add("data_transformation", study.Select(Function(a) a.protocols.data_transformation))
-        Call table.add("metabolite_identification", study.Select(Function(a) a.protocols.metabolite_identification))
+        Call table.add("sample_collection", study.Select(Function(a) trimString(a.protocols.sample_collection)))
+        Call table.add("extraction", study.Select(Function(a) trimString(a.protocols.extraction)))
+        Call table.add("chromatography", study.Select(Function(a) trimString(a.protocols.chromatography)))
+        Call table.add("mass_spectrometry", study.Select(Function(a) trimString(a.protocols.mass_spectrometry)))
+        Call table.add("data_transformation", study.Select(Function(a) trimString(a.protocols.data_transformation)))
+        Call table.add("metabolite_identification", study.Select(Function(a) trimString(a.protocols.metabolite_identification)))
 
         table.columns("metabolites") = study _
             .Select(Function(d)
