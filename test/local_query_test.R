@@ -1,5 +1,6 @@
 require(MetaboLights);
 require(Darwinism);
+require(xlsx);
 
 imports "repository" from "MetaboLights";
 imports "memory_query" from "Darwinism";
@@ -21,3 +22,5 @@ let experiments = as.data.frame([...serum, ...plasma, ...blood]);
 print(experiments);
 
 write.csv(experiments, file = "./experiments_filter.csv");
+write.xlsx(experiments, file = "./experiments_filter.xlsx");
+writeLines(rownames(experiments), con = "./id.txt");
