@@ -10,6 +10,7 @@ Imports SMRUCC.genomics.Assembly.ELIXIR.EBI.ChEBI.XML
 Imports SMRUCC.Rsharp.Runtime
 Imports SMRUCC.Rsharp.Runtime.Internal.Object
 Imports SMRUCC.Rsharp.Runtime.Interop
+Imports RInternal = SMRUCC.Rsharp.Runtime.Internal
 
 ''' <summary>
 ''' the metabolights data repository 
@@ -18,8 +19,8 @@ Imports SMRUCC.Rsharp.Runtime.Interop
 Public Module Rscript
 
     Friend Sub Main()
-        Call Internal.Object.Converts.makeDataframe.addHandler(GetType(ResearchStudy()), AddressOf CreateStudyTable)
-        Call Internal.Object.Converts.makeDataframe.addHandler(GetType(Metabolite()), AddressOf CreateMetaboliteTable)
+        Call RInternal.Object.Converts.makeDataframe.addHandler(GetType(ResearchStudy()), AddressOf CreateStudyTable)
+        Call RInternal.Object.Converts.makeDataframe.addHandler(GetType(Metabolite()), AddressOf CreateMetaboliteTable)
     End Sub
 
     Public Function CreateMetaboliteTable(metabos As Metabolite(), args As list, env As Environment) As dataframe
