@@ -23,6 +23,7 @@ Public Module Rscript
         Call RInternal.Object.Converts.makeDataframe.addHandler(GetType(Metabolite()), AddressOf CreateMetaboliteTable)
     End Sub
 
+    <RGenericOverloads("as.data.frame")>
     Public Function CreateMetaboliteTable(metabos As Metabolite(), args As list, env As Environment) As dataframe
         Dim entry_id As String() = metabos.Select(Function(m) m.entry_id).ToArray
         Dim df As New dataframe With {
@@ -41,6 +42,7 @@ Public Module Rscript
         Return df
     End Function
 
+    <RGenericOverloads("as.data.frame")>
     Public Function CreateStudyTable(study As ResearchStudy(), args As list, env As Environment) As dataframe
         Dim table As New dataframe With {
             .columns = New Dictionary(Of String, Array),
@@ -92,6 +94,13 @@ Public Module Rscript
         Call table.add("data_transformation", study.Select(Function(a) trimString(a.protocols.data_transformation)))
         Call table.add("metabolite_identification", study.Select(Function(a) trimString(a.protocols.metabolite_identification)))
 
+        table.columns("metabolite_hits") = study _
+            .Select(Function(d)
+                        Return d.cross_references _
+                            .TryGetValue("MetaboLights", [default]:={}) _
+                            .TryCount
+                    End Function) _
+            .ToArray
         table.columns("metabolites") = study _
             .Select(Function(d)
                         Return d.cross_references _

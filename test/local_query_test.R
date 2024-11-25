@@ -28,4 +28,5 @@ writeLines(rownames(experiments), con = "./id.txt");
 
 let thermo_fisher_ms = pool |> select(match_against("protocols.mass_spectrometry", "thermo fisher")) |> as.data.frame();
 
+write.xlsx(thermo_fisher_ms, file = "./thermo_fisher_ms.xlsx");
 write.csv(thermo_fisher_ms, file = "./thermo_fisher_ms.csv");
