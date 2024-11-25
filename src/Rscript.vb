@@ -136,12 +136,15 @@ Public Module Rscript
     ''' <param name="tqdm">
     ''' apply of the tqdm progress bar wrapper?
     ''' </param>
-    ''' <returns></returns>
+    ''' <returns>
+    ''' a collection of the data <see cref="entry"/> objects
+    ''' </returns>
     ''' <remarks>
     ''' the database file could be download from the url link: 
     ''' http://ftp.ebi.ac.uk/pub/databases/metabolights/eb-eye/eb-eye_metabolights_complete.xml
     ''' </remarks>
     <ExportAPI("loadMetaEntries")>
+    <RApiReturn(GetType(entry))>
     Public Function loadMetaEntries(file As String, Optional tqdm As Boolean = True) As pipeline
         Return pipeline.CreateFromPopulator(database.LoadReferenceEntries(file, tqdm:=tqdm))
     End Function
@@ -243,6 +246,7 @@ Public Module Rscript
     ''' <param name="env"></param>
     ''' <returns></returns>
     <ExportAPI("keywordFilters")>
+    <RApiReturn(GetType(ResearchStudy))>
     Public Function keywordFilters(<RRawVectorArgument>
                                    studies As Object,
                                    keywords As String(),
@@ -278,6 +282,11 @@ Public Module Rscript
             .ToArray
     End Function
 
+    ''' <summary>
+    ''' Parse the chebi entity
+    ''' </summary>
+    ''' <param name="xml"></param>
+    ''' <returns></returns>
     <ExportAPI("parseChEBIEntity")>
     <RApiReturn(GetType(ChEBIEntity))>
     Public Function ParseChebiEntity(xml As String) As Object
