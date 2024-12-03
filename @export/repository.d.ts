@@ -44,7 +44,7 @@ declare namespace repository {
      * 
      * + default value Is ``null``.
    */
-   function keywordFilters(studies: any, keywords: string, ignoreCase?: boolean, env?: object): any;
+   function keywordFilters(studies: any, keywords: string, ignoreCase?: boolean, env?: object): object;
    /**
     * load the complete metabolights database
     * 
@@ -56,6 +56,7 @@ declare namespace repository {
      * @param tqdm apply of the tqdm progress bar wrapper?
      * 
      * + default value Is ``true``.
+     * @return a collection of the data @``T:MetaboLights.entry`` objects
    */
    function loadMetaEntries(file: string, tqdm?: boolean): object;
    /**
@@ -71,6 +72,10 @@ declare namespace repository {
    */
    function metabolites(database: any, mzkit?: boolean, env?: object): object|object;
    /**
+    * Parse the chebi entity
+    * 
+    * 
+     * @param xml -
    */
    function parseChEBIEntity(xml: string): object;
 }
