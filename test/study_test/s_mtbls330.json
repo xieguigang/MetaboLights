@@ -1,1 +1,1139 @@
-[{"SourceName": "AALab Analytics","ProtocolREF": "Sample collection","SampleName": "IL_280514_7","Characteristics": {"Organism": {"name": "Spirodela polyrhiza","value": "NCBITAXON","comment": "http:\/\/purl.bioontology.org\/ontology\/NCBITAXON\/29656"},"Variant": {"name": "Spirodela polyrhiza (Spp)","value": "\"","comment": "\""},"Organism part": {"name": "whole plant","value": "BTO","comment": "http:\/\/purl.obolibrary.org\/obo\/BTO_0001461"}},"FactorValue": {"Tissue": {"name": "whole plant","value": "BTO","comment": "http:\/\/purl.obolibrary.org\/obo\/BTO_0001461"},"Life cycle stage": null,"Genotype": null}}, {"SourceName": "AALab Analytics","ProtocolREF": "Sample collection","SampleName": "IL_280514_23","Characteristics": {"Organism": {"name": "Wolffia","value": "NCBITAXON","comment": "http:\/\/purl.bioontology.org\/ontology\/NCBITAXON\/161109"},"Variant": {"name": "Wolffia (Wo)","value": "\"","comment": "\""},"Organism part": {"name": "whole plant","value": "BTO","comment": "http:\/\/purl.obolibrary.org\/obo\/BTO_0001461"}},"FactorValue": {"Tissue": {"name": "whole plant","value": "BTO","comment": "http:\/\/purl.obolibrary.org\/obo\/BTO_0001461"},"Life cycle stage": null,"Genotype": null}}, {"SourceName": "AALab Analytics","ProtocolREF": "Sample collection","SampleName": "IL_010614_4","Characteristics": {"Organism": {"name": "Landoltia punctata","value": "NCBITAXON","comment": "http:\/\/purl.bioontology.org\/ontology\/NCBITAXON\/50518"},"Variant": {"name": "Spirodela oligorhizza (Spo)","value": "\"","comment": "\""},"Organism part": {"name": "whole plant","value": "BTO","comment": "http:\/\/purl.obolibrary.org\/obo\/BTO_0001461"}},"FactorValue": {"Tissue": {"name": "whole plant","value": "BTO","comment": "http:\/\/purl.obolibrary.org\/obo\/BTO_0001461"},"Life cycle stage": null,"Genotype": null}}, {"SourceName": "AALab Analytics","ProtocolREF": "Sample collection","SampleName": "IL_010614_16","Characteristics": {"Organism": {"name": "Landoltia punctata","value": "NCBITAXON","comment": "http:\/\/purl.bioontology.org\/ontology\/NCBITAXON\/50518"},"Variant": {"name": "Spirodela oligorhizza (Spo)","value": "\"","comment": "\""},"Organism part": {"name": "whole plant","value": "BTO","comment": "http:\/\/purl.obolibrary.org\/obo\/BTO_0001461"}},"FactorValue": {"Tissue": {"name": "whole plant","value": "BTO","comment": "http:\/\/purl.obolibrary.org\/obo\/BTO_0001461"},"Life cycle stage": {"name": "mature","value": "BIOMODELS","comment": "http:\/\/purl.org\/obo\/owl\/PATO#PATO_0001701"},"Genotype": null}}, {"SourceName": "AALab Analytics","ProtocolREF": "Sample collection","SampleName": "IL_010614_27","Characteristics": {"Organism": {"name": "Landoltia punctata","value": "NCBITAXON","comment": "http:\/\/purl.bioontology.org\/ontology\/NCBITAXON\/50518"},"Variant": {"name": "Spirodela oligorhizza (Spo)","value": "\"","comment": "\""},"Organism part": {"name": "whole plant","value": "BTO","comment": "http:\/\/purl.obolibrary.org\/obo\/BTO_0001461"}},"FactorValue": {"Tissue": {"name": "root","value": "\"","comment": "\""},"Life cycle stage": null,"Genotype": null}}, {"SourceName": "AALab Analytics","ProtocolREF": "Sample collection","SampleName": "IL_230614_7","Characteristics": {"Organism": {"name": "Lemna gibba","value": "NCBITAXON","comment": "http:\/\/purl.bioontology.org\/ontology\/NCBITAXON\/4470"},"Variant": {"name": "Lemna gibba (Lg)","value": "\"","comment": "\""},"Organism part": {"name": "whole plant","value": "BTO","comment": "http:\/\/purl.obolibrary.org\/obo\/BTO_0001461"}},"FactorValue": {"Tissue": {"name": "whole plant","value": "BTO","comment": "http:\/\/purl.obolibrary.org\/obo\/BTO_0001461"},"Life cycle stage": {"name": "mature","value": "BIOMODELS","comment": "http:\/\/purl.org\/obo\/owl\/PATO#PATO_0001701"},"Genotype": null}}, {"SourceName": "AALab Analytics","ProtocolREF": "Sample collection","SampleName": "IL_230614_12","Characteristics": {"Organism": {"name": "Lemna gibba","value": "NCBITAXON","comment": "http:\/\/purl.bioontology.org\/ontology\/NCBITAXON\/4470"},"Variant": {"name": "Lemna gibba (Lg)","value": "\"","comment": "\""},"Organism part": {"name": "whole plant","value": "BTO","comment": "http:\/\/purl.obolibrary.org\/obo\/BTO_0001461"}},"FactorValue": {"Tissue": {"name": "whole plant","value": "BTO","comment": "http:\/\/purl.obolibrary.org\/obo\/BTO_0001461"},"Life cycle stage": {"name": "young","value": "BIOMODELS","comment": "http:\/\/purl.org\/obo\/owl\/PATO#PATO_0000309"},"Genotype": null}}, {"SourceName": "AALab Analytics","ProtocolREF": "Sample collection","SampleName": "IL_230614_16","Characteristics": {"Organism": {"name": "Lemna gibba","value": "NCBITAXON","comment": "http:\/\/purl.bioontology.org\/ontology\/NCBITAXON\/4470"},"Variant": {"name": "Lemna gibba (Lg)","value": "\"","comment": "\""},"Organism part": {"name": "rhizome","value": "BTO","comment": "http:\/\/purl.obolibrary.org\/obo\/BTO_0001181"}},"FactorValue": {"Tissue": {"name": "root","value": "\"","comment": "\""},"Life cycle stage": null,"Genotype": null}}, {"SourceName": "AALab Analytics","ProtocolREF": "Sample collection","SampleName": "IL_230614_21","Characteristics": {"Organism": {"name": "Spirodela polyrhiza","value": "NCBITAXON","comment": "http:\/\/purl.bioontology.org\/ontology\/NCBITAXON\/29656"},"Variant": {"name": "Spirodela polyrhiza (Spp)","value": "\"","comment": "\""},"Organism part": {"name": "whole plant","value": "BTO","comment": "http:\/\/purl.obolibrary.org\/obo\/BTO_0001461"}},"FactorValue": {"Tissue": {"name": "whole plant","value": "BTO","comment": "http:\/\/purl.obolibrary.org\/obo\/BTO_0001461"},"Life cycle stage": null,"Genotype": null}}, {"SourceName": "AALab Analytics","ProtocolREF": "Sample collection","SampleName": "IL_230614_38","Characteristics": {"Organism": {"name": "Wolffia","value": "NCBITAXON","comment": "http:\/\/purl.bioontology.org\/ontology\/NCBITAXON\/161109"},"Variant": {"name": "Wolffia (Wo)","value": "\"","comment": "\""},"Organism part": {"name": "whole plant","value": "BTO","comment": "http:\/\/purl.obolibrary.org\/obo\/BTO_0001461"}},"FactorValue": {"Tissue": {"name": "whole plant","value": "BTO","comment": "http:\/\/purl.obolibrary.org\/obo\/BTO_0001461"},"Life cycle stage": null,"Genotype": null}}, {"SourceName": "AALab Analytics","ProtocolREF": "Sample collection","SampleName": "IL_260514_4","Characteristics": {"Organism": {"name": "Spirodela polyrhiza","value": "NCBITAXON","comment": "http:\/\/purl.bioontology.org\/ontology\/NCBITAXON\/29656"},"Variant": {"name": "Spirodela polyrhiza (Spp)","value": "\"","comment": "\""},"Organism part": {"name": "whole plant","value": "BTO","comment": "http:\/\/purl.obolibrary.org\/obo\/BTO_0001461"}},"FactorValue": {"Tissue": {"name": "whole plant","value": "BTO","comment": "http:\/\/purl.obolibrary.org\/obo\/BTO_0001461"},"Life cycle stage": null,"Genotype": null}}, {"SourceName": "AALab Analytics","ProtocolREF": "Sample collection","SampleName": "IL_240814_4","Characteristics": {"Organism": {"name": "Solanum lycopersicum","value": "NCBITAXON","comment": "http:\/\/purl.bioontology.org\/ontology\/NCBITAXON\/4081"},"Variant": {"name": "Solanum lycopersicum cv. Micro-Tom","value": "\"","comment": "\""},"Organism part": {"name": "bud","value": "BTO","comment": "http:\/\/purl.obolibrary.org\/obo\/BTO_0001639"}},"FactorValue": {"Tissue": {"name": "buds","value": "\"","comment": "\""},"Life cycle stage": null,"Genotype": null}}, {"SourceName": "AALab Analytics","ProtocolREF": "Sample collection","SampleName": "IL_240814_9","Characteristics": {"Organism": {"name": "Solanum lycopersicum","value": "NCBITAXON","comment": "http:\/\/purl.bioontology.org\/ontology\/NCBITAXON\/4081"},"Variant": {"name": "Solanum lycopersicum cv. Micro-Tom","value": "\"","comment": "\""},"Organism part": {"name": "bud","value": "BTO","comment": "http:\/\/purl.obolibrary.org\/obo\/BTO_0001639"}},"FactorValue": {"Tissue": {"name": "buds","value": "\"","comment": "\""},"Life cycle stage": null,"Genotype": null}}, {"SourceName": "AALab Analytics","ProtocolREF": "Sample collection","SampleName": "IL_240814_53","Characteristics": {"Organism": {"name": "Solanum lycopersicum","value": "NCBITAXON","comment": "http:\/\/purl.bioontology.org\/ontology\/NCBITAXON\/4081"},"Variant": {"name": "Solanum lycopersicum cv. Micro-Tom","value": "\"","comment": "\""},"Organism part": {"name": "leaf","value": "BTO","comment": "http:\/\/purl.obolibrary.org\/obo\/BTO_0000713"}},"FactorValue": {"Tissue": {"name": "leaves","value": "\"","comment": "\""},"Life cycle stage": {"name": "mature","value": "BIOMODELS","comment": "http:\/\/purl.org\/obo\/owl\/PATO#PATO_0001701"},"Genotype": null}}, {"SourceName": "AALab Analytics","ProtocolREF": "Sample collection","SampleName": "IL_240814_79","Characteristics": {"Organism": {"name": "Solanum lycopersicum","value": "NCBITAXON","comment": "http:\/\/purl.bioontology.org\/ontology\/NCBITAXON\/4081"},"Variant": {"name": "Solanum lycopersicum cv. Micro-Tom","value": "\"","comment": "\""},"Organism part": {"name": "exocarp","value": "BTO","comment": "http:\/\/purl.obolibrary.org\/obo\/BTO_0000733"}},"FactorValue": {"Tissue": {"name": "fruit peel","value": "\"","comment": "\""},"Life cycle stage": {"name": "early whole plant fruit ripening stage","value": "FLOPO","comment": "http:\/\/purl.obolibrary.org\/obo\/PO_0007001"},"Genotype": null}}, {"SourceName": "AALab Analytics","ProtocolREF": "Sample collection","SampleName": "IL_140914_4","Characteristics": {"Organism": {"name": "Solanum lycopersicum","value": "NCBITAXON","comment": "http:\/\/purl.bioontology.org\/ontology\/NCBITAXON\/4081"},"Variant": {"name": "Solanum lycopersicum cv. Micro-Tom","value": "\"","comment": "\""},"Organism part": {"name": "bud","value": "BTO","comment": "http:\/\/purl.obolibrary.org\/obo\/BTO_0001639"}},"FactorValue": {"Tissue": {"name": "buds","value": "\"","comment": "\""},"Life cycle stage": null,"Genotype": null}}, {"SourceName": "AALab Analytics","ProtocolREF": "Sample collection","SampleName": "IL_140914_15","Characteristics": {"Organism": {"name": "Solanum lycopersicum","value": "NCBITAXON","comment": "http:\/\/purl.bioontology.org\/ontology\/NCBITAXON\/4081"},"Variant": {"name": "Solanum lycopersicum cv. Micro-Tom","value": "\"","comment": "\""},"Organism part": {"name": "flower","value": "BTO","comment": "http:\/\/purl.obolibrary.org\/obo\/BTO_0000469"}},"FactorValue": {"Tissue": {"name": "flowers","value": "\"","comment": "\""},"Life cycle stage": null,"Genotype": null}}, {"SourceName": "AALab Analytics","ProtocolREF": "Sample collection","SampleName": "IL_140914_20","Characteristics": {"Organism": {"name": "Solanum lycopersicum","value": "NCBITAXON","comment": "http:\/\/purl.bioontology.org\/ontology\/NCBITAXON\/4081"},"Variant": {"name": "Solanum lycopersicum cv. Micro-Tom","value": "\"","comment": "\""},"Organism part": {"name": "flower","value": "BTO","comment": "http:\/\/purl.obolibrary.org\/obo\/BTO_0000469"}},"FactorValue": {"Tissue": {"name": "flowers","value": "\"","comment": "\""},"Life cycle stage": null,"Genotype": null}}, {"SourceName": "AALab Analytics","ProtocolREF": "Sample collection","SampleName": "IL_140914_26","Characteristics": {"Organism": {"name": "Solanum lycopersicum","value": "NCBITAXON","comment": "http:\/\/purl.bioontology.org\/ontology\/NCBITAXON\/4081"},"Variant": {"name": "Solanum lycopersicum cv. Micro-Tom","value": "\"","comment": "\""},"Organism part": {"name": "flower bud","value": "BTO","comment": "http:\/\/purl.obolibrary.org\/obo\/BTO_0000470"}},"FactorValue": {"Tissue": {"name": "flower buds","value": "\"","comment": "\""},"Life cycle stage": null,"Genotype": null}}, {"SourceName": "AALab Analytics","ProtocolREF": "Sample collection","SampleName": "IL_140914_31","Characteristics": {"Organism": {"name": "Solanum lycopersicum","value": "NCBITAXON","comment": "http:\/\/purl.bioontology.org\/ontology\/NCBITAXON\/4081"},"Variant": {"name": "Solanum lycopersicum cv. Micro-Tom","value": "\"","comment": "\""},"Organism part": {"name": "flower bud","value": "BTO","comment": "http:\/\/purl.obolibrary.org\/obo\/BTO_0000470"}},"FactorValue": {"Tissue": {"name": "flower buds","value": "\"","comment": "\""},"Life cycle stage": null,"Genotype": null}}, {"SourceName": "AALab Analytics","ProtocolREF": "Sample collection","SampleName": "IL_140914_38","Characteristics": {"Organism": {"name": "Solanum lycopersicum","value": "NCBITAXON","comment": "http:\/\/purl.bioontology.org\/ontology\/NCBITAXON\/4081"},"Variant": {"name": "Solanum lycopersicum cv. Micro-Tom","value": "\"","comment": "\""},"Organism part": {"name": "juvenile leaf","value": "BTO","comment": "http:\/\/purl.obolibrary.org\/obo\/BTO_0003147"}},"FactorValue": {"Tissue": {"name": "leaves","value": "\"","comment": "\""},"Life cycle stage": {"name": "young","value": "BIOMODELS","comment": "http:\/\/purl.org\/obo\/owl\/PATO#PATO_0000309"},"Genotype": null}}, {"SourceName": "AALab Analytics","ProtocolREF": "Sample collection","SampleName": "IL_140914_41","Characteristics": {"Organism": {"name": "Solanum lycopersicum","value": "NCBITAXON","comment": "http:\/\/purl.bioontology.org\/ontology\/NCBITAXON\/4081"},"Variant": {"name": "Solanum lycopersicum cv. Micro-Tom","value": "\"","comment": "\""},"Organism part": {"name": "leaf","value": "BTO","comment": "http:\/\/purl.obolibrary.org\/obo\/BTO_0000713"}},"FactorValue": {"Tissue": {"name": "leaves","value": "\"","comment": "\""},"Life cycle stage": {"name": "mature","value": "BIOMODELS","comment": "http:\/\/purl.org\/obo\/owl\/PATO#PATO_0001701"},"Genotype": null}}, {"SourceName": "AALab Analytics","ProtocolREF": "Sample collection","SampleName": "IL_140914_49","Characteristics": {"Organism": {"name": "Solanum lycopersicum","value": "NCBITAXON","comment": "http:\/\/purl.bioontology.org\/ontology\/NCBITAXON\/4081"},"Variant": {"name": "Solanum lycopersicum cv. Micro-Tom","value": "\"","comment": "\""},"Organism part": {"name": "exocarp","value": "BTO","comment": "http:\/\/purl.obolibrary.org\/obo\/BTO_0000733"}},"FactorValue": {"Tissue": {"name": "fruit peel","value": "\"","comment": "\""},"Life cycle stage": {"name": "early whole plant fruit ripening stage","value": "FLOPO","comment": "http:\/\/purl.obolibrary.org\/obo\/PO_0007001"},"Genotype": null}}, {"SourceName": "AALab Analytics","ProtocolREF": "Sample collection","SampleName": "IL_140914_52","Characteristics": {"Organism": {"name": "Solanum lycopersicum","value": "NCBITAXON","comment": "http:\/\/purl.bioontology.org\/ontology\/NCBITAXON\/4081"},"Variant": {"name": "Solanum lycopersicum cv. Micro-Tom","value": "\"","comment": "\""},"Organism part": {"name": "exocarp","value": "BTO","comment": "http:\/\/purl.obolibrary.org\/obo\/BTO_0000733"}},"FactorValue": {"Tissue": {"name": "fruit peel","value": "\"","comment": "\""},"Life cycle stage": {"name": "late whole plant fruit ripening stage","value": "FLOPO","comment": "http:\/\/purl.obolibrary.org\/obo\/PO_0007050"},"Genotype": null}}, {"SourceName": "AALab Analytics","ProtocolREF": "Sample collection","SampleName": "IL_140914_55","Characteristics": {"Organism": {"name": "Solanum lycopersicum","value": "NCBITAXON","comment": "http:\/\/purl.bioontology.org\/ontology\/NCBITAXON\/4081"},"Variant": {"name": "Solanum lycopersicum cv. Micro-Tom","value": "\"","comment": "\""},"Organism part": {"name": "exocarp","value": "BTO","comment": "http:\/\/purl.obolibrary.org\/obo\/BTO_0000733"}},"FactorValue": {"Tissue": {"name": "fruit peel","value": "\"","comment": "\""},"Life cycle stage": {"name": "mid whole plant fruit ripening stage","value": "FLOPO","comment": "http:\/\/purl.obolibrary.org\/obo\/PO_0007031"},"Genotype": null}}, {"SourceName": "AALab Analytics","ProtocolREF": "Sample collection","SampleName": "IL_140914_59","Characteristics": {"Organism": {"name": "Solanum lycopersicum","value": "NCBITAXON","comment": "http:\/\/purl.bioontology.org\/ontology\/NCBITAXON\/4081"},"Variant": {"name": "Solanum lycopersicum cv. Micro-Tom","value": "\"","comment": "\""},"Organism part": {"name": "root","value": "BTO","comment": "http:\/\/purl.obolibrary.org\/obo\/BTO_0001188"}},"FactorValue": {"Tissue": {"name": "root","value": "\"","comment": "\""},"Life cycle stage": null,"Genotype": null}}, {"SourceName": "AALab Analytics","ProtocolREF": "Sample collection","SampleName": "IL_140914_64","Characteristics": {"Organism": {"name": "Solanum lycopersicum","value": "NCBITAXON","comment": "http:\/\/purl.bioontology.org\/ontology\/NCBITAXON\/4081"},"Variant": {"name": "Solanum lycopersicum cv. Micro-Tom","value": "\"","comment": "\""},"Organism part": {"name": "root","value": "BTO","comment": "http:\/\/purl.obolibrary.org\/obo\/BTO_0001188"}},"FactorValue": {"Tissue": {"name": "root","value": "\"","comment": "\""},"Life cycle stage": null,"Genotype": null}}, {"SourceName": "AALab Analytics","ProtocolREF": "Sample collection","SampleName": "IL_230614_44","Characteristics": {"Organism": {"name": "Arabidopsis thaliana","value": "NCBITAXON","comment": "http:\/\/purl.bioontology.org\/ontology\/NCBITAXON\/3702"},"Variant": {"name": "Arabidopsis thaliana str. Col-0","value": "\"","comment": "\""},"Organism part": {"name": "flower bud","value": "BTO","comment": "http:\/\/purl.obolibrary.org\/obo\/BTO_0000470"}},"FactorValue": {"Tissue": {"name": "buds","value": "\"","comment": "\""},"Life cycle stage": {"name": "closed","value": "FLOPO","comment": "http:\/\/purl.obolibrary.org\/obo\/PATO_0000608"},"Genotype": null}}, {"SourceName": "AALab Analytics","ProtocolREF": "Sample collection","SampleName": "IL_230614_51","Characteristics": {"Organism": {"name": "Arabidopsis thaliana","value": "NCBITAXON","comment": "http:\/\/purl.bioontology.org\/ontology\/NCBITAXON\/3702"},"Variant": {"name": "Arabidopsis thaliana str. Col-0","value": "\"","comment": "\""},"Organism part": {"name": "leaf","value": "BTO","comment": "http:\/\/purl.obolibrary.org\/obo\/BTO_0000713"}},"FactorValue": {"Tissue": {"name": "leaves","value": "\"","comment": "\""},"Life cycle stage": {"name": "mature","value": "BIOMODELS","comment": "http:\/\/purl.org\/obo\/owl\/PATO#PATO_0001701"},"Genotype": null}}, {"SourceName": "AALab Analytics","ProtocolREF": "Sample collection","SampleName": "IL_230614_62","Characteristics": {"Organism": {"name": "Arabidopsis thaliana","value": "NCBITAXON","comment": "http:\/\/purl.bioontology.org\/ontology\/NCBITAXON\/3702"},"Variant": {"name": "Arabidopsis thaliana str. Col-0","value": "\"","comment": "\""},"Organism part": {"name": "flower","value": "BTO","comment": "http:\/\/purl.obolibrary.org\/obo\/BTO_0000469"}},"FactorValue": {"Tissue": {"name": "flowers","value": "\"","comment": "\""},"Life cycle stage": {"name": "open","value": "FLOPO","comment": "http:\/\/purl.obolibrary.org\/obo\/PATO_0000610"},"Genotype": null}}, {"SourceName": "AALab Analytics","ProtocolREF": "Sample collection","SampleName": "IL_230614_71","Characteristics": {"Organism": {"name": "Arabidopsis thaliana","value": "NCBITAXON","comment": "http:\/\/purl.bioontology.org\/ontology\/NCBITAXON\/3702"},"Variant": {"name": "Arabidopsis thaliana str. Col-0","value": "\"","comment": "\""},"Organism part": {"name": "flower","value": "BTO","comment": "http:\/\/purl.obolibrary.org\/obo\/BTO_0000469"}},"FactorValue": {"Tissue": {"name": "flowers","value": "\"","comment": "\""},"Life cycle stage": {"name": "open","value": "FLOPO","comment": "http:\/\/purl.obolibrary.org\/obo\/PATO_0000610"},"Genotype": null}}, {"SourceName": "AALab Analytics","ProtocolREF": "Sample collection","SampleName": "IL_230614_77","Characteristics": {"Organism": {"name": "Arabidopsis thaliana","value": "NCBITAXON","comment": "http:\/\/purl.bioontology.org\/ontology\/NCBITAXON\/3702"},"Variant": {"name": "Arabidopsis thaliana str. Col-0","value": "\"","comment": "\""},"Organism part": {"name": "silique","value": "BTO","comment": "http:\/\/purl.obolibrary.org\/obo\/BTO_0001249"}},"FactorValue": {"Tissue": {"name": "silique","value": "\"","comment": "\""},"Life cycle stage": null,"Genotype": null}}, {"SourceName": "AALab Analytics","ProtocolREF": "Sample collection","SampleName": "IL_230614_86","Characteristics": {"Organism": {"name": "Arabidopsis thaliana","value": "NCBITAXON","comment": "http:\/\/purl.bioontology.org\/ontology\/NCBITAXON\/3702"},"Variant": {"name": "Arabidopsis thaliana str. Col-0","value": "\"","comment": "\""},"Organism part": {"name": "stem","value": "BTO","comment": "http:\/\/purl.obolibrary.org\/obo\/BTO_0001300"}},"FactorValue": {"Tissue": {"name": "stem","value": "\"","comment": "\""},"Life cycle stage": null,"Genotype": null}}, {"SourceName": "AALab Analytics","ProtocolREF": "Sample collection","SampleName": "IL_230614_92","Characteristics": {"Organism": {"name": "Arabidopsis thaliana","value": "NCBITAXON","comment": "http:\/\/purl.bioontology.org\/ontology\/NCBITAXON\/3702"},"Variant": {"name": "Arabidopsis thaliana str. Col-0","value": "\"","comment": "\""},"Organism part": {"name": "stem leaf","value": "BTO","comment": "http:\/\/purl.obolibrary.org\/obo\/BTO_0005694"}},"FactorValue": {"Tissue": {"name": "stem leaves","value": "\"","comment": "\""},"Life cycle stage": null,"Genotype": null}}, {"SourceName": "AALab Analytics","ProtocolREF": "Sample collection","SampleName": "IL_230614_95","Characteristics": {"Organism": {"name": "Arabidopsis thaliana","value": "NCBITAXON","comment": "http:\/\/purl.bioontology.org\/ontology\/NCBITAXON\/3702"},"Variant": {"name": "Arabidopsis thaliana str. Col-0","value": "\"","comment": "\""},"Organism part": {"name": "juvenile leaf","value": "BTO","comment": "http:\/\/purl.obolibrary.org\/obo\/BTO_0003147"}},"FactorValue": {"Tissue": {"name": "leaves","value": "\"","comment": "\""},"Life cycle stage": {"name": "young","value": "BIOMODELS","comment": "http:\/\/purl.org\/obo\/owl\/PATO#PATO_0000309"},"Genotype": null}}, {"SourceName": "AALab Analytics","ProtocolREF": "Sample collection","SampleName": "IL_070714_3","Characteristics": {"Organism": {"name": "Arabidopsis thaliana","value": "NCBITAXON","comment": "http:\/\/purl.bioontology.org\/ontology\/NCBITAXON\/3702"},"Variant": {"name": "Arabidopsis thaliana str. Col-0","value": "\"","comment": "\""},"Organism part": {"name": "bud","value": "BTO","comment": "http:\/\/purl.obolibrary.org\/obo\/BTO_0001639"}},"FactorValue": {"Tissue": {"name": "buds","value": "\"","comment": "\""},"Life cycle stage": null,"Genotype": null}}, {"SourceName": "AALab Analytics","ProtocolREF": "Sample collection","SampleName": "IL_070714_10","Characteristics": {"Organism": {"name": "Arabidopsis thaliana","value": "NCBITAXON","comment": "http:\/\/purl.bioontology.org\/ontology\/NCBITAXON\/3702"},"Variant": {"name": "Arabidopsis thaliana str. Col-0","value": "\"","comment": "\""},"Organism part": {"name": "leaf","value": "BTO","comment": "http:\/\/purl.obolibrary.org\/obo\/BTO_0000713"}},"FactorValue": {"Tissue": {"name": "leaves","value": "\"","comment": "\""},"Life cycle stage": {"name": "mature","value": "BIOMODELS","comment": "http:\/\/purl.org\/obo\/owl\/PATO#PATO_0001701"},"Genotype": null}}, {"SourceName": "AALab Analytics","ProtocolREF": "Sample collection","SampleName": "IL_070714_16","Characteristics": {"Organism": {"name": "Arabidopsis thaliana","value": "NCBITAXON","comment": "http:\/\/purl.bioontology.org\/ontology\/NCBITAXON\/3702"},"Variant": {"name": "Arabidopsis thaliana str. Col-0","value": "\"","comment": "\""},"Organism part": {"name": "flower","value": "BTO","comment": "http:\/\/purl.obolibrary.org\/obo\/BTO_0000469"}},"FactorValue": {"Tissue": {"name": "flowers","value": "\"","comment": "\""},"Life cycle stage": {"name": "open","value": "FLOPO","comment": "http:\/\/purl.obolibrary.org\/obo\/PATO_0000610"},"Genotype": null}}, {"SourceName": "AALab Analytics","ProtocolREF": "Sample collection","SampleName": "IL_070714_37","Characteristics": {"Organism": {"name": "Arabidopsis thaliana","value": "NCBITAXON","comment": "http:\/\/purl.bioontology.org\/ontology\/NCBITAXON\/3702"},"Variant": {"name": "Arabidopsis thaliana str. Col-0","value": "\"","comment": "\""},"Organism part": {"name": "stem","value": "BTO","comment": "http:\/\/purl.obolibrary.org\/obo\/BTO_0001300"}},"FactorValue": {"Tissue": {"name": "stem","value": "\"","comment": "\""},"Life cycle stage": null,"Genotype": null}}]
+[
+  {
+    "SourceName": "AALab Analytics",
+    "ProtocolREF": "Sample collection",
+    "SampleName": "IL_280514_7",
+    "Characteristics": {
+      "Organism": {
+        "name": "Spirodela polyrhiza",
+        "value": "NCBITAXON",
+        "comment": "http://purl.bioontology.org/ontology/NCBITAXON/29656"
+      },
+      "Variant": {
+        "name": "Spirodela polyrhiza (Spp)",
+        "value": "\"",
+        "comment": "\""
+      },
+      "Organism part": {
+        "name": "whole plant",
+        "value": "BTO",
+        "comment": "http://purl.obolibrary.org/obo/BTO_0001461"
+      }
+    },
+    "FactorValue": {
+      "Tissue": {
+        "name": "whole plant",
+        "value": "BTO",
+        "comment": "http://purl.obolibrary.org/obo/BTO_0001461"
+      },
+      "Life cycle stage": null,
+      "Genotype": null
+    }
+  },
+  {
+    "SourceName": "AALab Analytics",
+    "ProtocolREF": "Sample collection",
+    "SampleName": "IL_280514_23",
+    "Characteristics": {
+      "Organism": {
+        "name": "Wolffia",
+        "value": "NCBITAXON",
+        "comment": "http://purl.bioontology.org/ontology/NCBITAXON/161109"
+      },
+      "Variant": { "name": "Wolffia (Wo)", "value": "\"", "comment": "\"" },
+      "Organism part": {
+        "name": "whole plant",
+        "value": "BTO",
+        "comment": "http://purl.obolibrary.org/obo/BTO_0001461"
+      }
+    },
+    "FactorValue": {
+      "Tissue": {
+        "name": "whole plant",
+        "value": "BTO",
+        "comment": "http://purl.obolibrary.org/obo/BTO_0001461"
+      },
+      "Life cycle stage": null,
+      "Genotype": null
+    }
+  },
+  {
+    "SourceName": "AALab Analytics",
+    "ProtocolREF": "Sample collection",
+    "SampleName": "IL_010614_4",
+    "Characteristics": {
+      "Organism": {
+        "name": "Landoltia punctata",
+        "value": "NCBITAXON",
+        "comment": "http://purl.bioontology.org/ontology/NCBITAXON/50518"
+      },
+      "Variant": {
+        "name": "Spirodela oligorhizza (Spo)",
+        "value": "\"",
+        "comment": "\""
+      },
+      "Organism part": {
+        "name": "whole plant",
+        "value": "BTO",
+        "comment": "http://purl.obolibrary.org/obo/BTO_0001461"
+      }
+    },
+    "FactorValue": {
+      "Tissue": {
+        "name": "whole plant",
+        "value": "BTO",
+        "comment": "http://purl.obolibrary.org/obo/BTO_0001461"
+      },
+      "Life cycle stage": null,
+      "Genotype": null
+    }
+  },
+  {
+    "SourceName": "AALab Analytics",
+    "ProtocolREF": "Sample collection",
+    "SampleName": "IL_010614_16",
+    "Characteristics": {
+      "Organism": {
+        "name": "Landoltia punctata",
+        "value": "NCBITAXON",
+        "comment": "http://purl.bioontology.org/ontology/NCBITAXON/50518"
+      },
+      "Variant": {
+        "name": "Spirodela oligorhizza (Spo)",
+        "value": "\"",
+        "comment": "\""
+      },
+      "Organism part": {
+        "name": "whole plant",
+        "value": "BTO",
+        "comment": "http://purl.obolibrary.org/obo/BTO_0001461"
+      }
+    },
+    "FactorValue": {
+      "Tissue": {
+        "name": "whole plant",
+        "value": "BTO",
+        "comment": "http://purl.obolibrary.org/obo/BTO_0001461"
+      },
+      "Life cycle stage": {
+        "name": "mature",
+        "value": "BIOMODELS",
+        "comment": "http://purl.org/obo/owl/PATO#PATO_0001701"
+      },
+      "Genotype": null
+    }
+  },
+  {
+    "SourceName": "AALab Analytics",
+    "ProtocolREF": "Sample collection",
+    "SampleName": "IL_010614_27",
+    "Characteristics": {
+      "Organism": {
+        "name": "Landoltia punctata",
+        "value": "NCBITAXON",
+        "comment": "http://purl.bioontology.org/ontology/NCBITAXON/50518"
+      },
+      "Variant": {
+        "name": "Spirodela oligorhizza (Spo)",
+        "value": "\"",
+        "comment": "\""
+      },
+      "Organism part": {
+        "name": "whole plant",
+        "value": "BTO",
+        "comment": "http://purl.obolibrary.org/obo/BTO_0001461"
+      }
+    },
+    "FactorValue": {
+      "Tissue": { "name": "root", "value": "\"", "comment": "\"" },
+      "Life cycle stage": null,
+      "Genotype": null
+    }
+  },
+  {
+    "SourceName": "AALab Analytics",
+    "ProtocolREF": "Sample collection",
+    "SampleName": "IL_230614_7",
+    "Characteristics": {
+      "Organism": {
+        "name": "Lemna gibba",
+        "value": "NCBITAXON",
+        "comment": "http://purl.bioontology.org/ontology/NCBITAXON/4470"
+      },
+      "Variant": { "name": "Lemna gibba (Lg)", "value": "\"", "comment": "\"" },
+      "Organism part": {
+        "name": "whole plant",
+        "value": "BTO",
+        "comment": "http://purl.obolibrary.org/obo/BTO_0001461"
+      }
+    },
+    "FactorValue": {
+      "Tissue": {
+        "name": "whole plant",
+        "value": "BTO",
+        "comment": "http://purl.obolibrary.org/obo/BTO_0001461"
+      },
+      "Life cycle stage": {
+        "name": "mature",
+        "value": "BIOMODELS",
+        "comment": "http://purl.org/obo/owl/PATO#PATO_0001701"
+      },
+      "Genotype": null
+    }
+  },
+  {
+    "SourceName": "AALab Analytics",
+    "ProtocolREF": "Sample collection",
+    "SampleName": "IL_230614_12",
+    "Characteristics": {
+      "Organism": {
+        "name": "Lemna gibba",
+        "value": "NCBITAXON",
+        "comment": "http://purl.bioontology.org/ontology/NCBITAXON/4470"
+      },
+      "Variant": { "name": "Lemna gibba (Lg)", "value": "\"", "comment": "\"" },
+      "Organism part": {
+        "name": "whole plant",
+        "value": "BTO",
+        "comment": "http://purl.obolibrary.org/obo/BTO_0001461"
+      }
+    },
+    "FactorValue": {
+      "Tissue": {
+        "name": "whole plant",
+        "value": "BTO",
+        "comment": "http://purl.obolibrary.org/obo/BTO_0001461"
+      },
+      "Life cycle stage": {
+        "name": "young",
+        "value": "BIOMODELS",
+        "comment": "http://purl.org/obo/owl/PATO#PATO_0000309"
+      },
+      "Genotype": null
+    }
+  },
+  {
+    "SourceName": "AALab Analytics",
+    "ProtocolREF": "Sample collection",
+    "SampleName": "IL_230614_16",
+    "Characteristics": {
+      "Organism": {
+        "name": "Lemna gibba",
+        "value": "NCBITAXON",
+        "comment": "http://purl.bioontology.org/ontology/NCBITAXON/4470"
+      },
+      "Variant": { "name": "Lemna gibba (Lg)", "value": "\"", "comment": "\"" },
+      "Organism part": {
+        "name": "rhizome",
+        "value": "BTO",
+        "comment": "http://purl.obolibrary.org/obo/BTO_0001181"
+      }
+    },
+    "FactorValue": {
+      "Tissue": { "name": "root", "value": "\"", "comment": "\"" },
+      "Life cycle stage": null,
+      "Genotype": null
+    }
+  },
+  {
+    "SourceName": "AALab Analytics",
+    "ProtocolREF": "Sample collection",
+    "SampleName": "IL_230614_21",
+    "Characteristics": {
+      "Organism": {
+        "name": "Spirodela polyrhiza",
+        "value": "NCBITAXON",
+        "comment": "http://purl.bioontology.org/ontology/NCBITAXON/29656"
+      },
+      "Variant": {
+        "name": "Spirodela polyrhiza (Spp)",
+        "value": "\"",
+        "comment": "\""
+      },
+      "Organism part": {
+        "name": "whole plant",
+        "value": "BTO",
+        "comment": "http://purl.obolibrary.org/obo/BTO_0001461"
+      }
+    },
+    "FactorValue": {
+      "Tissue": {
+        "name": "whole plant",
+        "value": "BTO",
+        "comment": "http://purl.obolibrary.org/obo/BTO_0001461"
+      },
+      "Life cycle stage": null,
+      "Genotype": null
+    }
+  },
+  {
+    "SourceName": "AALab Analytics",
+    "ProtocolREF": "Sample collection",
+    "SampleName": "IL_230614_38",
+    "Characteristics": {
+      "Organism": {
+        "name": "Wolffia",
+        "value": "NCBITAXON",
+        "comment": "http://purl.bioontology.org/ontology/NCBITAXON/161109"
+      },
+      "Variant": { "name": "Wolffia (Wo)", "value": "\"", "comment": "\"" },
+      "Organism part": {
+        "name": "whole plant",
+        "value": "BTO",
+        "comment": "http://purl.obolibrary.org/obo/BTO_0001461"
+      }
+    },
+    "FactorValue": {
+      "Tissue": {
+        "name": "whole plant",
+        "value": "BTO",
+        "comment": "http://purl.obolibrary.org/obo/BTO_0001461"
+      },
+      "Life cycle stage": null,
+      "Genotype": null
+    }
+  },
+  {
+    "SourceName": "AALab Analytics",
+    "ProtocolREF": "Sample collection",
+    "SampleName": "IL_260514_4",
+    "Characteristics": {
+      "Organism": {
+        "name": "Spirodela polyrhiza",
+        "value": "NCBITAXON",
+        "comment": "http://purl.bioontology.org/ontology/NCBITAXON/29656"
+      },
+      "Variant": {
+        "name": "Spirodela polyrhiza (Spp)",
+        "value": "\"",
+        "comment": "\""
+      },
+      "Organism part": {
+        "name": "whole plant",
+        "value": "BTO",
+        "comment": "http://purl.obolibrary.org/obo/BTO_0001461"
+      }
+    },
+    "FactorValue": {
+      "Tissue": {
+        "name": "whole plant",
+        "value": "BTO",
+        "comment": "http://purl.obolibrary.org/obo/BTO_0001461"
+      },
+      "Life cycle stage": null,
+      "Genotype": null
+    }
+  },
+  {
+    "SourceName": "AALab Analytics",
+    "ProtocolREF": "Sample collection",
+    "SampleName": "IL_240814_4",
+    "Characteristics": {
+      "Organism": {
+        "name": "Solanum lycopersicum",
+        "value": "NCBITAXON",
+        "comment": "http://purl.bioontology.org/ontology/NCBITAXON/4081"
+      },
+      "Variant": {
+        "name": "Solanum lycopersicum cv. Micro-Tom",
+        "value": "\"",
+        "comment": "\""
+      },
+      "Organism part": {
+        "name": "bud",
+        "value": "BTO",
+        "comment": "http://purl.obolibrary.org/obo/BTO_0001639"
+      }
+    },
+    "FactorValue": {
+      "Tissue": { "name": "buds", "value": "\"", "comment": "\"" },
+      "Life cycle stage": null,
+      "Genotype": null
+    }
+  },
+  {
+    "SourceName": "AALab Analytics",
+    "ProtocolREF": "Sample collection",
+    "SampleName": "IL_240814_9",
+    "Characteristics": {
+      "Organism": {
+        "name": "Solanum lycopersicum",
+        "value": "NCBITAXON",
+        "comment": "http://purl.bioontology.org/ontology/NCBITAXON/4081"
+      },
+      "Variant": {
+        "name": "Solanum lycopersicum cv. Micro-Tom",
+        "value": "\"",
+        "comment": "\""
+      },
+      "Organism part": {
+        "name": "bud",
+        "value": "BTO",
+        "comment": "http://purl.obolibrary.org/obo/BTO_0001639"
+      }
+    },
+    "FactorValue": {
+      "Tissue": { "name": "buds", "value": "\"", "comment": "\"" },
+      "Life cycle stage": null,
+      "Genotype": null
+    }
+  },
+  {
+    "SourceName": "AALab Analytics",
+    "ProtocolREF": "Sample collection",
+    "SampleName": "IL_240814_53",
+    "Characteristics": {
+      "Organism": {
+        "name": "Solanum lycopersicum",
+        "value": "NCBITAXON",
+        "comment": "http://purl.bioontology.org/ontology/NCBITAXON/4081"
+      },
+      "Variant": {
+        "name": "Solanum lycopersicum cv. Micro-Tom",
+        "value": "\"",
+        "comment": "\""
+      },
+      "Organism part": {
+        "name": "leaf",
+        "value": "BTO",
+        "comment": "http://purl.obolibrary.org/obo/BTO_0000713"
+      }
+    },
+    "FactorValue": {
+      "Tissue": { "name": "leaves", "value": "\"", "comment": "\"" },
+      "Life cycle stage": {
+        "name": "mature",
+        "value": "BIOMODELS",
+        "comment": "http://purl.org/obo/owl/PATO#PATO_0001701"
+      },
+      "Genotype": null
+    }
+  },
+  {
+    "SourceName": "AALab Analytics",
+    "ProtocolREF": "Sample collection",
+    "SampleName": "IL_240814_79",
+    "Characteristics": {
+      "Organism": {
+        "name": "Solanum lycopersicum",
+        "value": "NCBITAXON",
+        "comment": "http://purl.bioontology.org/ontology/NCBITAXON/4081"
+      },
+      "Variant": {
+        "name": "Solanum lycopersicum cv. Micro-Tom",
+        "value": "\"",
+        "comment": "\""
+      },
+      "Organism part": {
+        "name": "exocarp",
+        "value": "BTO",
+        "comment": "http://purl.obolibrary.org/obo/BTO_0000733"
+      }
+    },
+    "FactorValue": {
+      "Tissue": { "name": "fruit peel", "value": "\"", "comment": "\"" },
+      "Life cycle stage": {
+        "name": "early whole plant fruit ripening stage",
+        "value": "FLOPO",
+        "comment": "http://purl.obolibrary.org/obo/PO_0007001"
+      },
+      "Genotype": null
+    }
+  },
+  {
+    "SourceName": "AALab Analytics",
+    "ProtocolREF": "Sample collection",
+    "SampleName": "IL_140914_4",
+    "Characteristics": {
+      "Organism": {
+        "name": "Solanum lycopersicum",
+        "value": "NCBITAXON",
+        "comment": "http://purl.bioontology.org/ontology/NCBITAXON/4081"
+      },
+      "Variant": {
+        "name": "Solanum lycopersicum cv. Micro-Tom",
+        "value": "\"",
+        "comment": "\""
+      },
+      "Organism part": {
+        "name": "bud",
+        "value": "BTO",
+        "comment": "http://purl.obolibrary.org/obo/BTO_0001639"
+      }
+    },
+    "FactorValue": {
+      "Tissue": { "name": "buds", "value": "\"", "comment": "\"" },
+      "Life cycle stage": null,
+      "Genotype": null
+    }
+  },
+  {
+    "SourceName": "AALab Analytics",
+    "ProtocolREF": "Sample collection",
+    "SampleName": "IL_140914_15",
+    "Characteristics": {
+      "Organism": {
+        "name": "Solanum lycopersicum",
+        "value": "NCBITAXON",
+        "comment": "http://purl.bioontology.org/ontology/NCBITAXON/4081"
+      },
+      "Variant": {
+        "name": "Solanum lycopersicum cv. Micro-Tom",
+        "value": "\"",
+        "comment": "\""
+      },
+      "Organism part": {
+        "name": "flower",
+        "value": "BTO",
+        "comment": "http://purl.obolibrary.org/obo/BTO_0000469"
+      }
+    },
+    "FactorValue": {
+      "Tissue": { "name": "flowers", "value": "\"", "comment": "\"" },
+      "Life cycle stage": null,
+      "Genotype": null
+    }
+  },
+  {
+    "SourceName": "AALab Analytics",
+    "ProtocolREF": "Sample collection",
+    "SampleName": "IL_140914_20",
+    "Characteristics": {
+      "Organism": {
+        "name": "Solanum lycopersicum",
+        "value": "NCBITAXON",
+        "comment": "http://purl.bioontology.org/ontology/NCBITAXON/4081"
+      },
+      "Variant": {
+        "name": "Solanum lycopersicum cv. Micro-Tom",
+        "value": "\"",
+        "comment": "\""
+      },
+      "Organism part": {
+        "name": "flower",
+        "value": "BTO",
+        "comment": "http://purl.obolibrary.org/obo/BTO_0000469"
+      }
+    },
+    "FactorValue": {
+      "Tissue": { "name": "flowers", "value": "\"", "comment": "\"" },
+      "Life cycle stage": null,
+      "Genotype": null
+    }
+  },
+  {
+    "SourceName": "AALab Analytics",
+    "ProtocolREF": "Sample collection",
+    "SampleName": "IL_140914_26",
+    "Characteristics": {
+      "Organism": {
+        "name": "Solanum lycopersicum",
+        "value": "NCBITAXON",
+        "comment": "http://purl.bioontology.org/ontology/NCBITAXON/4081"
+      },
+      "Variant": {
+        "name": "Solanum lycopersicum cv. Micro-Tom",
+        "value": "\"",
+        "comment": "\""
+      },
+      "Organism part": {
+        "name": "flower bud",
+        "value": "BTO",
+        "comment": "http://purl.obolibrary.org/obo/BTO_0000470"
+      }
+    },
+    "FactorValue": {
+      "Tissue": { "name": "flower buds", "value": "\"", "comment": "\"" },
+      "Life cycle stage": null,
+      "Genotype": null
+    }
+  },
+  {
+    "SourceName": "AALab Analytics",
+    "ProtocolREF": "Sample collection",
+    "SampleName": "IL_140914_31",
+    "Characteristics": {
+      "Organism": {
+        "name": "Solanum lycopersicum",
+        "value": "NCBITAXON",
+        "comment": "http://purl.bioontology.org/ontology/NCBITAXON/4081"
+      },
+      "Variant": {
+        "name": "Solanum lycopersicum cv. Micro-Tom",
+        "value": "\"",
+        "comment": "\""
+      },
+      "Organism part": {
+        "name": "flower bud",
+        "value": "BTO",
+        "comment": "http://purl.obolibrary.org/obo/BTO_0000470"
+      }
+    },
+    "FactorValue": {
+      "Tissue": { "name": "flower buds", "value": "\"", "comment": "\"" },
+      "Life cycle stage": null,
+      "Genotype": null
+    }
+  },
+  {
+    "SourceName": "AALab Analytics",
+    "ProtocolREF": "Sample collection",
+    "SampleName": "IL_140914_38",
+    "Characteristics": {
+      "Organism": {
+        "name": "Solanum lycopersicum",
+        "value": "NCBITAXON",
+        "comment": "http://purl.bioontology.org/ontology/NCBITAXON/4081"
+      },
+      "Variant": {
+        "name": "Solanum lycopersicum cv. Micro-Tom",
+        "value": "\"",
+        "comment": "\""
+      },
+      "Organism part": {
+        "name": "juvenile leaf",
+        "value": "BTO",
+        "comment": "http://purl.obolibrary.org/obo/BTO_0003147"
+      }
+    },
+    "FactorValue": {
+      "Tissue": { "name": "leaves", "value": "\"", "comment": "\"" },
+      "Life cycle stage": {
+        "name": "young",
+        "value": "BIOMODELS",
+        "comment": "http://purl.org/obo/owl/PATO#PATO_0000309"
+      },
+      "Genotype": null
+    }
+  },
+  {
+    "SourceName": "AALab Analytics",
+    "ProtocolREF": "Sample collection",
+    "SampleName": "IL_140914_41",
+    "Characteristics": {
+      "Organism": {
+        "name": "Solanum lycopersicum",
+        "value": "NCBITAXON",
+        "comment": "http://purl.bioontology.org/ontology/NCBITAXON/4081"
+      },
+      "Variant": {
+        "name": "Solanum lycopersicum cv. Micro-Tom",
+        "value": "\"",
+        "comment": "\""
+      },
+      "Organism part": {
+        "name": "leaf",
+        "value": "BTO",
+        "comment": "http://purl.obolibrary.org/obo/BTO_0000713"
+      }
+    },
+    "FactorValue": {
+      "Tissue": { "name": "leaves", "value": "\"", "comment": "\"" },
+      "Life cycle stage": {
+        "name": "mature",
+        "value": "BIOMODELS",
+        "comment": "http://purl.org/obo/owl/PATO#PATO_0001701"
+      },
+      "Genotype": null
+    }
+  },
+  {
+    "SourceName": "AALab Analytics",
+    "ProtocolREF": "Sample collection",
+    "SampleName": "IL_140914_49",
+    "Characteristics": {
+      "Organism": {
+        "name": "Solanum lycopersicum",
+        "value": "NCBITAXON",
+        "comment": "http://purl.bioontology.org/ontology/NCBITAXON/4081"
+      },
+      "Variant": {
+        "name": "Solanum lycopersicum cv. Micro-Tom",
+        "value": "\"",
+        "comment": "\""
+      },
+      "Organism part": {
+        "name": "exocarp",
+        "value": "BTO",
+        "comment": "http://purl.obolibrary.org/obo/BTO_0000733"
+      }
+    },
+    "FactorValue": {
+      "Tissue": { "name": "fruit peel", "value": "\"", "comment": "\"" },
+      "Life cycle stage": {
+        "name": "early whole plant fruit ripening stage",
+        "value": "FLOPO",
+        "comment": "http://purl.obolibrary.org/obo/PO_0007001"
+      },
+      "Genotype": null
+    }
+  },
+  {
+    "SourceName": "AALab Analytics",
+    "ProtocolREF": "Sample collection",
+    "SampleName": "IL_140914_52",
+    "Characteristics": {
+      "Organism": {
+        "name": "Solanum lycopersicum",
+        "value": "NCBITAXON",
+        "comment": "http://purl.bioontology.org/ontology/NCBITAXON/4081"
+      },
+      "Variant": {
+        "name": "Solanum lycopersicum cv. Micro-Tom",
+        "value": "\"",
+        "comment": "\""
+      },
+      "Organism part": {
+        "name": "exocarp",
+        "value": "BTO",
+        "comment": "http://purl.obolibrary.org/obo/BTO_0000733"
+      }
+    },
+    "FactorValue": {
+      "Tissue": { "name": "fruit peel", "value": "\"", "comment": "\"" },
+      "Life cycle stage": {
+        "name": "late whole plant fruit ripening stage",
+        "value": "FLOPO",
+        "comment": "http://purl.obolibrary.org/obo/PO_0007050"
+      },
+      "Genotype": null
+    }
+  },
+  {
+    "SourceName": "AALab Analytics",
+    "ProtocolREF": "Sample collection",
+    "SampleName": "IL_140914_55",
+    "Characteristics": {
+      "Organism": {
+        "name": "Solanum lycopersicum",
+        "value": "NCBITAXON",
+        "comment": "http://purl.bioontology.org/ontology/NCBITAXON/4081"
+      },
+      "Variant": {
+        "name": "Solanum lycopersicum cv. Micro-Tom",
+        "value": "\"",
+        "comment": "\""
+      },
+      "Organism part": {
+        "name": "exocarp",
+        "value": "BTO",
+        "comment": "http://purl.obolibrary.org/obo/BTO_0000733"
+      }
+    },
+    "FactorValue": {
+      "Tissue": { "name": "fruit peel", "value": "\"", "comment": "\"" },
+      "Life cycle stage": {
+        "name": "mid whole plant fruit ripening stage",
+        "value": "FLOPO",
+        "comment": "http://purl.obolibrary.org/obo/PO_0007031"
+      },
+      "Genotype": null
+    }
+  },
+  {
+    "SourceName": "AALab Analytics",
+    "ProtocolREF": "Sample collection",
+    "SampleName": "IL_140914_59",
+    "Characteristics": {
+      "Organism": {
+        "name": "Solanum lycopersicum",
+        "value": "NCBITAXON",
+        "comment": "http://purl.bioontology.org/ontology/NCBITAXON/4081"
+      },
+      "Variant": {
+        "name": "Solanum lycopersicum cv. Micro-Tom",
+        "value": "\"",
+        "comment": "\""
+      },
+      "Organism part": {
+        "name": "root",
+        "value": "BTO",
+        "comment": "http://purl.obolibrary.org/obo/BTO_0001188"
+      }
+    },
+    "FactorValue": {
+      "Tissue": { "name": "root", "value": "\"", "comment": "\"" },
+      "Life cycle stage": null,
+      "Genotype": null
+    }
+  },
+  {
+    "SourceName": "AALab Analytics",
+    "ProtocolREF": "Sample collection",
+    "SampleName": "IL_140914_64",
+    "Characteristics": {
+      "Organism": {
+        "name": "Solanum lycopersicum",
+        "value": "NCBITAXON",
+        "comment": "http://purl.bioontology.org/ontology/NCBITAXON/4081"
+      },
+      "Variant": {
+        "name": "Solanum lycopersicum cv. Micro-Tom",
+        "value": "\"",
+        "comment": "\""
+      },
+      "Organism part": {
+        "name": "root",
+        "value": "BTO",
+        "comment": "http://purl.obolibrary.org/obo/BTO_0001188"
+      }
+    },
+    "FactorValue": {
+      "Tissue": { "name": "root", "value": "\"", "comment": "\"" },
+      "Life cycle stage": null,
+      "Genotype": null
+    }
+  },
+  {
+    "SourceName": "AALab Analytics",
+    "ProtocolREF": "Sample collection",
+    "SampleName": "IL_230614_44",
+    "Characteristics": {
+      "Organism": {
+        "name": "Arabidopsis thaliana",
+        "value": "NCBITAXON",
+        "comment": "http://purl.bioontology.org/ontology/NCBITAXON/3702"
+      },
+      "Variant": {
+        "name": "Arabidopsis thaliana str. Col-0",
+        "value": "\"",
+        "comment": "\""
+      },
+      "Organism part": {
+        "name": "flower bud",
+        "value": "BTO",
+        "comment": "http://purl.obolibrary.org/obo/BTO_0000470"
+      }
+    },
+    "FactorValue": {
+      "Tissue": { "name": "buds", "value": "\"", "comment": "\"" },
+      "Life cycle stage": {
+        "name": "closed",
+        "value": "FLOPO",
+        "comment": "http://purl.obolibrary.org/obo/PATO_0000608"
+      },
+      "Genotype": null
+    }
+  },
+  {
+    "SourceName": "AALab Analytics",
+    "ProtocolREF": "Sample collection",
+    "SampleName": "IL_230614_51",
+    "Characteristics": {
+      "Organism": {
+        "name": "Arabidopsis thaliana",
+        "value": "NCBITAXON",
+        "comment": "http://purl.bioontology.org/ontology/NCBITAXON/3702"
+      },
+      "Variant": {
+        "name": "Arabidopsis thaliana str. Col-0",
+        "value": "\"",
+        "comment": "\""
+      },
+      "Organism part": {
+        "name": "leaf",
+        "value": "BTO",
+        "comment": "http://purl.obolibrary.org/obo/BTO_0000713"
+      }
+    },
+    "FactorValue": {
+      "Tissue": { "name": "leaves", "value": "\"", "comment": "\"" },
+      "Life cycle stage": {
+        "name": "mature",
+        "value": "BIOMODELS",
+        "comment": "http://purl.org/obo/owl/PATO#PATO_0001701"
+      },
+      "Genotype": null
+    }
+  },
+  {
+    "SourceName": "AALab Analytics",
+    "ProtocolREF": "Sample collection",
+    "SampleName": "IL_230614_62",
+    "Characteristics": {
+      "Organism": {
+        "name": "Arabidopsis thaliana",
+        "value": "NCBITAXON",
+        "comment": "http://purl.bioontology.org/ontology/NCBITAXON/3702"
+      },
+      "Variant": {
+        "name": "Arabidopsis thaliana str. Col-0",
+        "value": "\"",
+        "comment": "\""
+      },
+      "Organism part": {
+        "name": "flower",
+        "value": "BTO",
+        "comment": "http://purl.obolibrary.org/obo/BTO_0000469"
+      }
+    },
+    "FactorValue": {
+      "Tissue": { "name": "flowers", "value": "\"", "comment": "\"" },
+      "Life cycle stage": {
+        "name": "open",
+        "value": "FLOPO",
+        "comment": "http://purl.obolibrary.org/obo/PATO_0000610"
+      },
+      "Genotype": null
+    }
+  },
+  {
+    "SourceName": "AALab Analytics",
+    "ProtocolREF": "Sample collection",
+    "SampleName": "IL_230614_71",
+    "Characteristics": {
+      "Organism": {
+        "name": "Arabidopsis thaliana",
+        "value": "NCBITAXON",
+        "comment": "http://purl.bioontology.org/ontology/NCBITAXON/3702"
+      },
+      "Variant": {
+        "name": "Arabidopsis thaliana str. Col-0",
+        "value": "\"",
+        "comment": "\""
+      },
+      "Organism part": {
+        "name": "flower",
+        "value": "BTO",
+        "comment": "http://purl.obolibrary.org/obo/BTO_0000469"
+      }
+    },
+    "FactorValue": {
+      "Tissue": { "name": "flowers", "value": "\"", "comment": "\"" },
+      "Life cycle stage": {
+        "name": "open",
+        "value": "FLOPO",
+        "comment": "http://purl.obolibrary.org/obo/PATO_0000610"
+      },
+      "Genotype": null
+    }
+  },
+  {
+    "SourceName": "AALab Analytics",
+    "ProtocolREF": "Sample collection",
+    "SampleName": "IL_230614_77",
+    "Characteristics": {
+      "Organism": {
+        "name": "Arabidopsis thaliana",
+        "value": "NCBITAXON",
+        "comment": "http://purl.bioontology.org/ontology/NCBITAXON/3702"
+      },
+      "Variant": {
+        "name": "Arabidopsis thaliana str. Col-0",
+        "value": "\"",
+        "comment": "\""
+      },
+      "Organism part": {
+        "name": "silique",
+        "value": "BTO",
+        "comment": "http://purl.obolibrary.org/obo/BTO_0001249"
+      }
+    },
+    "FactorValue": {
+      "Tissue": { "name": "silique", "value": "\"", "comment": "\"" },
+      "Life cycle stage": null,
+      "Genotype": null
+    }
+  },
+  {
+    "SourceName": "AALab Analytics",
+    "ProtocolREF": "Sample collection",
+    "SampleName": "IL_230614_86",
+    "Characteristics": {
+      "Organism": {
+        "name": "Arabidopsis thaliana",
+        "value": "NCBITAXON",
+        "comment": "http://purl.bioontology.org/ontology/NCBITAXON/3702"
+      },
+      "Variant": {
+        "name": "Arabidopsis thaliana str. Col-0",
+        "value": "\"",
+        "comment": "\""
+      },
+      "Organism part": {
+        "name": "stem",
+        "value": "BTO",
+        "comment": "http://purl.obolibrary.org/obo/BTO_0001300"
+      }
+    },
+    "FactorValue": {
+      "Tissue": { "name": "stem", "value": "\"", "comment": "\"" },
+      "Life cycle stage": null,
+      "Genotype": null
+    }
+  },
+  {
+    "SourceName": "AALab Analytics",
+    "ProtocolREF": "Sample collection",
+    "SampleName": "IL_230614_92",
+    "Characteristics": {
+      "Organism": {
+        "name": "Arabidopsis thaliana",
+        "value": "NCBITAXON",
+        "comment": "http://purl.bioontology.org/ontology/NCBITAXON/3702"
+      },
+      "Variant": {
+        "name": "Arabidopsis thaliana str. Col-0",
+        "value": "\"",
+        "comment": "\""
+      },
+      "Organism part": {
+        "name": "stem leaf",
+        "value": "BTO",
+        "comment": "http://purl.obolibrary.org/obo/BTO_0005694"
+      }
+    },
+    "FactorValue": {
+      "Tissue": { "name": "stem leaves", "value": "\"", "comment": "\"" },
+      "Life cycle stage": null,
+      "Genotype": null
+    }
+  },
+  {
+    "SourceName": "AALab Analytics",
+    "ProtocolREF": "Sample collection",
+    "SampleName": "IL_230614_95",
+    "Characteristics": {
+      "Organism": {
+        "name": "Arabidopsis thaliana",
+        "value": "NCBITAXON",
+        "comment": "http://purl.bioontology.org/ontology/NCBITAXON/3702"
+      },
+      "Variant": {
+        "name": "Arabidopsis thaliana str. Col-0",
+        "value": "\"",
+        "comment": "\""
+      },
+      "Organism part": {
+        "name": "juvenile leaf",
+        "value": "BTO",
+        "comment": "http://purl.obolibrary.org/obo/BTO_0003147"
+      }
+    },
+    "FactorValue": {
+      "Tissue": { "name": "leaves", "value": "\"", "comment": "\"" },
+      "Life cycle stage": {
+        "name": "young",
+        "value": "BIOMODELS",
+        "comment": "http://purl.org/obo/owl/PATO#PATO_0000309"
+      },
+      "Genotype": null
+    }
+  },
+  {
+    "SourceName": "AALab Analytics",
+    "ProtocolREF": "Sample collection",
+    "SampleName": "IL_070714_3",
+    "Characteristics": {
+      "Organism": {
+        "name": "Arabidopsis thaliana",
+        "value": "NCBITAXON",
+        "comment": "http://purl.bioontology.org/ontology/NCBITAXON/3702"
+      },
+      "Variant": {
+        "name": "Arabidopsis thaliana str. Col-0",
+        "value": "\"",
+        "comment": "\""
+      },
+      "Organism part": {
+        "name": "bud",
+        "value": "BTO",
+        "comment": "http://purl.obolibrary.org/obo/BTO_0001639"
+      }
+    },
+    "FactorValue": {
+      "Tissue": { "name": "buds", "value": "\"", "comment": "\"" },
+      "Life cycle stage": null,
+      "Genotype": null
+    }
+  },
+  {
+    "SourceName": "AALab Analytics",
+    "ProtocolREF": "Sample collection",
+    "SampleName": "IL_070714_10",
+    "Characteristics": {
+      "Organism": {
+        "name": "Arabidopsis thaliana",
+        "value": "NCBITAXON",
+        "comment": "http://purl.bioontology.org/ontology/NCBITAXON/3702"
+      },
+      "Variant": {
+        "name": "Arabidopsis thaliana str. Col-0",
+        "value": "\"",
+        "comment": "\""
+      },
+      "Organism part": {
+        "name": "leaf",
+        "value": "BTO",
+        "comment": "http://purl.obolibrary.org/obo/BTO_0000713"
+      }
+    },
+    "FactorValue": {
+      "Tissue": { "name": "leaves", "value": "\"", "comment": "\"" },
+      "Life cycle stage": {
+        "name": "mature",
+        "value": "BIOMODELS",
+        "comment": "http://purl.org/obo/owl/PATO#PATO_0001701"
+      },
+      "Genotype": null
+    }
+  },
+  {
+    "SourceName": "AALab Analytics",
+    "ProtocolREF": "Sample collection",
+    "SampleName": "IL_070714_16",
+    "Characteristics": {
+      "Organism": {
+        "name": "Arabidopsis thaliana",
+        "value": "NCBITAXON",
+        "comment": "http://purl.bioontology.org/ontology/NCBITAXON/3702"
+      },
+      "Variant": {
+        "name": "Arabidopsis thaliana str. Col-0",
+        "value": "\"",
+        "comment": "\""
+      },
+      "Organism part": {
+        "name": "flower",
+        "value": "BTO",
+        "comment": "http://purl.obolibrary.org/obo/BTO_0000469"
+      }
+    },
+    "FactorValue": {
+      "Tissue": { "name": "flowers", "value": "\"", "comment": "\"" },
+      "Life cycle stage": {
+        "name": "open",
+        "value": "FLOPO",
+        "comment": "http://purl.obolibrary.org/obo/PATO_0000610"
+      },
+      "Genotype": null
+    }
+  },
+  {
+    "SourceName": "AALab Analytics",
+    "ProtocolREF": "Sample collection",
+    "SampleName": "IL_070714_37",
+    "Characteristics": {
+      "Organism": {
+        "name": "Arabidopsis thaliana",
+        "value": "NCBITAXON",
+        "comment": "http://purl.bioontology.org/ontology/NCBITAXON/3702"
+      },
+      "Variant": {
+        "name": "Arabidopsis thaliana str. Col-0",
+        "value": "\"",
+        "comment": "\""
+      },
+      "Organism part": {
+        "name": "stem",
+        "value": "BTO",
+        "comment": "http://purl.obolibrary.org/obo/BTO_0001300"
+      }
+    },
+    "FactorValue": {
+      "Tissue": { "name": "stem", "value": "\"", "comment": "\"" },
+      "Life cycle stage": null,
+      "Genotype": null
+    }
+  }
+]
