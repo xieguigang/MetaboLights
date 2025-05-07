@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Combine the matrix with sampleinfo</title>
+    <title>Combine expression matrix with sample metadata This function performs row-wise merging of transposed expression data with sample metadata, requiring matching row names between the two inputs.</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
     <link rel="stylesheet" type="text/css" href="../../_assets/page.css">
@@ -18,7 +18,7 @@
             </tr>
         </table>
 
-        <h2>Combine the matrix with sampleinfo</h2>
+        <h2>Combine expression matrix with sample metadata This function performs row-wise merging of transposed expression data with sample metadata, requiring matching row names between the two inputs.</h2>
 
         <h3>Description</h3>
 
@@ -34,6 +34,13 @@
 
         <table>
             
+<dt>x</dt>
+<dd><p><p>A numeric matrix or data.frame containing expression data. Rows represent features (genes/proteins), columns represent samples.</p></p></dd>
+
+
+<dt>sampleinfo</dt>
+<dd><p><p>A data.frame containing sample metadata. Must include: \itemize{ \item{sample<em>name: Character vector with sample identifiers} \item{sample</em>info: Factor or character vector with sample classification} \item{color: Character vector specifying display colors for samples} } Row names must match column names of the original expression matrix.</p></p></dd>
+
         </table>
 
 
@@ -47,7 +54,7 @@
 
         <h3>Value</h3>
 
-        This function has no value returns.
+        <p>A merged data.frame with: \itemize{ \item{First 3 columns: sample<em>name, class (from sample</em>info), color} \item{Subsequent columns: expression values from input matrix} } Note: The input matrix is transposed before merging (samples become rows).</p>
 
         <h3 style="display: none;">Examples</h3>
 

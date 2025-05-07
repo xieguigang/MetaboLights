@@ -1,18 +1,22 @@
-﻿.TH COMBINE_SAMPLEINFO 1 2025-May "" "Combine the matrix with sampleinfo"
+﻿.TH COMBINE_SAMPLEINFO 1 2025-May "" "Combine expression matrix with sample metadata This function performs row-wise merging of transposed expression data with sample metadata, requiring matching row names between the two inputs."
 .SH NAME
 combine_sampleinfo \- combine_sampleinfo(x, sampleinfo)
 .SH SYNOPSIS
 \fIcombine_sampleinfo(x, sampleinfo)\fR
 .SH OPTIONS
 .PP
-\fBx\fB \fR\- . 
+\fBx\fB \fR\- . A numeric matrix or data.frame containing expression data. Rows represent features (genes/proteins), columns represent samples.
 .PP
 .PP
-\fBsampleinfo\fB \fR\- . 
+\fBsampleinfo\fB \fR\- . A data.frame containing sample metadata. Must include: \itemize{ \item{sample_name: Character vector with sample identifiers} \item{sample_info: Factor or character vector with sample classification} \item{color: Character vector specifying display colors for samples} } Row names must match column names of the original expression matrix.
+.PP
+.SH VALUE
+.PP
+A merged data.frame with: \itemize{ \item{First 3 columns: sample_name, class (from sample_info), color} \item{Subsequent columns: expression values from input matrix} } Note: The input matrix is transposed before merging (samples become rows).
 .PP
 .SH FILES
 .PP
-SMRUCC/R#.declare_function.combine_sampleinfo at combine_sampleinfo.R:line 3
+SMRUCC/R#.declare_function.combine_sampleinfo at combine_sampleinfo.R:line 45
 .PP
 .SH COPYRIGHT
 Copyright © xieguigang, MIT Licensed 2025
