@@ -355,3 +355,4 @@ MigrationBackup/
 test/workflow_test/.RData
 .RData
 test/eb_eye_metabolights_complete.xml
+data/eb_eye_metabolights_complete.xml
