@@ -3,20 +3,48 @@
 combine_sampleinfo \- combine_sampleinfo(x, sampleinfo)
 .SH SYNOPSIS
 \fIcombine_sampleinfo(x, sampleinfo)\fR
+.SH DESCRIPTION
+.PP
+This function performs row-wise merging of transposed expression data with
+sample metadata, requiring matching row names between the two inputs.
+.PP
 .SH OPTIONS
 .PP
-\fBx\fB \fR\- . A numeric matrix or data.frame containing expression data. Rows represent features (genes/proteins), columns represent samples.
+\fBx\fB \fR\- . A numeric matrix or data.frame containing expression data.
+Rows represent features (genes/proteins), columns represent samples.
 .PP
 .PP
-\fBsampleinfo\fB \fR\- . A data.frame containing sample metadata. Must include: \itemize{ \item{sample_name: Character vector with sample identifiers} \item{sample_info: Factor or character vector with sample classification} \item{color: Character vector specifying display colors for samples} } Row names must match column names of the original expression matrix.
+\fBsampleinfo\fB \fR\- . A data.frame containing sample metadata. Must include:
+\itemize{
+\item{sample_name: Character vector with sample identifiers}
+\item{sample_info: Factor or character vector with sample classification}
+\item{color: Character vector specifying display colors for samples}
+}
+Row names must match column names of the original expression matrix.
 .PP
 .SH VALUE
 .PP
-A merged data.frame with: \itemize{ \item{First 3 columns: sample_name, class (from sample_info), color} \item{Subsequent columns: expression values from input matrix} } Note: The input matrix is transposed before merging (samples become rows).
+A merged data.frame with:
+\itemize{
+\item{First 3 columns: sample_name, class (from sample_info), color}
+\item{Subsequent columns: expression values from input matrix}
+}
+Note: The input matrix is transposed before merging (samples become rows).
 .PP
 .SH EXAMPLES
 .PP
-# Create example data expr_matrix <- matrix(rnorm(20), ncol=4, dimnames=list(paste0("Gene",1:5), paste0("S",1:4))) sample_data <- data.frame( sample_name = paste0("Sample",1:4), sample_info = c("Control", "Control", "Treatment", "Treatment"), color = c("#1b9e77", "#1b9e77", "#d95f02", "#d95f02"), row.names = paste0("S",1:4) ) # Combine datasets combined <- combine_sampleinfo(expr_matrix, sample_data) head(combined[, 1:5])
+# Create example data
+expr_matrix <- matrix(rnorm(20), ncol=4,
+dimnames=list(paste0("Gene",1:5), paste0("S",1:4)))
+sample_data <- data.frame(
+sample_name = paste0("Sample",1:4),
+sample_info = c("Control", "Control", "Treatment", "Treatment"),
+color = c("#1b9e77", "#1b9e77", "#d95f02", "#d95f02"),
+row.names = paste0("S",1:4)
+)
+# Combine datasets
+combined <- combine_sampleinfo(expr_matrix, sample_data)
+head(combined[, 1:5])
 .PP
 .SH SEE ALSO
 \code{\link{merge}} for general data merging functionality
